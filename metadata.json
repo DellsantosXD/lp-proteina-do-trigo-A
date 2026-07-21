@@ -1,0 +1,6 @@
+{
+  "name": "Sweet Therapy - Proteína do Trigo Pro Filler",
+  "description": "Reconstrução Molecular em 3 Camadas que devolve corpo e espessura ao fio fino, de dentro pra fora.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
