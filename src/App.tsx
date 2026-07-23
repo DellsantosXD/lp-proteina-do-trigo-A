@@ -559,9 +559,17 @@ export default function App() {
             </p>
           </div>
 
-          {/* Clean Scientific Strand Video Visualizer (Matches Image 2) */}
-          <div className="max-w-4xl mx-auto relative z-10">
-            <ProductVisualizer type="hair-gif" variant="floating" />
+          {/* Pro Filler Video Container - Google Drive URL 19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ */}
+          <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[28px] border border-cream/25 bg-black shadow-[0_28px_70px_rgba(0,0,0,0.6)] backdrop-blur-md">
+            <div className="aspect-[16/9] w-full relative">
+              <iframe
+                src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
+                className="absolute inset-0 w-full h-full rounded-[28px]"
+                allow="encrypted-media; picture-in-picture"
+                allowFullScreen
+                title="Demonstração Pro Filler"
+              />
+            </div>
           </div>
 
           {/* Premium Benefits Grid below Video */}
