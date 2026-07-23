@@ -543,31 +543,82 @@ export default function App() {
         </div>
       </section>
 
-      {/* PROVA SOCIAL / TESTIMONIALS SECTION */}
-      <section className="relative overflow-hidden py-24 px-6 bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] border-t border-cream/15" id="prova">
+      {/* TECNOLOGIA EM SUA FORMA MAIS PURA SECTION */}
+      <section className="relative overflow-hidden py-24 px-6 bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] border-t border-cream/15" id="pro-filler">
         <div className="absolute inset-0 bg-[linear-gradient(35deg,transparent_0%,rgba(255,255,255,0.06)_52%,transparent_74%)] pointer-events-none" />
-        <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-16">
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-14">
             <span className="text-xs font-mono text-rose uppercase font-bold tracking-widest block mb-3">
-              Resultados Clínicos Reais
+              A TECNOLOGIA EM SUA FORMA MAIS PURA
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-cream font-black tracking-tight leading-tight">
-              Quem Já Encorpou o Fio com Pro Filler
+            <h2 className="text-3xl sm:text-5xl font-serif text-cream font-black tracking-tight leading-tight max-w-4xl mx-auto">
+              Conheça o Pro Filler: a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
             </h2>
-            <p className="text-sm md:text-base text-cream/85 mt-3 max-w-xl mx-auto leading-relaxed">
-              Veja depoimentos espontâneos de clientes reais que deixaram de lado os apliques e recuperaram a saúde do próprio cabelo.
-            </p>
           </div>
 
-          <SocialProof />
+          {/* Premium Grid: Video Player + Product Showcase */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left: Video Player */}
+            <div className="lg:col-span-6 relative overflow-hidden rounded-3xl border border-cream/20 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md">
+              <div className="aspect-[9/16] sm:aspect-video w-full relative">
+                <iframe
+                  src="https://drive.google.com/file/d/1gjkK4oI0fFZvJyzm5OV4P9LOjsi3GBuM/preview"
+                  className="absolute inset-0 w-full h-full rounded-3xl"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                  title="Demonstração em Vídeo Pro Filler"
+                />
+              </div>
+            </div>
+
+            {/* Right: Product Pot Image + Premium Benefits List */}
+            <div className="lg:col-span-6 space-y-6">
+              {/* Product Pot Image */}
+              <div className="relative overflow-hidden rounded-3xl border border-cream/20 bg-gradient-to-br from-cream/10 to-black/30 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
+                <img
+                  src="/products/pro-filler-pot.jpg"
+                  alt="Proteína do Trigo Pro Filler - Pote com textura da fórmula"
+                  className="w-full h-64 sm:h-72 object-cover rounded-2xl"
+                />
+              </div>
+
+              {/* Frase e Lista Premium */}
+              <div className="bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md space-y-6">
+                <div>
+                  <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-cream">
+                    Mais do que uma reconstrução.
+                  </h3>
+                </div>
+
+                <div className="space-y-3">
+                  {[
+                    'Preenche a fibra',
+                    'Devolve densidade',
+                    'Blinda o resultado',
+                    'Sem pesar os fios',
+                    'Uso em casa'
+                  ].map((benefit, idx) => (
+                    <div key={idx} className="flex items-center gap-3">
+                      <div className="w-6 h-6 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
+                        <CheckCircle2 className="w-4 h-4 text-rose" />
+                      </div>
+                      <span className="text-base font-sans font-medium text-cream/95">
+                        {benefit}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="mt-14">
             <ConversionCta
               tone="dark"
-              eyebrow="Resultados reais"
-              title="Se outras mulheres já recuperaram corpo no fio, o próximo passo é escolher seu protocolo."
-              description="Use os depoimentos como validação. A decisão prática acontece na tabela de protocolos logo abaixo."
-              label="Ver ofertas com desconto"
+              eyebrow="Garantia de Qualidade & Tecnologia"
+              title="Pronta para restaurar a espessura e densidade dos seus fios?"
+              description="Escolha abaixo o protocolo ideal para o seu nível de afinamento e receba o tratamento na sua casa."
+              label="Quero iniciar meu tratamento"
             />
           </div>
         </div>
