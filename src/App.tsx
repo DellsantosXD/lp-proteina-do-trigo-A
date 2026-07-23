@@ -468,13 +468,13 @@ export default function App() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-3">
-              O Produto Oficial
+              A TECNOLOGIA QUE DÁ VIDA À RECONSTRUÇÃO MOLECULAR
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
-              A Fórmula Clínica Transposta em Frasco:<br />Proteína do Trigo Pro Filler
+              Os três ativos que tornam a Reconstrução Molecular em 3 Camadas possível.
             </h2>
             <p className="text-base text-ink-soft max-w-xl mx-auto mt-4 leading-relaxed">
-              Não criamos apenas mais uma linha comercial. Desenvolvemos um ativo puro capaz de reverter o histórico de afinamento das pontas de forma contínua.
+              Cada ativo foi selecionado para cumprir uma função específica dentro da fibra. Juntos, eles atuam em sequência para preencher, devolver densidade e proteger o resultado por muito mais tempo.
             </p>
           </div>
 
@@ -491,10 +491,10 @@ export default function App() {
                 </div>
                 <div>
                   <h3 className="font-serif font-bold text-base md:text-lg text-bordo mb-1">
-                    Complexo TriMolecular Inteligente
+                    Complexo TriMolecular Inteligente®️
                   </h3>
                   <p className="text-sm text-ink-soft leading-relaxed">
-                    Proteínas hidrolisadas de trigo, ervilha e arroz calibradas com pesos moleculares reduzidos para infiltrar com facilidade em poros microscópicos.
+                    Três proteínas hidrolisadas com pesos moleculares diferentes trabalham em conjunto para alcançar as regiões mais fragilizadas da fibra. Em vez de se acumularem na superfície, atuam exatamente onde o fio perdeu estrutura.
                   </p>
                 </div>
               </div>
@@ -508,7 +508,7 @@ export default function App() {
                     NV Redensifier de Alta Performance
                   </h3>
                   <p className="text-sm text-ink-soft leading-relaxed">
-                    Ativos encapsulados em nanoestruturas que se expandem em contato com a umidade cortical do fio, devolvendo a espessura física original de imediato.
+                    Nanoestruturas inteligentes expandem-se no interior da fibra, aumentando seu diâmetro e devolvendo massa onde houve afinamento. O resultado é um cabelo visivelmente mais encorpado, com mais corpo e resistência.
                   </p>
                 </div>
               </div>
@@ -522,7 +522,7 @@ export default function App() {
                     Cera de Farelo de Arroz Hidrofóbica
                   </h3>
                   <p className="text-sm text-ink-soft leading-relaxed">
-                    Cria uma película impermeabilizante suave que protege o preenchimento, retendo as proteínas no núcleo do fio mesmo após repetidos enxágues.
+                    Forma uma blindagem protetora ao redor da fibra, ajudando a preservar o preenchimento e reduzindo a perda dos ativos durante as lavagens, para que o resultado permaneça por muito mais tempo.
                   </p>
                 </div>
               </div>
