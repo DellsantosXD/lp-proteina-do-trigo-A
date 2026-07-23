@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Sparkles, Dna, Activity, CheckCircle2 } from 'lucide-react';
 import Header from './components/Header';
 import InteractiveStrand from './components/InteractiveStrand';
 import Timeline from './components/Timeline';
@@ -234,15 +235,15 @@ export default function App() {
               <p className="text-sm sm:text-base text-ink-soft leading-relaxed mb-4">
                 {leadParagraphs[1]}
               </p>
-              <div className="flex flex-wrap gap-2 pt-2">
-                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  ✨ {leadParagraphs[2]}
+              <div className="flex flex-wrap gap-2.5 pt-2">
+                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[2]}
                 </span>
-                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  ✨ {leadParagraphs[3]}
+                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[3]}
                 </span>
-                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  ✨ {leadParagraphs[4]}
+                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[4]}
                 </span>
               </div>
             </motion.div>
@@ -277,8 +278,8 @@ export default function App() {
               className="bg-bordo text-cream rounded-2xl p-6 sm:p-8 shadow-lg relative"
             >
               <div className="mb-4 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-cream/20 flex items-center justify-center font-serif text-lg font-bold text-cream">
-                  🧬
+                <div className="w-10 h-10 rounded-full bg-cream/15 border border-cream/20 flex items-center justify-center text-cream">
+                  <Activity className="w-5 h-5 text-cream" />
                 </div>
                 <div>
                   <span className="block font-serif text-lg font-bold text-cream">{leadParagraphs[8]}</span>
