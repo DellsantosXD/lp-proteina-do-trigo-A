@@ -472,9 +472,18 @@ export default function App() {
             </p>
           </div>
 
-          <div className="relative mx-auto mb-14 max-w-3xl">
+          <div className="relative mx-auto mb-12 max-w-3xl">
             <div className="absolute inset-x-8 -top-8 h-24 bg-rose/20 blur-3xl pointer-events-none" />
             <ProductVisualizer type="hair-gif" variant="floating" className="relative z-10" />
+          </div>
+
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl font-serif text-bordo font-black tracking-tight leading-tight">
+              Os três ativos que tornam a Reconstrução Molecular em 3 Camadas possível.
+            </h3>
+            <p className="text-base text-ink-soft max-w-xl mx-auto mt-3 leading-relaxed">
+              Cada ativo foi selecionado para cumprir uma função específica dentro da fibra. Juntos, eles atuam em sequência para preencher, devolver densidade e proteger o resultado por muito mais tempo.
+            </p>
           </div>
 
           <div className="max-w-3xl mx-auto">
