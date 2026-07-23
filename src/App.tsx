@@ -454,10 +454,10 @@ export default function App() {
             </div>
 
             <ConversionCta
-              eyebrow="Agora que você viu o mecanismo"
-              title="Escolha o protocolo para iniciar a reconstrução molecular em casa."
-              description="A próxima etapa é selecionar a duração ideal do tratamento para o seu nível de afinamento e constância."
-              label="Escolher meu protocolo"
+              eyebrow="Agora que você entende o mecanismo"
+              title="Toda essa tecnologia só é possível porque cada ativo desempenha uma função específica."
+              description="A Reconstrução Molecular em 3 Camadas não depende de um único ingrediente. Ela combina três tecnologias que trabalham em sequência para preencher, devolver densidade e proteger a fibra capilar."
+              label="Quero iniciar meu protocolo"
             />
           </div>
         </div>
