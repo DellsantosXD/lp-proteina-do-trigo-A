@@ -170,23 +170,26 @@ export default function App() {
         <div className="absolute inset-0 bg-radial-[circle_at_100%_20%] from-tan/25 via-transparent to-transparent pointer-events-none" />
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
-          {/* Static Headline (Teste A) */}
+          {/* Headline */}
           <div className="flex items-center justify-center mb-6">
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="font-serif text-bordo font-black tracking-tight leading-tight text-2xl sm:text-4xl md:text-5xl max-w-3xl text-balance"
+              className="font-serif text-bordo font-black tracking-tight leading-tight text-3xl sm:text-5xl md:text-6xl max-w-4xl text-balance"
             >
-              Seu rabo de cavalo virou um fiapo.{' '}
-              <br className="hidden md:inline" />
-              Seja qual for o motivo, a fibra pode ser reconstruída.
+              Seu rabo de cavalo virou um fiapo.
             </motion.h1>
           </div>
 
-          <p className="text-base sm:text-lg md:text-xl text-ink-soft max-w-xl mx-auto mb-10 leading-relaxed">
-            A Reconstrução Molecular em 3 Camadas devolve corpo e espessura ao fio fino, de dentro pra fora, sem depender de salão.
-          </p>
+          <div className="max-w-2xl mx-auto mb-10 space-y-3">
+            <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
+              O afinamento pode ter diferentes causas. A boa notícia é que a fibra capilar pode recuperar estrutura quando recebe a tecnologia certa.
+            </p>
+            <p className="text-base sm:text-lg text-ink font-medium leading-relaxed">
+              A Reconstrução Molecular em 3 Camadas foi desenvolvida para restaurar a estrutura da fibra afinada, devolvendo corpo, densidade e resistência aos fios, sem depender de salão.
+            </p>
+          </div>
 
           {/* Premium Video Showcase representing clinical hair reconstruction in loop */}
           <div className="mx-auto mb-12 max-w-5xl">
