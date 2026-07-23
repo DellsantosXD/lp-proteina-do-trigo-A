@@ -49,31 +49,36 @@ const items: TimelineItem[] = [
 
 const labels = ['Autoridade', 'Dano', 'Frustração', 'Virada', 'Pesquisa', 'Protocolo', 'Resultado'];
 
-const visuals: Record<number, { src: string; alt: string; position: string }> = {
+const visuals: Record<number, { src: string; alt: string; position: string; height?: string }> = {
   1: {
     src: '/timeline/card-1.jpg',
     alt: 'Durante anos eu acompanhei milhares de histórias de afinamento',
-    position: 'object-[center_20%]'
+    position: 'object-[center_45%]',
+    height: 'h-80 sm:h-[420px]'
   },
   2: {
     src: '/timeline/card-2.jpg',
     alt: 'Eu escondia o afinamento em vez de resolver',
-    position: 'object-[center_25%]'
+    position: 'object-[center_15%]',
+    height: 'h-64 sm:h-80'
   },
   3: {
     src: '/timeline/card-3.jpg',
     alt: 'Fiz tudo o que diziam que funcionava',
-    position: 'object-[center_30%]'
+    position: 'object-[left_bottom]',
+    height: 'h-64 sm:h-80'
   },
   4: {
     src: '/timeline/card-4.jpg',
     alt: 'No ensaio do nascimento do meu segundo filho',
-    position: 'object-[center_25%]'
+    position: 'object-center',
+    height: 'h-60 sm:h-72'
   },
   5: {
     src: '/timeline/card-5.jpg',
     alt: 'Foi estudando a estrutura da fibra que encontrei a resposta',
-    position: 'object-[center_20%]'
+    position: 'object-[left_bottom]',
+    height: 'h-64 sm:h-80'
   }
 };
 
@@ -167,7 +172,7 @@ export default function Timeline() {
                       <motion.img
                         src={visual.src}
                         alt={visual.alt}
-                        className={`h-48 w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] sm:h-52 ${visual.position}`}
+                        className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${visual.height || 'h-48 sm:h-52'} ${visual.position}`}
                         referrerPolicy="no-referrer"
                         initial={{ scale: 1.06, opacity: 0.82 }}
                         whileInView={{ scale: 1, opacity: 1 }}
