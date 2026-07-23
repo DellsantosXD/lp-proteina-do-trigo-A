@@ -531,10 +531,10 @@ export default function App() {
 
           <div className="mt-12">
             <ConversionCta
-              eyebrow="Fórmula pura, aplicação simples"
-              title="Leve o protocolo clínico para sua rotina antes da próxima lavagem."
-              description="O Pro Filler foi criado para atuar no ponto crítico da fibra: preenchimento, redensificação e selagem."
-              label="Garantir meu tratamento"
+              eyebrow="Leve essa tecnologia para sua rotina"
+              title="Agora é sua vez de devolver corpo, densidade e resistência aos seus fios."
+              description="A mesma tecnologia desenvolvida para restaurar a estrutura da fibra agora está disponível para você realizar a Reconstrução Molecular em 3 Camadas no conforto da sua casa."
+              label="Quero iniciar meu tratamento"
             />
           </div>
         </div>
