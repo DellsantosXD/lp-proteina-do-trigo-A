@@ -559,13 +559,14 @@ export default function App() {
             </p>
           </div>
 
-          {/* Pro Filler Video Container - Clean Control-Free Viewport */}
+          {/* Pro Filler Video Container - Interactive Video Player */}
           <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[28px] border border-cream/25 bg-black shadow-[0_28px_70px_rgba(0,0,0,0.6)] backdrop-blur-md">
             <div className="aspect-[16/9] w-full relative overflow-hidden rounded-[28px]">
               <iframe
                 src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
-                className="absolute -top-[12%] -left-[2%] w-[104%] h-[124%] rounded-[28px] pointer-events-none"
+                className="absolute -top-[12%] -left-[2%] w-[104%] h-[124%] rounded-[28px] pointer-events-auto"
                 allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
                 title="Demonstração Pro Filler"
               />
               <div className="absolute inset-0 pointer-events-none rounded-[28px] ring-1 ring-white/20" />
