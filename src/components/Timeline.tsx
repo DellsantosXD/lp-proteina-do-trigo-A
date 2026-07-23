@@ -5,33 +5,33 @@ import { TimelineItem } from '../types';
 const items: TimelineItem[] = [
   {
     id: 1,
-    title: 'Dez anos tratando o cabelo das outras',
+    title: 'Durante anos eu acompanhei milhares de histórias de afinamento.',
     description:
-      'Clínica de terapia capilar de prestígio em Brasília. Mais de dez mil pacientes atendidas e três mil e quinhentos profissionais formados. Vi de perto o que funciona de verdade na fisiologia capilar, e o que é apenas maquiagem cosmética temporária.'
+      'Durante mais de uma década acompanhei milhares de mulheres enfrentando afinamento, queda e quebra capilar. Vi tratamentos funcionarem por algumas semanas e depois perderem efeito. Foi ali que comecei a entender que o problema não era apenas tratar os fios, mas restaurar sua estrutura interna.'
   },
   {
     id: 2,
-    title: 'Progressiva atrás de progressiva',
+    title: 'Eu escondia o afinamento em vez de resolver.',
     description:
-      'Não era vaidade, era proteção para tentar disfarçar a fragilidade. No entanto, cada química acumulada deixava a ponta ainda mais fina, frágil e propensa à quebra.'
+      'Não era vaidade. Era a tentativa de disfarçar um cabelo que perdia cada vez mais corpo. Quanto mais química eu fazia para esconder o problema, mais fina e frágil a fibra ficava.'
   },
   {
     id: 3,
-    title: 'As tentativas falhas de cronogramas tradicionais',
+    title: 'Fiz tudo o que diziam que funcionava.',
     description:
-      'Hidratações intensivas, máscaras reconstrutoras importadas e cronogramas seguidos à risca. Mesmo assim, meu cabelo crescia cada vez menos porque a ponta quebrava e esfarelava antes mesmo de passar da linha dos ombros.'
+      'Máscaras caras. Cronogramas rigorosos. Produtos importados. O brilho aparecia por alguns dias, mas o corpo do cabelo nunca voltava. Era um ciclo que sempre recomeçava.'
   },
   {
     id: 4,
-    title: 'O dia que eu nunca esqueci',
+    title: 'No ensaio do nascimento do meu segundo filho olhei aquelas fotos e tomei uma decisão: eu precisava encontrar uma resposta científica para o meu próprio cabelo.',
     description:
-      'No ensaio fotográfico do meu segundo filho recém-nascido, olhei as fotos e decidi nunca publicá-las. Meu cabelo parecia rígido, sem volume, um fiapo murcho. Eu era tricologista respeitada, ensinava sobre afinamento toda semana e não tinha respostas nem para mim mesma.'
+      'Eu não queria apenas esconder o afinamento. Queria entender por que ele acontecia.'
   },
   {
     id: 5,
-    title: 'Fui atrás da verdade científica',
+    title: 'Foi estudando a estrutura da fibra que encontrei a resposta.',
     description:
-      'Estudei a fundo o porquê de tanta reconstrução falhar. Descobri que proteínas de peso molecular uniforme se acumulam apenas na superfície, enrijecendo e quebrando a fibra, em vez de penetrar na porosidade.'
+      'O problema não era falta de proteína. Era a forma como ela chegava ao fio. A maioria permanecia apenas na superfície, sem restaurar as regiões realmente danificadas.'
   },
   {
     id: 6,
