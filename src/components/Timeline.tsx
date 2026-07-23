@@ -35,9 +35,9 @@ const items: TimelineItem[] = [
   },
   {
     id: 6,
-    title: 'Testei em meu próprio fio primeiro',
+    title: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas.',
     description:
-      'Desenvolvi um complexo com proteínas de três pesos moleculares diferentes. Criei um protocolo de 3 camadas: uma que preenchia as microfissuras internas, outra que expandia o diâmetro do córtex e uma terceira que blindava a cutícula.'
+      'Depois de entender por que tantas reconstruções falhavam, desenvolvi um protocolo que atua em sequência. A primeira camada preenche as regiões fragilizadas da fibra, a segunda devolve densidade ao córtex e a terceira blinda a cutícula para preservar o resultado por muito mais tempo.'
   },
   {
     id: 7,
@@ -79,6 +79,12 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
     alt: 'Foi estudando a estrutura da fibra que encontrei a resposta',
     position: 'object-[left_bottom]',
     height: 'h-64 sm:h-80'
+  },
+  6: {
+    src: '/timeline/card-6.jpg',
+    alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
+    position: 'object-[center_35%]',
+    height: 'h-80 sm:h-[400px]'
   }
 };
 
