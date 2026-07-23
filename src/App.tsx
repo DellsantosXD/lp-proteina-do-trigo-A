@@ -231,15 +231,26 @@ export default function App() {
 
           {/* Callout box */}
           <motion.div 
-            className="bg-rose/40 border border-rose rounded-2xl p-6 mb-12 text-center"
+            className="bg-rose/40 border border-rose rounded-2xl p-6 sm:p-8 mb-12"
             initial={{ scale: 0.98, opacity: 0.9 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="font-serif text-lg md:text-xl font-bold text-bordo-deep italic">
-              "Se você se identificou com essa cena, existe um motivo científico. E a sua fibra capilar pode ser reconstruída."
-            </p>
+            <div className="space-y-4">
+              {leadParagraphs.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={`text-base sm:text-lg leading-relaxed ${
+                    index === 0 || index === 8 || index === 10 || index === 12
+                      ? 'font-bold text-bordo-deep'
+                      : 'text-ink-soft'
+                  }`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </motion.div>
 
           <p className="text-base sm:text-lg text-ink font-bold mb-6 text-center md:text-left">
