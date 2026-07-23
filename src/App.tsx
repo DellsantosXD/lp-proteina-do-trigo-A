@@ -559,13 +559,14 @@ export default function App() {
             </p>
           </div>
 
-          {/* Larger Centered Video Player - Controls Cropped Out */}
+          {/* Centered Video Player - HD Crisp Quality & Autoplay Loop */}
           <div className="max-w-4xl sm:max-w-5xl mx-auto relative overflow-hidden rounded-3xl border border-cream/25 bg-black shadow-[0_30px_70px_rgba(0,0,0,0.7)] backdrop-blur-md">
             <div className="aspect-[16/9] w-full relative overflow-hidden">
               <iframe
-                src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
-                className="absolute -top-[14%] -left-[2%] w-[104%] h-[128%] rounded-3xl pointer-events-none scale-[1.05]"
-                allow="autoplay; encrypted-media"
+                src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview?autoplay=1&loop=1"
+                className="absolute -top-[9%] -left-[1%] w-[102%] h-[118%] rounded-3xl pointer-events-none"
+                allow="autoplay; encrypted-media; picture-in-picture"
+                allowFullScreen
                 title="Demonstração Pro Filler"
               />
             </div>
