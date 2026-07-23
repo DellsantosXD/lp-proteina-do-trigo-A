@@ -383,10 +383,10 @@ export default function App() {
           <div className="relative z-20 mt-12">
             <ConversionCta
               tone="dark"
-              eyebrow="Se essa história parece a sua"
-              title="Comece pelo protocolo que reconstrói a fibra antes que ela continue quebrando."
-              description="Você não precisa esperar o cabelo afinar ainda mais para agir. O tratamento foi pensado para recuperar corpo, peso e resistência no comprimento."
-              label="Ver protocolos disponíveis"
+              eyebrow="Reconstrução Molecular em 3 Camadas"
+              title="Agora você entende por que essa tecnologia entrega um resultado diferente."
+              description="A Reconstrução Molecular em 3 Camadas foi desenvolvida para restaurar corpo, densidade e resistência da fibra de forma inteligente, atuando exatamente onde o fio perdeu estrutura."
+              label="Quero iniciar meu protocolo"
             />
           </div>
         </div>
