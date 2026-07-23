@@ -403,7 +403,7 @@ export default function App() {
               O Mecanismo de Ação em 3 Camadas
             </h2>
             <p className="text-ink-soft max-w-xl mx-auto mt-4 text-sm md:text-base leading-relaxed">
-              Diferente de máscaras comuns, o Pro Filler atua de forma cirúrgica na estrutura do fio por meio de atração estática seletiva.
+              Diferente de máscaras comuns, o Pro Filler atua de forma seletiva na estrutura da fibra por meio de atração estática seletiva.
             </p>
           </div>
 
@@ -415,34 +415,34 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  Fio bonito por fora não é fio forte por dentro
+                  O brilho não significa que a fibra foi restaurada.
                 </h3>
                 <p className="text-base text-ink-soft leading-relaxed">
-                  O brilho instantâneo da hidratação comum dura poucas horas porque atua somente na maciez externa. Sem repor massa cortical, o fio continua fino e frágil.
+                  Muitas máscaras hidratam apenas a superfície do fio, criando uma sensação temporária de maciez e brilho. Sem recuperar a estrutura interna da fibra, o cabelo continua afinando, perdendo resistência e quebrando com facilidade.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  Afinidade seletiva por porosidade capilar
+                  A tecnologia reconhece exatamente onde o fio precisa de reparo.
                 </h3>
                 <p className="text-base text-ink-soft leading-relaxed">
-                  Nosso Complexo TriMolecular é inteligente: as cargas magnéticas das microfissuras atraem as proteínas hidrolisadas exatamente onde o fio precisa, sem pesar as áreas sadias.
+                  Nosso Complexo TriMolecular utiliza afinidade seletiva por porosidade para direcionar as proteínas hidrolisadas às regiões mais fragilizadas da fibra, restaurando apenas onde existe perda estrutural, sem sobrecarregar as áreas saudáveis.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  Nem toda reconstrução constrói, algumas apenas empilham
+                  O verdadeiro encorpamento acontece quando a fibra recupera sua densidade.
                 </h3>
                 <p className="text-base text-ink-soft leading-relaxed">
-                  A queratina tradicional é muito grande e só se acumula do lado de fora do cabelo, provocando o efeito rebote de enrijecimento que leva à quebra em fios finos.
+                  O NV Redensifier atua no interior da fibra, aumentando seu diâmetro e devolvendo massa onde o cabelo perdeu estrutura. O resultado são fios mais encorpados, resistentes e com maior sensação de densidade desde as primeiras aplicações.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  Suficiente para encorpar, blindado para durar
+                  Depois de reconstruir, é preciso proteger esse resultado.
                 </h3>
                 <p className="text-base text-ink-soft leading-relaxed">
-                  O NV Redensifier incha e aumenta o diâmetro da fibra. Em seguida, a cera de farelo de arroz envelopa a cutícula, sustentando o preenchimento por lavagens seguidas.
+                  Após preencher e redensificar a fibra, a terceira camada cria uma blindagem cuticular que ajuda a manter os ativos protegidos no interior do fio por mais tempo, preservando corpo, resistência e durabilidade da reconstrução.
                 </p>
               </div>
             </div>
