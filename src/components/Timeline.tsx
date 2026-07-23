@@ -41,9 +41,9 @@ const items: TimelineItem[] = [
   },
   {
     id: 7,
-    title: 'O encorpamento que virou libertação',
+    title: 'Quando vi que funcionava, decidi levar essa tecnologia para milhares de mulheres.',
     description:
-      'Pela primeira vez em anos vi minhas pontas preenchidas e com peso. Meu cabelo cresceu longo, forte e encorpado até a cintura. Percebi que o afinamento não era um destino definitivo. Levei a fórmula para minhas pacientes da clínica e o sucesso foi absoluto.'
+      'Pela primeira vez em muitos anos, vi meu cabelo recuperar corpo, densidade e movimento. Quando confirmei que aquela tecnologia entregava resultados de forma consistente, percebi que ela não poderia ficar restrita à clínica. Foi assim que nasceu o projeto que deu origem à primeira marca brasileira dedicada exclusivamente à terapia capilar em casa, permitindo que milhares de mulheres restaurassem a fibra capilar com a mesma tecnologia, no conforto de casa.'
   }
 ];
 
@@ -84,6 +84,12 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
     src: '/timeline/card-6.jpg',
     alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
     position: 'object-[center_35%]',
+    height: 'h-80 sm:h-[400px]'
+  },
+  7: {
+    src: '/timeline/card-7.jpg',
+    alt: 'Quando vi que funcionava, decidi levar essa tecnologia para milhares de mulheres',
+    position: 'object-[center_20%]',
     height: 'h-80 sm:h-[400px]'
   }
 };
