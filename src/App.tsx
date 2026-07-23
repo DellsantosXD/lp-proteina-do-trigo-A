@@ -559,21 +559,20 @@ export default function App() {
             </p>
           </div>
 
-          {/* Centered Video Player */}
-          <div className="max-w-3xl mx-auto relative overflow-hidden rounded-3xl border border-cream/20 bg-black/50 shadow-[0_25px_60px_rgba(0,0,0,0.6)] backdrop-blur-md">
-            <div className="aspect-video w-full relative">
+          {/* Larger Centered Video Player - Controls Cropped Out */}
+          <div className="max-w-4xl sm:max-w-5xl mx-auto relative overflow-hidden rounded-3xl border border-cream/25 bg-black shadow-[0_30px_70px_rgba(0,0,0,0.7)] backdrop-blur-md">
+            <div className="aspect-[16/9] w-full relative overflow-hidden">
               <iframe
                 src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
-                className="absolute inset-0 w-full h-full rounded-3xl"
+                className="absolute -top-[14%] -left-[2%] w-[104%] h-[128%] rounded-3xl pointer-events-none scale-[1.05]"
                 allow="autoplay; encrypted-media"
-                allowFullScreen
                 title="Demonstração Pro Filler"
               />
             </div>
           </div>
 
           {/* Premium Benefits Grid below Video */}
-          <div className="max-w-3xl mx-auto mt-10 bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-center">
+          <div className="max-w-4xl sm:max-w-5xl mx-auto mt-10 bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-center">
             <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-cream mb-6">
               Mais do que uma reconstrução.
             </h3>
@@ -586,7 +585,7 @@ export default function App() {
                 'Sem pesar os fios',
                 'Uso em casa'
               ].map((benefit, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-cream/5 border border-cream/10">
+                <div key={idx} className="flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl bg-cream/5 border border-cream/10">
                   <div className="w-8 h-8 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
                     <CheckCircle2 className="w-4 h-4 text-rose" />
                   </div>
