@@ -453,33 +453,22 @@ export default function App() {
               </p>
             </div>
 
-            <div className="text-center pt-8 pb-4">
-              <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-3">
-                AGORA QUE VOCÊ ENTENDE O MECANISMO
-              </span>
-              <h2 className="text-2xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight max-w-3xl mx-auto mb-4">
-                Toda essa tecnologia só é possível porque cada ativo desempenha uma função específica.
-              </h2>
-              <p className="text-base text-ink-soft max-w-2xl mx-auto leading-relaxed">
-                A Reconstrução Molecular em 3 Camadas não depende de um único ingrediente. Ela combina três tecnologias que trabalham em sequência para preencher, devolver densidade e proteger a fibra capilar.
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* PRODUTO SECTION */}
+      {/* PRODUTO SECTION - 3 ATIVOS */}
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="produto">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-10">
             <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-3">
-              A TECNOLOGIA QUE DÁ VIDA À RECONSTRUÇÃO MOLECULAR
+              AGORA QUE VOCÊ ENTENDE O MECANISMO
             </span>
-            <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
-              Os três ativos que tornam a Reconstrução Molecular em 3 Camadas possível.
+            <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight max-w-3xl mx-auto">
+              Toda essa tecnologia só é possível porque cada ativo desempenha uma função específica.
             </h2>
-            <p className="text-base text-ink-soft max-w-xl mx-auto mt-4 leading-relaxed">
-              Cada ativo foi selecionado para cumprir uma função específica dentro da fibra. Juntos, eles atuam em sequência para preencher, devolver densidade e proteger o resultado por muito mais tempo.
+            <p className="text-base text-ink-soft max-w-2xl mx-auto mt-4 leading-relaxed">
+              A Reconstrução Molecular em 3 Camadas não depende de um único ingrediente. Ela combina três tecnologias que trabalham em sequência para preencher, devolver densidade e proteger a fibra capilar.
             </p>
           </div>
 
