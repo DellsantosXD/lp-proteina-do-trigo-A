@@ -565,7 +565,7 @@ export default function App() {
               <iframe
                 src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
                 className="absolute inset-0 w-full h-full rounded-3xl"
-                allow="autoplay; encrypted-media; picture-in-picture"
+                allow="encrypted-media; picture-in-picture"
                 allowFullScreen
                 title="Demonstração Pro Filler"
               />
