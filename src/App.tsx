@@ -209,49 +209,93 @@ export default function App() {
       {/* LEAD SECTION - PROBLEM OUTLINE */}
       <section className="py-20 px-6 border-t border-tan-deep/25 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="flex items-center mb-6 select-none justify-center md:justify-start">
-            <span className="text-xl sm:text-2xl font-serif text-bordo font-black">O Diagnóstico Clínico</span>
+          <div className="text-center md:text-left mb-10">
+            <span className="inline-block px-3 py-1 bg-bordo/10 text-bordo font-mono text-xs font-bold uppercase tracking-widest rounded-full mb-3">
+              Análise Especializada
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-serif text-bordo font-black tracking-tight">
+              O Diagnóstico Clínico
+            </h2>
           </div>
 
-          {/* Static Lead paragraphs (Teste A) */}
-          <div className="prose prose-ink max-w-none mb-10">
+          {/* Structured Storytelling Cards */}
+          <div className="space-y-6 mb-12">
+            {/* Card 1: Memória & Identificação */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-cream/30 border border-tan-deep/20 rounded-2xl p-6 sm:p-8"
             >
-              {leadParagraphs.map((paragraph, index) => (
-                <p key={index} className="text-base sm:text-lg text-ink-soft leading-relaxed">
-                  {paragraph}
+              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed mb-4">
+                {leadParagraphs[0]}
+              </p>
+              <p className="text-sm sm:text-base text-ink-soft leading-relaxed mb-4">
+                {leadParagraphs[1]}
+              </p>
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  ✨ {leadParagraphs[2]}
+                </span>
+                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  ✨ {leadParagraphs[3]}
+                </span>
+                <span className="bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
+                  ✨ {leadParagraphs[4]}
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Card 2: A Realidade Atual */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="bg-gradient-to-br from-rose/30 via-rose/15 to-transparent border border-rose/60 rounded-2xl p-6 sm:p-8 relative overflow-hidden"
+            >
+              <div className="relative z-10 space-y-3">
+                <p className="text-base sm:text-lg text-bordo-deep font-bold leading-relaxed">
+                  {leadParagraphs[5]}
                 </p>
-              ))}
+                <p className="text-sm sm:text-base text-ink-soft leading-relaxed">
+                  {leadParagraphs[6]}
+                </p>
+                <p className="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+                  {leadParagraphs[7]}
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Card 3: A Jornada da Tricologista */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-bordo text-cream rounded-2xl p-6 sm:p-8 shadow-lg relative"
+            >
+              <div className="mb-4 flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-cream/20 flex items-center justify-center font-serif text-lg font-bold text-cream">
+                  🧬
+                </div>
+                <div>
+                  <span className="block font-serif text-lg font-bold text-cream">{leadParagraphs[8]}</span>
+                  <span className="text-xs text-cream/70 font-mono uppercase tracking-wider">10+ Anos de Prática Clínica</span>
+                </div>
+              </div>
+              <p className="text-sm sm:text-base text-cream/90 leading-relaxed mb-4">
+                {leadParagraphs[9]}
+              </p>
+              <p className="text-sm sm:text-base text-cream/90 leading-relaxed font-semibold mb-2">
+                {leadParagraphs[10]} {leadParagraphs[11]}
+              </p>
+              <p className="text-sm sm:text-base text-rose font-semibold leading-relaxed">
+                {leadParagraphs[12]}
+              </p>
             </motion.div>
           </div>
-
-          {/* Callout box */}
-          <motion.div 
-            className="bg-rose/40 border border-rose rounded-2xl p-6 sm:p-8 mb-12"
-            initial={{ scale: 0.98, opacity: 0.9 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <div className="space-y-4">
-              {leadParagraphs.map((paragraph, index) => (
-                <p
-                  key={index}
-                  className={`text-base sm:text-lg leading-relaxed ${
-                    index === 0 || index === 8 || index === 10 || index === 12
-                      ? 'font-bold text-bordo-deep'
-                      : 'text-ink-soft'
-                  }`}
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </div>
-          </motion.div>
 
           <p className="text-base sm:text-lg text-ink font-bold mb-6 text-center md:text-left">
             A maioria das fórmulas de reconstrução falha por dois motivos clássicos:
