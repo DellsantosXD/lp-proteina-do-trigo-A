@@ -546,73 +546,59 @@ export default function App() {
       {/* TECNOLOGIA EM SUA FORMA MAIS PURA SECTION */}
       <section className="relative overflow-hidden py-24 px-6 bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] border-t border-cream/15" id="pro-filler">
         <div className="absolute inset-0 bg-[linear-gradient(35deg,transparent_0%,rgba(255,255,255,0.06)_52%,transparent_74%)] pointer-events-none" />
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-14">
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-12">
             <span className="text-xs font-mono text-rose uppercase font-bold tracking-widest block mb-3">
               A TECNOLOGIA EM SUA FORMA MAIS PURA
             </span>
-            <h2 className="text-3xl sm:text-5xl font-serif text-cream font-black tracking-tight leading-tight max-w-4xl mx-auto">
-              Conheça o Pro Filler: a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
+            <h2 className="text-3xl sm:text-5xl font-serif text-cream font-black tracking-tight leading-tight">
+              Conheça o Pro Filler:
             </h2>
+            <p className="text-xl sm:text-2xl font-serif text-cream/90 italic font-semibold mt-2 max-w-3xl mx-auto leading-relaxed">
+              a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
+            </p>
           </div>
 
-          {/* Premium Grid: Video Player + Product Showcase */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left: Video Player */}
-            <div className="lg:col-span-6 relative overflow-hidden rounded-3xl border border-cream/20 bg-black/40 shadow-[0_20px_50px_rgba(0,0,0,0.5)] backdrop-blur-md">
-              <div className="aspect-[9/16] sm:aspect-video w-full relative">
-                <iframe
-                  src="https://drive.google.com/file/d/1gjkK4oI0fFZvJyzm5OV4P9LOjsi3GBuM/preview"
-                  className="absolute inset-0 w-full h-full rounded-3xl"
-                  allow="autoplay; encrypted-media"
-                  allowFullScreen
-                  title="Demonstração em Vídeo Pro Filler"
-                />
-              </div>
-            </div>
-
-            {/* Right: Product Pot Image + Premium Benefits List */}
-            <div className="lg:col-span-6 space-y-6">
-              {/* Product Pot Image */}
-              <div className="relative overflow-hidden rounded-3xl border border-cream/20 bg-gradient-to-br from-cream/10 to-black/30 p-3 shadow-[0_20px_50px_rgba(0,0,0,0.4)]">
-                <img
-                  src="/products/pro-filler-pot.jpg"
-                  alt="Proteína do Trigo Pro Filler - Pote com textura da fórmula"
-                  className="w-full h-64 sm:h-72 object-cover rounded-2xl"
-                />
-              </div>
-
-              {/* Frase e Lista Premium */}
-              <div className="bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md space-y-6">
-                <div>
-                  <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-cream">
-                    Mais do que uma reconstrução.
-                  </h3>
-                </div>
-
-                <div className="space-y-3">
-                  {[
-                    'Preenche a fibra',
-                    'Devolve densidade',
-                    'Blinda o resultado',
-                    'Sem pesar os fios',
-                    'Uso em casa'
-                  ].map((benefit, idx) => (
-                    <div key={idx} className="flex items-center gap-3">
-                      <div className="w-6 h-6 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
-                        <CheckCircle2 className="w-4 h-4 text-rose" />
-                      </div>
-                      <span className="text-base font-sans font-medium text-cream/95">
-                        {benefit}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+          {/* Centered Video Player */}
+          <div className="max-w-3xl mx-auto relative overflow-hidden rounded-3xl border border-cream/20 bg-black/50 shadow-[0_25px_60px_rgba(0,0,0,0.6)] backdrop-blur-md">
+            <div className="aspect-video w-full relative">
+              <iframe
+                src="https://drive.google.com/file/d/19w8IgBnAPW0oy9MWyN3eQjoKEfiP8QhZ/preview"
+                className="absolute inset-0 w-full h-full rounded-3xl"
+                allow="autoplay; encrypted-media"
+                allowFullScreen
+                title="Demonstração Pro Filler"
+              />
             </div>
           </div>
 
-          <div className="mt-14">
+          {/* Premium Benefits Grid below Video */}
+          <div className="max-w-3xl mx-auto mt-10 bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-center">
+            <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-cream mb-6">
+              Mais do que uma reconstrução.
+            </h3>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-center items-center">
+              {[
+                'Preenche a fibra',
+                'Devolve densidade',
+                'Blinda o resultado',
+                'Sem pesar os fios',
+                'Uso em casa'
+              ].map((benefit, idx) => (
+                <div key={idx} className="flex flex-col items-center gap-2 p-3 rounded-2xl bg-cream/5 border border-cream/10">
+                  <div className="w-8 h-8 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
+                    <CheckCircle2 className="w-4 h-4 text-rose" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-sans font-semibold text-cream/95 leading-tight">
+                    {benefit}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-14 max-w-3xl mx-auto">
             <ConversionCta
               tone="dark"
               eyebrow="Garantia de Qualidade & Tecnologia"
