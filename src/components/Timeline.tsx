@@ -51,14 +51,29 @@ const labels = ['Autoridade', 'Dano', 'Frustração', 'Virada', 'Pesquisa', 'Pro
 
 const visuals: Record<number, { src: string; alt: string; position: string }> = {
   1: {
-    src: 'https://iili.io/ChNqUnn.jpg',
-    alt: 'Análise da fibra na clínica',
-    position: 'object-[center_15%]'
+    src: '/timeline/card-1.jpg',
+    alt: 'Durante anos eu acompanhei milhares de histórias de afinamento',
+    position: 'object-[center_20%]'
   },
   2: {
-    src: 'https://iili.io/ChNqr6G.jpg',
-    alt: 'Progressiva capilar',
-    position: 'object-[center_35%]'
+    src: '/timeline/card-2.jpg',
+    alt: 'Eu escondia o afinamento em vez de resolver',
+    position: 'object-[center_25%]'
+  },
+  3: {
+    src: '/timeline/card-3.jpg',
+    alt: 'Fiz tudo o que diziam que funcionava',
+    position: 'object-[center_30%]'
+  },
+  4: {
+    src: '/timeline/card-4.jpg',
+    alt: 'No ensaio do nascimento do meu segundo filho',
+    position: 'object-[center_25%]'
+  },
+  5: {
+    src: '/timeline/card-5.jpg',
+    alt: 'Foi estudando a estrutura da fibra que encontrei a resposta',
+    position: 'object-[center_20%]'
   }
 };
 
