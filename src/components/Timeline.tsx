@@ -132,17 +132,10 @@ export default function Timeline() {
                     transition={{ duration: 1.2, delay: index * 0.08 + 0.25, ease: 'easeInOut' }}
                   />
 
-                  <div className="mb-4 flex items-center justify-between gap-3">
-                    <div className="flex min-w-0 items-center gap-2">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-bordo font-sans text-[11px] font-extrabold text-cream shadow-[0_8px_18px_rgba(94,16,23,0.18)] sm:hidden">
-                        {String(item.id).padStart(2, '0')}
-                      </span>
-                      <span className="truncate rounded-full bg-bordo/10 px-3 py-1 text-[10px] font-sans font-black uppercase tracking-widest text-bordo">
-                        {labels[index]}
-                      </span>
-                    </div>
-                    <span className="font-sans text-[11px] font-bold text-bordo/55">
-                      Etapa {item.id}
+                  {/* Mobile step badge */}
+                  <div className="mb-3 sm:hidden">
+                    <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-bordo font-sans text-[10px] font-extrabold text-cream">
+                      {String(item.id).padStart(2, '0')}
                     </span>
                   </div>
 
