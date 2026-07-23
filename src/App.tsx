@@ -235,16 +235,31 @@ export default function App() {
               <p className="text-sm sm:text-base text-ink-soft leading-relaxed mb-4">
                 {leadParagraphs[1]}
               </p>
-              <div className="flex flex-wrap gap-2.5 pt-2">
-                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[2]}
-                </span>
-                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[3]}
-                </span>
-                <span className="inline-flex items-center gap-1.5 bg-white border border-tan-deep/20 text-bordo text-xs font-medium px-3.5 py-1.5 rounded-full shadow-xs">
-                  <Sparkles className="w-3.5 h-3.5 text-bordo/80" /> {leadParagraphs[4]}
-                </span>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
+                <div className="flex items-center gap-3 bg-white border border-bordo/30 px-4 py-3.5 rounded-xl shadow-[0_4px_14px_rgba(78,20,28,0.08)] hover:border-bordo/60 transition-all duration-300">
+                  <div className="w-8 h-8 rounded-full bg-bordo/10 border border-bordo/20 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4 text-bordo" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-sans font-bold text-bordo leading-snug">
+                    {leadParagraphs[2]}
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 bg-white border border-bordo/30 px-4 py-3.5 rounded-xl shadow-[0_4px_14px_rgba(78,20,28,0.08)] hover:border-bordo/60 transition-all duration-300">
+                  <div className="w-8 h-8 rounded-full bg-bordo/10 border border-bordo/20 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4 text-bordo" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-sans font-bold text-bordo leading-snug">
+                    {leadParagraphs[3]}
+                  </span>
+                </div>
+                <div className="flex items-center gap-3 bg-white border border-bordo/30 px-4 py-3.5 rounded-xl shadow-[0_4px_14px_rgba(78,20,28,0.08)] hover:border-bordo/60 transition-all duration-300">
+                  <div className="w-8 h-8 rounded-full bg-bordo/10 border border-bordo/20 flex items-center justify-center shrink-0">
+                    <Sparkles className="w-4 h-4 text-bordo" />
+                  </div>
+                  <span className="text-xs sm:text-sm font-sans font-bold text-bordo leading-snug">
+                    {leadParagraphs[4]}
+                  </span>
+                </div>
               </div>
             </motion.div>
 
