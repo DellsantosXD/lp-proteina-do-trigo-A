@@ -14,10 +14,19 @@ const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o mo
 
 // Lead paragraphs of Teste A
 const leadParagraphs = [
-  'Você já recorreu a aplique ou lace pra disfarçar o quanto seu cabelo afinou?',
-  'Lembra do seu rabo de cavalo de antes, aquele que enchia a mão inteira? Hoje ele vira um fiapo. Solto, dá pra ver a orelha entre os fios. O coque não enche mais. Fica pequeno, murcho, sem volume nenhum.',
-  'Sou tricologista. Dez anos de clínica em Brasília, mais de dez mil pacientes, mais de três mil e quinhentos profissionais formados.',
-  'E mesmo assim, por anos, não conseguia resolver o meu próprio afinamento. O que poucas das minhas pacientes sabem é que essa história começa comigo. Antes de resolver o afinamento de qualquer uma delas, eu precisei resolver o meu primeiro.'
+  'Você já recorreu a um aplique ou até mesmo a uma peruca para esconder o quanto o seu cabelo afinou?',
+  'Você se lembra de como era o seu cabelo antes?',
+  'O rabo de cavalo era cheio.',
+  'O coque tinha volume.',
+  'Os fios eram encorpados e brilhantes.',
+  'Hoje, quando você prende o cabelo, ele vira um fiapo.',
+  'As pontas parecem cada vez mais finas.',
+  'E o volume que antes fazia parte da sua identidade parece desaparecer um pouco mais a cada ano.',
+  'Sou tricologista.',
+  'Foram mais de 10 anos dedicados exclusivamente à terapia capilar, milhares de mulheres acompanhadas ao longo dessa jornada e mais de 3.500 profissionais formados.',
+  'Mas existe algo que poucas pessoas sabem.',
+  'Antes de ajudar milhares de mulheres a recuperarem cabelos visivelmente mais encorpados, eu precisei encontrar uma solução para o meu próprio cabelo.',
+  'Foi justamente dessa busca que nasceu a tecnologia que você vai conhecer nesta página.'
 ];
 
 type ConversionCtaProps = {
