@@ -39,6 +39,30 @@ const slides: SlideItem[] = [
     src: '/results/resultado-4.jpg',
     alt: 'Relato WhatsApp 2',
   },
+  {
+    id: 'img-5',
+    type: 'image',
+    src: '/results/resultado-5.jpg',
+    alt: 'Relato WhatsApp 3 - Caixa Unboxing',
+  },
+  {
+    id: 'img-6',
+    type: 'image',
+    src: '/results/resultado-6.jpg',
+    alt: 'Relato WhatsApp 4 - Experiência do Cliente',
+  },
+  {
+    id: 'img-7',
+    type: 'image',
+    src: '/results/resultado-7.jpg',
+    alt: 'Relato WhatsApp 5 - Madeixas Lindas',
+  },
+  {
+    id: 'img-8',
+    type: 'image',
+    src: '/results/resultado-8.jpg',
+    alt: 'Relato WhatsApp 6 - Marli Medeiros Avaliação Tricologista',
+  },
 ];
 
 export const TestimonialsCarousel: React.FC = () => {
