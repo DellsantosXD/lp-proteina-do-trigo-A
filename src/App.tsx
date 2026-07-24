@@ -12,6 +12,7 @@ import VideoPlayer from './components/VideoPlayer';
 import { TestimonialsCarousel } from './components/TestimonialsCarousel';
 import { TrichologistsSection } from './components/TrichologistsSection';
 import ConversionCta from './components/ConversionCta';
+import TreatmentExperienceSection from './components/TreatmentExperienceSection';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -695,6 +696,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* EXPERIÊNCIA DO SEU PROTOCOLO SECTION */}
+      <TreatmentExperienceSection />
 
       {/* DECISION CROSSROADS SECTION */}
       <section className="py-20 px-6 bg-tan/15 border-t border-tan-deep/20">
