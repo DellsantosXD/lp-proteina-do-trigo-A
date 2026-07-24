@@ -704,43 +704,84 @@ export default function App() {
       {/* EXPERIÊNCIA DO SEU PROTOCOLO SECTION */}
       <TreatmentExperienceSection />
 
-      {/* DECISION CROSSROADS SECTION */}
-      <section className="py-20 px-6 bg-tan/15 border-t border-tan-deep/20">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-2">
-              A Decisão Inteligente
+      {/* DECISION CROSSROADS SECTION - VIBRANT HIGH IMPACT */}
+      <section className="py-24 px-6 bg-gradient-to-b from-[#2D060C] via-[#4A0E19] to-[#2D060C] text-cream border-t border-cream/15 relative overflow-hidden" id="decisao">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_0%,rgba(255,255,255,0.04)_50%,transparent_100%)] pointer-events-none" />
+        
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <span className="text-xs font-mono text-rose uppercase font-bold tracking-[0.25em] block mb-3">
+              O MOMENTO DA DECISÃO
             </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-bordo font-black">
-              Por que iniciar o preenchimento agora?
+            <h2 className="text-3xl sm:text-5xl font-serif text-cream font-black tracking-tight leading-tight">
+              Quanto antes você começar, maior a chance de preservar a estrutura do fio.
             </h2>
+            <p className="text-sm sm:text-base font-sans text-cream/80 max-w-xl mx-auto mt-4 leading-relaxed font-normal">
+              O tempo joga a favor ou contra a densidade do seu cabelo. Veja o que muda dependendo do seu próximo passo.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-white border border-tan-deep/30 rounded-2xl p-6 md:p-8">
-              <span className="text-xs font-mono text-verde font-bold block mb-3 uppercase tracking-wider">
-                ● Se você decidir tratar hoje
-              </span>
-              <p className="text-sm md:text-base text-ink-soft leading-relaxed">
-                Você interrompe de imediato o ciclo de enfraquecimento e quebra. Em poucas lavagens, as camadas se sobrepõem e as fibras preenchem, garantindo pontas pesadas e resistentes para crescer com saúde.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {/* Card 1: Se você começar agora */}
+            <div className="bg-emerald-950/40 border border-emerald-500/40 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-[0_20px_50px_rgba(16,185,129,0.15)] flex flex-col justify-between hover:border-emerald-400/70 transition-all duration-300">
+              <div>
+                <div className="flex items-center gap-2.5 mb-6">
+                  <span className="w-3 h-3 rounded-full bg-emerald-400 animate-ping" />
+                  <h3 className="font-serif font-black text-xl sm:text-2xl text-emerald-300">
+                    Se você começar agora
+                  </h3>
+                </div>
+
+                <ul className="space-y-4">
+                  {[
+                    'interrompe o ciclo contínuo de afinamento',
+                    'começa a devolver corpo à fibra',
+                    'recupera densidade progressivamente',
+                    'protege os fios das próximas agressões',
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-cream/95 font-sans font-medium text-sm sm:text-base">
+                      <div className="w-6 h-6 rounded-full bg-emerald-500/25 border border-emerald-400/50 flex items-center justify-center shrink-0 mt-0.5 text-emerald-300">
+                        <CheckCircle2 className="w-4 h-4" />
+                      </div>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="mt-8 pt-5 border-t border-emerald-500/20 text-xs font-mono uppercase tracking-wider text-emerald-300/90 font-bold flex items-center gap-2">
+                <span>✓ Proteção ativa da fibra</span>
+              </div>
             </div>
-            <div className="bg-white border border-tan-deep/30 rounded-2xl p-6 md:p-8">
-              <span className="text-xs font-mono text-bordo font-bold block mb-3 uppercase tracking-wider">
-                ● Se você adiar a decisão
-              </span>
-              <p className="text-sm md:text-base text-ink-soft leading-relaxed">
-                O córtex continua perdendo massa estrutural a cada banho quente, secador ou escovação. O cabelo afina cada vez mais, quebrando antes mesmo de passar dos ombros, mantendo você presa ao ciclo do coque murcho.
-              </p>
+
+            {/* Card 2: Se continuar adiando */}
+            <div className="bg-rose-950/30 border border-rose-500/30 rounded-3xl p-6 sm:p-8 backdrop-blur-md shadow-[0_20px_50px_rgba(244,63,94,0.1)] flex flex-col justify-between hover:border-rose-400/60 transition-all duration-300">
+              <div>
+                <div className="flex items-center gap-2.5 mb-6">
+                  <span className="w-3 h-3 rounded-full bg-rose-500" />
+                  <h3 className="font-serif font-bold text-xl sm:text-2xl text-rose-300">
+                    Se continuar adiando
+                  </h3>
+                </div>
+
+                <p className="text-sm sm:text-base font-sans text-cream/85 leading-relaxed font-normal">
+                  A fibra continua perdendo massa estrutural a cada lavagem, calor e processos químicos. Quanto mais afinado o fio fica, maior o esforço necessário para recuperar sua estrutura.
+                </p>
+              </div>
+
+              <div className="mt-8 pt-5 border-t border-rose-500/20 text-xs font-mono uppercase tracking-wider text-rose-300/80 font-semibold flex items-center gap-2">
+                <span>⚠️ Perda progressiva de massa</span>
+              </div>
             </div>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-14 max-w-2xl mx-auto">
             <ConversionCta
+              tone="dark"
               eyebrow="Não deixe a ponta decidir por você"
               title="Trate enquanto ainda há fibra para recuperar."
               description="Quanto antes o preenchimento começa, menor a chance de continuar perdendo comprimento por quebra."
-              label="Voltar para escolher protocolo"
+              label="Escolher meu protocolo agora"
             />
           </div>
         </div>
