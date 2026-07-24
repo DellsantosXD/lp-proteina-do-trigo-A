@@ -9,6 +9,7 @@ import FaqAccordion from './components/FaqAccordion';
 import SocialProof from './components/SocialProof';
 import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
+import { VideoTestimonialCard } from './components/VideoTestimonialCard';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -779,6 +780,17 @@ export default function App() {
                 </p>
               </div>
             </div>
+          </div>
+
+          {/* Video Testimonial Card with Auto-play on Scroll and Audio Toggle */}
+          <div className="mt-12">
+            <VideoTestimonialCard
+              videoSrc="/videos/depoimento-video-1.mp4"
+              badge="DEPOIMENTO EM VÍDEO COMPLETO"
+              title="Recuperação Estrutural na Prática"
+              subtitle="Relato em Vídeo de Paciente Sweet Therapy"
+              quote="Acompanhe o depoimento em vídeo sobre a restauração da fibra capilar e a volta do corpo e brilho dos fios."
+            />
           </div>
         </div>
       </section>
