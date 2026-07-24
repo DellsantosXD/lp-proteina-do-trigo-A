@@ -45,7 +45,7 @@ export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const carouselRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -55,7 +55,6 @@ export const TestimonialsCarousel: React.FC = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
-  // Video Autoplay Observer on active slide
   useEffect(() => {
     const videoElem = videoRef.current;
     if (slides[currentIndex].type === 'video' && videoElem) {
@@ -72,8 +71,8 @@ export const TestimonialsCarousel: React.FC = () => {
         { threshold: 0.3 }
       );
 
-      if (carouselRef.current) {
-        observer.observe(carouselRef.current);
+      if (containerRef.current) {
+        observer.observe(containerRef.current);
       }
 
       return () => observer.disconnect();
@@ -89,56 +88,80 @@ export const TestimonialsCarousel: React.FC = () => {
   };
 
   return (
-    <div ref={carouselRef} className="max-w-3xl mx-auto relative px-4 sm:px-12 py-4">
-      {/* Carousel Main Stage Container */}
-      <div className="relative overflow-hidden rounded-3xl bg-white border border-tan-deep/25 shadow-xl transition-all duration-300">
-        <div className="w-full flex items-center justify-center p-2 sm:p-4 bg-neutral-900/5 min-h-[420px] sm:min-h-[560px] max-h-[75vh]">
-          {slides[currentIndex].type === 'video' ? (
-            <div className="relative w-full h-full max-h-[70vh] flex items-center justify-center overflow-hidden rounded-2xl bg-black">
-              <video
-                ref={videoRef}
-                src={slides[currentIndex].src}
-                loop
-                muted={isMuted}
-                playsInline
-                autoPlay
-                className="w-full h-full object-contain rounded-2xl max-h-[70vh]"
-              />
+    <div ref={containerRef} className="w-full relative py-6 overflow-hidden">
+      {/* Peeking Carousel Slider Stage */}
+      <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center min-h-[460px] sm:min-h-[620px]">
+        <div
+          className="flex transition-transform duration-500 ease-out items-center"
+          style={{
+            transform: `translateX(calc(50% - ${(currentIndex * 340) + 170}px))`,
+          }}
+        >
+          {slides.map((slide, idx) => {
+            const isActive = currentIndex === idx;
 
-              {/* Floating Mute/Unmute Audio Toggle Button */}
-              <button
-                onClick={toggleMute}
-                className="absolute bottom-4 right-4 z-20 flex items-center gap-2 bg-bordo/90 hover:bg-bordo text-cream border border-cream/30 px-3.5 py-2 rounded-full backdrop-blur-md text-xs font-sans font-semibold shadow-lg transition-all active:scale-95"
-                aria-label={isMuted ? 'Ativar Áudio' : 'Silenciar Áudio'}
+            return (
+              <div
+                key={slide.id}
+                onClick={() => setCurrentIndex(idx)}
+                className={`shrink-0 w-[290px] sm:w-[340px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden bg-white border shadow-lg ${
+                  isActive
+                    ? 'scale-100 opacity-100 z-20 border-bordo/40 ring-4 ring-bordo/10 shadow-2xl'
+                    : 'scale-90 opacity-55 z-10 border-tan-deep/20 hover:opacity-85'
+                }`}
               >
-                {isMuted ? (
-                  <>
-                    <VolumeX className="w-4 h-4 text-cream/70" />
-                    <span>Ativar Som</span>
-                  </>
-                ) : (
-                  <>
-                    <Volume2 className="w-4 h-4 text-rose animate-pulse" />
-                    <span>Som Ativado</span>
-                  </>
-                )}
-              </button>
-            </div>
-          ) : (
-            <div className="w-full h-full max-h-[70vh] flex items-center justify-center overflow-hidden rounded-2xl">
-              <img
-                src={slides[currentIndex].src}
-                alt={slides[currentIndex].alt}
-                className="w-full h-auto max-h-[70vh] object-contain rounded-2xl shadow-sm"
-              />
-            </div>
-          )}
+                <div className="relative w-full h-[450px] sm:h-[580px] bg-neutral-950 flex items-center justify-center p-2">
+                  {slide.type === 'video' ? (
+                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl">
+                      <video
+                        ref={isActive ? videoRef : null}
+                        src={slide.src}
+                        loop
+                        muted={isMuted}
+                        playsInline
+                        autoPlay={isActive}
+                        className="w-full h-full object-contain rounded-2xl"
+                      />
+
+                      {isActive && (
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleMute();
+                          }}
+                          className="absolute bottom-4 right-4 z-30 flex items-center gap-2 bg-bordo/90 hover:bg-bordo text-cream border border-cream/30 px-3.5 py-2 rounded-full backdrop-blur-md text-xs font-sans font-semibold shadow-lg transition-all active:scale-95"
+                        >
+                          {isMuted ? (
+                            <>
+                              <VolumeX className="w-4 h-4 text-cream/70" />
+                              <span>Ativar Som</span>
+                            </>
+                          ) : (
+                            <>
+                              <Volume2 className="w-4 h-4 text-rose animate-pulse" />
+                              <span>Som Ativado</span>
+                            </>
+                          )}
+                        </button>
+                      )}
+                    </div>
+                  ) : (
+                    <img
+                      src={slide.src}
+                      alt={slide.alt}
+                      className="w-full h-full object-contain rounded-2xl"
+                    />
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Carousel Navigation Arrow Buttons */}
+        {/* Floating Navigation Controls */}
         <button
           onClick={prevSlide}
-          className="absolute left-3 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-bordo border border-tan-deep/30 flex items-center justify-center shadow-lg backdrop-blur-md transition-all hover:scale-105 active:scale-95"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-bordo border border-tan-deep/30 flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110 active:scale-95"
           aria-label="Anterior"
         >
           <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
@@ -146,15 +169,15 @@ export const TestimonialsCarousel: React.FC = () => {
 
         <button
           onClick={nextSlide}
-          className="absolute right-3 top-1/2 -translate-y-1/2 z-30 w-11 h-11 rounded-full bg-white/90 hover:bg-white text-bordo border border-tan-deep/30 flex items-center justify-center shadow-lg backdrop-blur-md transition-all hover:scale-105 active:scale-95"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-bordo border border-tan-deep/30 flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110 active:scale-95"
           aria-label="Próximo"
         >
           <ChevronRight className="w-6 h-6 stroke-[2.5]" />
         </button>
       </div>
 
-      {/* Carousel Pagination Dots */}
-      <div className="flex items-center justify-center gap-2 mt-6">
+      {/* Pagination Dots */}
+      <div className="flex items-center justify-center gap-2.5 mt-6">
         {slides.map((_, idx) => (
           <button
             key={idx}
