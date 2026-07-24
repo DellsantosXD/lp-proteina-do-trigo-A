@@ -364,34 +364,34 @@ export default function App() {
           <div className="mt-16 space-y-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  O brilho não significa que a fibra foi restaurada.
+                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                  O BRILHO NÃO SIGNIFICA QUE A FIBRA FOI RESTAURADA.
                 </h3>
-                <p className="text-base text-ink-soft leading-relaxed">
+                <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
                   Muitas máscaras hidratam apenas a superfície do fio, criando uma sensação temporária de maciez e brilho. Sem recuperar a estrutura interna da fibra, o cabelo continua afinando, perdendo resistência e quebrando com facilidade.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  A tecnologia reconhece exatamente onde o fio precisa de reparo.
+                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                  A TECNOLOGIA RECONHECE EXATAMENTE ONDE O FIO PRECISA DE REPARO.
                 </h3>
-                <p className="text-base text-ink-soft leading-relaxed">
+                <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
                   Nosso Complexo TriMolecular utiliza afinidade seletiva por porosidade para direcionar as proteínas hidrolisadas às regiões mais fragilizadas da fibra, restaurando apenas onde existe perda estrutural, sem sobrecarregar as áreas saudáveis.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  O verdadeiro encorpamento acontece quando a fibra recupera sua densidade.
+                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                  O VERDADEIRO ENCORPAMENTO ACONTECE QUANDO A FIBRA RECUPERA SUA DENSIDADE.
                 </h3>
-                <p className="text-base text-ink-soft leading-relaxed">
+                <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
                   O NV Redensifier atua no interior da fibra, aumentando seu diâmetro e devolvendo massa onde o cabelo perdeu estrutura. O resultado são fios mais encorpados, resistentes e com maior sensação de densidade desde as primeiras aplicações.
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-xl font-serif font-bold text-bordo mb-3 italic">
-                  Depois de reconstruir, é preciso proteger esse resultado.
+                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                  DEPOIS DE RECONSTRUIR, É PRECISO PROTEGER ESSE RESULTADO.
                 </h3>
-                <p className="text-base text-ink-soft leading-relaxed">
+                <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
                   Após preencher e redensificar a fibra, a terceira camada cria uma blindagem cuticular que ajuda a manter os ativos protegidos no interior do fio por mais tempo, preservando corpo, resistência e durabilidade da reconstrução.
                 </p>
               </div>
