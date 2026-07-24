@@ -60,6 +60,7 @@ const protocols: ExtendedProtocol[] = [
       'Shampoo Antioxidante Mineral',
       'Frete grátis incluso'
     ],
+    imageUrl: '/products/protocolo-3-kit-cutout.png',
     infoBox: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
     hasFreeShipping: true
   }
@@ -191,7 +192,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     src={protocol.imageUrl}
                     alt={protocol.name}
                     className={`relative z-10 object-contain object-center drop-shadow-[0_18px_24px_rgba(78,20,28,0.18)] transition-transform duration-300 ${
-                      protocol.id === 2 ? 'h-[135%] w-[135%] scale-110' : 'h-[118%] w-[118%]'
+                      protocol.id >= 2 ? 'h-[135%] w-[135%] scale-110' : 'h-[118%] w-[118%]'
                     }`}
                   />
                 ) : (
