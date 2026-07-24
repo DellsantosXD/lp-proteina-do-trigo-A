@@ -5,74 +5,124 @@ import { FaqItem } from '../types';
 const faqItems: FaqItem[] = [
   {
     id: 1,
-    question: 'Funciona para o meu tipo de afinamento, seja por idade, hormônio ou química?',
-    answer: 'Sim, funciona perfeitamente independente da causa. A Proteína do Trigo Pro Filler atua preenchendo as falhas de porosidade da estrutura física do fio. Quer o seu afinamento tenha sido causado por processos químicos acumulados (progressivas, descolorações), quer por alterações hormonais naturais ou envelhecimento capilar, a fibra danificada será reconstruída em camadas moleculares.'
+    question: '1. Funciona para o meu tipo de afinamento?',
+    answer:
+      'Sim. O Pro Filler foi desenvolvido para restaurar a estrutura da fibra capilar afinada, independentemente da causa do afinamento. Seja por química, calor excessivo, menopausa, pós-parto, envelhecimento natural ou danos acumulados, a tecnologia atua diretamente na fibra existente, devolvendo corpo, densidade e resistência.',
   },
   {
     id: 2,
-    question: 'Já tentei hidratação e reconstrutor comum. Por que o Pro Filler seria diferente?',
-    answer: 'Porque a maioria dos reconstrutores de prateleira ou salão peca por dois motivos: 1) espalham-se de forma uniforme pela fibra, acumulando queratina pesada onde o fio já está saudável, causando enrijecimento e quebra; 2) não possuem agentes de ancoragem, fazendo o resultado escorrer pelo ralo na primeira lavagem. O nosso Complexo TriMolecular possui pesos seletivos que penetram apenas nas microfissuras e a cera de farelo de arroz sela essa massa para que ela continue dentro do córtex por muito mais tempo.'
+    question: '2. Meu cabelo está muito fino. Ainda dá tempo de recuperar?',
+    answer:
+      'Na maioria dos casos, sim. Quanto antes a reconstrução estrutural começa, maior a quantidade de fibra preservada. O objetivo do tratamento é recuperar a massa da fibra existente e reduzir a progressão do afinamento.',
   },
   {
     id: 3,
-    question: 'Preciso de salão de beleza ou fórmula manipulada para aplicar?',
-    answer: 'Não. Todo o protocolo foi desenhado para ser aplicado de forma simples e rápida no conforto da sua casa, dispensando o custo de idas frequentes ao salão ou a complexidade de encomendar fórmulas manipuladas em farmácias.'
+    question: '3. Já usei cronograma capilar, máscaras caras e reconstruções. Por que esse seria diferente?',
+    answer:
+      'Porque o Pro Filler não foi desenvolvido apenas para "hidratar" ou "depositar proteína". A tecnologia de Reconstrução Molecular em 3 Camadas atua de forma sequencial: primeiro preenche as regiões fragilizadas, depois devolve densidade e, por fim, sela esse preenchimento para prolongar o resultado.',
   },
   {
     id: 4,
-    question: 'Como saber qual o protocolo de tratamento ideal para mim?',
-    answer: 'Se você sente apenas o comprimento e as pontas do cabelo finas, ralas e sem vida, o Protocolo 1 (Proteína) é suficiente. Se você percebe que o afinamento começa desde o nascimento do fio e nota queda capilar, o Protocolo 2 soma o Sérum Fortalecedor para tratar diretamente o bulbo capilar. Se o seu cabelo também sofre com oleosidade excessiva no couro cabeludo, o que deixa os fios grudados e acentua a sensação de cabelo fino, o Protocolo 3 com o Shampoo Antioxidante Mineral prepara o couro perfeitamente para absorver todo o tratamento.'
+    question: '4. Vou sentir diferença logo na primeira aplicação?',
+    answer:
+      'Muitas clientes relatam perceber mais corpo, peso e resistência já na primeira aplicação. Porém, a recuperação estrutural da fibra é cumulativa. Quanto maior a constância no tratamento, mais consistente tende a ser o resultado.',
   },
   {
     id: 5,
-    question: 'Como funciona a garantia de 30 dias?',
-    answer: 'Acreditamos tanto na ciência do nosso produto que oferecemos uma Garantia Incondicional de Satisfação de 30 dias. Se por qualquer motivo você aplicar o protocolo e achar que não obteve resultado expressivo no encorpamento do fio, basta entrar em contato conosco e faremos a devolução integral do seu dinheiro sem burocracia ou justificativas.'
+    question: '5. Preciso ir ao salão para aplicar?',
+    answer:
+      'Não. O protocolo foi desenvolvido justamente para reproduzir, em casa, uma tecnologia antes restrita ao ambiente clínico.',
   },
   {
     id: 6,
-    question: 'Em quanto tempo vejo os primeiros resultados?',
-    answer: 'A sensação de cabelo encorpado, denso e com balanço já pode ser sentida logo após a primeira aplicação do produto devido à deposição imediata da primeira camada do Complexo TriMolecular. Os resultados acumulativos aumentam o diâmetro real e permanente do fio ao longo de 4 semanas de uso contínuo.'
+    question: '6. Como escolher o protocolo ideal?',
+    answer:
+      '• Protocolo 1 é indicado para quem deseja recuperar apenas a fibra.\n• Protocolo 2 adiciona o Sérum Fortalecedor para cuidar também do ambiente onde o fio nasce.\n• Protocolo 3 é o protocolo mais completo, combinando reconstrução da fibra com preparo do couro cabeludo para potencializar o tratamento.',
   },
   {
     id: 7,
-    question: 'Posso parcelar a compra?',
-    answer: 'Sim, a sua compra pode ser realizada à vista via Pix ou parcelada em até 12x no cartão de crédito através do nosso gateway seguro de pagamento.'
+    question: '7. O tratamento pesa ou endurece o cabelo?',
+    answer:
+      'Não quando utilizado conforme o protocolo. A tecnologia foi desenvolvida para atuar preferencialmente nas áreas mais fragilizadas da fibra, evitando o aspecto rígido comum em reconstruções convencionais.',
   },
   {
     id: 8,
-    question: 'Qual o prazo de envio e de entrega?',
-    answer: 'Seu pedido é processado e despachado de Brasília em até 1 dia útil após a confirmação do pagamento. O prazo médio de entrega para as capitais é de 5 a 8 dias úteis, e para o interior de até 12 dias úteis, contando com código de rastreamento enviado via e-mail.'
-  }
+    question: '8. Meu cabelo é loiro, colorido ou com química. Posso usar?',
+    answer:
+      'Sim. Inclusive cabelos descoloridos, com progressiva ou coloração costumam apresentar perda estrutural importante da fibra, sendo excelentes candidatos para a Reconstrução Molecular.',
+  },
+  {
+    id: 9,
+    question: '9. Em quanto tempo devo repetir a aplicação?',
+    answer:
+      'A frequência depende do nível de afinamento e dano estrutural. No protocolo você recebe toda a orientação para realizar as aplicações de forma segura e obter o melhor resultado.',
+  },
+  {
+    id: 10,
+    question: '10. Existe garantia?',
+    answer:
+      'Sim.\nVocê tem 30 dias de garantia para comprar com tranquilidade. Caso o protocolo não faça mais sentido para você dentro desse período, basta devolver os cosméticos 100% lacrados e sem uso que devolvemos seu dinheiro.',
+  },
+  {
+    id: 11,
+    question: '11. Em quanto tempo meu pedido é enviado?',
+    answer:
+      'Os pedidos são preparados rapidamente pela nossa equipe e despachados em até 24 horas úteis após a confirmação do pagamento.',
+  },
+  {
+    id: 12,
+    question: '12. Posso parcelar?',
+    answer:
+      'Sim. Você pode escolher a forma de pagamento disponível no checkout e parcelar conforme as condições apresentadas no momento da compra.',
+  },
+  {
+    id: 13,
+    question: '13. O tratamento substitui medicamentos para queda capilar?',
+    answer:
+      'Não. O Pro Filler é um cosmético desenvolvido para restaurar a fibra capilar. Caso você esteja tratando uma condição clínica relacionada à queda, ele pode ser utilizado como parte da sua rotina de cuidados, respeitando sempre a orientação do seu profissional de saúde.',
+  },
+  {
+    id: 14,
+    question: '14. Quem desenvolveu essa tecnologia?',
+    answer:
+      'O Pro Filler foi desenvolvido pela Sweet Therapy, marca fundada por Cris Mendanha, pioneira na criação da primeira clínica exclusiva de tricologia do Brasil e da primeira marca brasileira dedicada exclusivamente à terapia capilar em casa.',
+  },
+  {
+    id: 15,
+    question: '15. Ainda estou em dúvida. Vale a pena começar?',
+    answer:
+      'Se o seu cabelo já perdeu corpo, espessura e movimento, adiar o cuidado significa permitir que a fibra continue sofrendo agressões diárias. Quanto antes a reconstrução estrutural começa, maiores são as chances de preservar e recuperar a massa da fibra capilar.',
+  },
 ];
 
 export default function FaqAccordion() {
-  const [openId, setOpenId] = useState<number | null>(4); // default open item 4 like the original HTML mockup
+  const [openId, setOpenId] = useState<number | null>(1); // default open item 1
 
   const toggle = (id: number) => {
     setOpenId(openId === id ? null : id);
   };
 
   return (
-    <div className="max-w-2xl mx-auto divide-y divide-tan-deep/30">
+    <div className="max-w-3xl mx-auto divide-y divide-tan-deep/25">
       {faqItems.map((item) => {
         const isOpen = openId === item.id;
         return (
           <div key={item.id} className="py-4">
             <button
               onClick={() => toggle(item.id)}
-              className="w-full flex items-center justify-between text-left py-2 font-serif font-semibold text-base md:text-lg text-bordo hover:text-bordo-deep transition-colors cursor-pointer"
+              className="w-full flex items-center justify-between text-left py-2.5 font-serif font-bold text-base md:text-lg text-bordo hover:text-bordo-deep transition-colors cursor-pointer"
               aria-expanded={isOpen}
             >
-              <span>{item.question}</span>
+              <span className="pr-4 leading-snug">{item.question}</span>
               <motion.span
-                className="text-lg font-mono text-bordo ml-4"
+                className="text-xl font-mono text-bordo shrink-0 w-8 h-8 rounded-full bg-bordo/8 flex items-center justify-center"
                 animate={{ rotate: isOpen ? 45 : 0 }}
                 transition={{ duration: 0.25 }}
               >
                 +
               </motion.span>
             </button>
-            
+
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
@@ -82,9 +132,9 @@ export default function FaqAccordion() {
                   transition={{ duration: 0.3, ease: 'easeInOut' }}
                   className="overflow-hidden"
                 >
-                  <p className="text-sm md:text-base text-ink-soft leading-relaxed pt-2 pb-4 px-1">
+                  <div className="text-sm md:text-base text-ink-soft leading-relaxed pt-2 pb-4 px-1 whitespace-pre-line space-y-2">
                     {item.answer}
-                  </p>
+                  </div>
                 </motion.div>
               )}
             </AnimatePresence>

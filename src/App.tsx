@@ -790,16 +790,13 @@ export default function App() {
       {/* FAQ SECTION */}
       <section className="py-24 px-6 bg-cream border-t border-tan-deep/20" id="faq">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-3">
-              Suporte Clínico
+          <div className="text-center mb-16 max-w-2xl mx-auto">
+            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-3">
+              PERGUNTAS FREQUENTES
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
-              Perguntas Frequentes
+              Tire todas as suas dúvidas antes de iniciar sua Reconstrução Molecular.
             </h2>
-            <p className="text-sm md:text-base text-ink-soft mt-3 max-w-md mx-auto leading-relaxed">
-              Tire todas as suas dúvidas sobre o mecanismo de ação TriMolecular do Pro Filler.
-            </p>
           </div>
 
           <FaqAccordion />
