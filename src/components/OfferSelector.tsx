@@ -139,22 +139,27 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
     <>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
       {protocols.map((protocol) => {
+        const isSelected = selectedId === protocol.id;
+
         return (
           <motion.div
             key={protocol.id}
+            id={`protocol-card-${protocol.id}`}
             onClick={() => onSelect(protocol.id)}
             className={`relative h-full rounded-[28px] border cursor-pointer select-none transition-all duration-300 flex flex-col overflow-hidden ${
-              protocol.id === 3
-                ? 'border-bordo bg-gradient-to-b from-[#FFF9F9] to-white shadow-[0_22px_44px_rgba(78,20,28,0.18)]'
-                : 'border-tan-deep/30 bg-white shadow-[0_14px_30px_rgba(42,33,27,0.10)] hover:border-bordo/45'
+              isSelected
+                ? 'border-bordo ring-4 ring-bordo/80 bg-gradient-to-b from-[#FFF9F9] to-white shadow-[0_26px_52px_rgba(78,20,28,0.24)] scale-[1.02] z-20'
+                : 'border-tan-deep/30 bg-white opacity-90 shadow-[0_14px_30px_rgba(42,33,27,0.10)] hover:border-bordo/45 hover:opacity-100 hover:scale-[1.01]'
             }`}
             whileHover={{ y: -5 }}
             transition={{ type: 'spring', stiffness: 220, damping: 18 }}
           >
-            {/* MELHOR CUSTO-BENEFICIO Ribbon for Card 3 */}
-            {protocol.topHeaderBadge && (
-              <div className="bg-[#4E141C] text-cream text-[11px] font-bold tracking-widest uppercase py-2 text-center w-full flex items-center justify-center gap-1">
-                {protocol.topHeaderBadge}
+            {/* Top Badge Ribbon */}
+            {(isSelected || protocol.topHeaderBadge) && (
+              <div className={`text-cream text-[11px] font-extrabold tracking-widest uppercase py-2 text-center w-full flex items-center justify-center gap-1.5 transition-colors duration-300 ${
+                isSelected ? 'bg-[#4E141C]' : 'bg-[#6E1F2B]/90'
+              }`}>
+                {isSelected ? '✓ SEU PROTOCOLO SELECIONADO' : protocol.topHeaderBadge}
               </div>
             )}
 
@@ -263,9 +268,13 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     e.preventDefault();
                     alert(`Direcionando para o gateway de pagamento seguro para o ${protocol.name} (R$${protocol.price})`);
                   }}
-                  className="min-h-[58px] w-full inline-flex items-center justify-center bg-[#4E141C] hover:bg-[#6E1F2B] text-white font-sans font-extrabold text-sm sm:text-base py-3.5 px-6 rounded-full shadow-[0_4px_12px_rgba(78,20,28,0.2)] hover:shadow-[0_6px_16px_rgba(78,20,28,0.3)] active:scale-[0.98] transition-all duration-300 cursor-pointer text-center"
+                  className={`min-h-[58px] w-full inline-flex items-center justify-center font-sans font-extrabold text-sm sm:text-base py-3.5 px-6 rounded-full transition-all duration-300 cursor-pointer text-center ${
+                    isSelected
+                      ? 'bg-[#4E141C] hover:bg-[#6E1F2B] text-white shadow-[0_8px_20px_rgba(78,20,28,0.35)] scale-[1.02]'
+                      : 'bg-[#4E141C]/90 hover:bg-[#4E141C] text-white/90 shadow-[0_4px_12px_rgba(78,20,28,0.18)]'
+                  }`}
                 >
-                  {protocol.id === 1 ? 'Quero o Protocolo 1' : protocol.id === 2 ? 'Quero testar o Protocolo 2' : 'Quero o Protocolo 3 completo'}
+                  {isSelected ? `✓ Quero o ${protocol.name}` : `Quero o ${protocol.name}`}
                 </a>
 
                 {/* Trust badges below button */}

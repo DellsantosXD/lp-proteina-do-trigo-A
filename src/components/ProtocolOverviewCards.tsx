@@ -39,10 +39,12 @@ const items: OverviewItem[] = [
 export const ProtocolOverviewCards: React.FC<ProtocolOverviewCardsProps> = ({ onSelectProtocol }) => {
   const handleClick = (id: number) => {
     onSelectProtocol(id);
-    const element = document.getElementById('oferta');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    setTimeout(() => {
+      const element = document.getElementById(`protocol-card-${id}`) || document.getElementById('oferta');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }, 50);
   };
 
   return (
