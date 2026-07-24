@@ -274,7 +274,11 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                       : 'bg-[#4E141C]/90 hover:bg-[#4E141C] text-white/90 shadow-[0_4px_12px_rgba(78,20,28,0.18)]'
                   }`}
                 >
-                  {isSelected ? `✓ Quero o ${protocol.name}` : `Quero o ${protocol.name}`}
+                  {protocol.id === 1
+                    ? 'Quero começar meu tratamento'
+                    : protocol.id === 2
+                    ? 'Quero resultados mais completos'
+                    : 'Quero o tratamento completo'}
                 </a>
 
                 {/* Trust badges below button */}
