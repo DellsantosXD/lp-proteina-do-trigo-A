@@ -268,10 +268,10 @@ export default function App() {
 
           {/* Transition text */}
           <div className="space-y-4 mb-10 text-center md:text-left">
-            <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
+            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
               Se você se identificou com essa história, existe uma explicação científica. E entender como a fibra perde estrutura é o primeiro passo para restaurar cabelos mais encorpados.
             </p>
-            <p className="text-base sm:text-lg text-bordo font-bold leading-relaxed">
+            <p className="text-base sm:text-xl text-bordo font-black leading-relaxed">
               Antes de conhecer a Reconstrução Molecular em 3 Camadas, vale entender por que tantos tratamentos falham:
             </p>
           </div>
@@ -280,25 +280,25 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             {/* Box 01 */}
             <div className="bg-cream/40 border border-tan-deep/30 rounded-2xl p-6 sm:p-8 relative">
-              <span className="font-serif text-3xl font-black text-bordo block mb-4">01</span>
-              <h3 className="text-base sm:text-lg font-sans font-bold text-ink mb-3 leading-snug">
+              <span className="font-serif text-4xl font-black text-bordo block mb-4">01</span>
+              <h3 className="text-lg sm:text-xl font-sans font-black text-ink mb-3 leading-snug">
                 Tratam o fio inteiro como se todo cabelo tivesse o mesmo nível de dano.
               </h3>
-              <p className="text-sm sm:text-base text-ink-soft leading-relaxed">
+              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed">
                 As proteínas se acumulam também nas áreas saudáveis da fibra, deixando o cabelo rígido, pesado e mais suscetível à quebra, em vez de restaurar apenas onde realmente existe perda estrutural.
               </p>
             </div>
 
             {/* Box 02 */}
             <div className="bg-cream/40 border border-tan-deep/30 rounded-2xl p-6 sm:p-8 relative">
-              <span className="font-serif text-3xl font-black text-bordo block mb-4">02</span>
-              <h3 className="text-base sm:text-lg font-sans font-bold text-ink mb-3 leading-snug">
+              <span className="font-serif text-4xl font-black text-bordo block mb-4">02</span>
+              <h3 className="text-lg sm:text-xl font-sans font-black text-ink mb-3 leading-snug">
                 Não conseguem manter os ativos dentro da fibra por tempo suficiente.
               </h3>
-              <p className="text-sm sm:text-base text-ink-soft leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed mb-4">
                 Sem uma etapa de blindagem molecular, parte dos ativos é perdida já nas primeiras lavagens, reduzindo rapidamente a sensação de fios mais encorpados.
               </p>
-              <p className="text-xs sm:text-sm font-medium text-bordo leading-relaxed pt-2 border-t border-tan-deep/20">
+              <p className="text-sm sm:text-base font-bold text-bordo leading-relaxed pt-3 border-t border-tan-deep/25">
                 Isso prepara perfeitamente a etapa 3 da tecnologia.
               </p>
             </div>
