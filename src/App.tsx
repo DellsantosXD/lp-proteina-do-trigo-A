@@ -804,21 +804,24 @@ export default function App() {
       </section>
 
       {/* FINAL CALL TO ACTION */}
-      <section className="py-24 px-6 bg-gradient-to-b from-bordo to-bordo-deep text-cream text-center relative overflow-hidden">
+      <section className="py-24 px-6 bg-gradient-to-b from-[#4A0E19] to-[#2D060C] text-cream text-center relative overflow-hidden">
         <div className="absolute inset-0 bg-radial-[circle_at_center] from-white/5 to-transparent pointer-events-none" />
-        <div className="max-w-2xl mx-auto relative z-10">
+        <div className="max-w-3xl mx-auto relative z-10">
+          <span className="text-xs font-mono text-rose uppercase font-bold tracking-[0.2em] block mb-3">
+            SUA FIBRA MERECE CORPO E DENSIDADE
+          </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-cream font-black tracking-tight leading-tight mb-6">
-            Chega de esconder as pontas.<br />Dê o primeiro passo científico.
+            Seu cabelo não precisa parecer mais fino do que realmente é.
           </h2>
-          <p className="text-cream/80 text-sm sm:text-base md:text-lg mb-10 max-w-lg mx-auto leading-relaxed">
-            Deixe no passado o coque murcho ou o rabo de cavalo sem volume. Sinta novamente a densidade e o balanço natural de um cabelo verdadeiramente seu.
+          <p className="text-cream/85 text-sm sm:text-base md:text-lg mb-10 max-w-2xl mx-auto leading-relaxed font-normal">
+            A Reconstrução Molecular em 3 Camadas foi desenvolvida para devolver corpo, densidade e resistência à fibra capilar, diretamente da sua casa.
           </p>
           <div className="max-w-md mx-auto">
             <a
               href="#oferta"
-              className="inline-flex items-center justify-center w-full bg-cream text-bordo font-sans font-bold text-base md:text-lg px-8 py-5 rounded-full hover:bg-rose transition-all shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="inline-flex items-center justify-center w-full bg-cream text-bordo font-sans font-extrabold text-base md:text-lg px-8 py-5 rounded-full hover:bg-rose hover:text-white transition-all duration-300 shadow-xl hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
-              Garantir Minha Reconstrução Molecular
+              Quero iniciar minha Reconstrução Molecular
             </a>
           </div>
         </div>
