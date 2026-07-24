@@ -651,10 +651,10 @@ export default function App() {
           <div className="mt-14 max-w-3xl mx-auto">
             <ConversionCta
               tone="dark"
-              eyebrow="Garantia de Qualidade & Tecnologia"
-              title="Pronta para restaurar a espessura e densidade dos seus fios?"
-              description="Escolha abaixo o protocolo ideal para o seu nível de afinamento e receba o tratamento na sua casa."
-              label="Quero iniciar meu tratamento"
+              eyebrow="Seu novo ritual começa aqui"
+              title="Sua fibra já sabe o que precisa. Agora só falta começar."
+              description="O primeiro passo para recuperar corpo, densidade e resistência é iniciar uma rotina consistente com a tecnologia desenvolvida pela Sweet Therapy."
+              label="Quero começar meu tratamento"
             />
           </div>
         </div>
