@@ -1,5 +1,6 @@
 import React from 'react';
 import { Package, Video, Home, MessageSquare, Heart, Sparkles } from 'lucide-react';
+import ConversionCta from './ConversionCta';
 
 interface ExperienceItem {
   icon: React.ReactNode;
@@ -83,6 +84,17 @@ export const TreatmentExperienceSection: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Conversion CTA Card */}
+        <div className="mt-14 max-w-3xl mx-auto">
+          <ConversionCta
+            tone="light"
+            eyebrow="Seu protocolo está pronto"
+            title="Seu protocolo está pronto. Agora basta dar o primeiro passo."
+            description="Escolha o protocolo ideal para o seu nível de afinamento e receba o tratamento completo diretamente na sua casa com frete seguro."
+            label="Quero iniciar minha Reconstrução Molecular"
+          />
         </div>
       </div>
     </section>
