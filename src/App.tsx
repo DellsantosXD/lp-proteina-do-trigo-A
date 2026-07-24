@@ -10,6 +10,7 @@ import SocialProof from './components/SocialProof';
 import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
 import { TestimonialsCarousel } from './components/TestimonialsCarousel';
+import { TrichologistsSection } from './components/TrichologistsSection';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -683,6 +684,9 @@ export default function App() {
           <TestimonialsCarousel />
         </div>
       </section>
+
+      {/* RECOMENDAÇÃO DE TRICOLOGISTAS SECTION */}
+      <TrichologistsSection />
 
       {/* OFERTA SECTION */}
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
