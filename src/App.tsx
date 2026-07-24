@@ -9,7 +9,7 @@ import FaqAccordion from './components/FaqAccordion';
 import SocialProof from './components/SocialProof';
 import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
-import { VideoTestimonialCard } from './components/VideoTestimonialCard';
+import { TestimonialsCarousel } from './components/TestimonialsCarousel';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -679,119 +679,8 @@ export default function App() {
             </p>
           </div>
 
-          {/* Premium Showcase Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-            {/* Card 1 */}
-            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5">
-                <img
-                  src="/results/resultado-1.jpg"
-                  alt="Resultado real de recuperação capilar - Roberta Mazoni"
-                  className="w-full h-auto object-cover rounded-2xl max-h-[500px]"
-                />
-              </div>
-              <div className="space-y-2 px-2 pb-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
-                    RECUPERAÇÃO DE COMPRIMENTO & DENSIDADE
-                  </span>
-                  <div className="flex text-amber-500 text-xs">★★★★★</div>
-                </div>
-                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
-                  Roberta Mazoni
-                </h3>
-                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
-                  "Olha o tamanho do meu cabelo com seu protocolo! Recuperou corpo e peso de forma impressionante."
-                </p>
-              </div>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5">
-                <img
-                  src="/results/resultado-2.jpg"
-                  alt="Resultado real de recuperação capilar - Mari"
-                  className="w-full h-full object-cover rounded-2xl max-h-[500px]"
-                />
-              </div>
-              <div className="space-y-2 px-2 pb-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
-                    RESTAURAÇÃO DE BRILHO & MASSA
-                  </span>
-                  <div className="flex text-amber-500 text-xs">★★★★★</div>
-                </div>
-                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
-                  Depoimento de Paciente
-                </h3>
-                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
-                  "O brilho já voltou e eu estou muito feliz com os resultados... Nem se compara com nada do que já usei!"
-                </p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5 flex items-center justify-center">
-                <img
-                  src="/results/resultado-3.jpg"
-                  alt="Relato WhatsApp de paciente - Fios encorpados e com brilho"
-                  className="w-full h-auto object-cover rounded-2xl max-h-[500px]"
-                />
-              </div>
-              <div className="space-y-2 px-2 pb-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
-                    VOLUME & VITALIDADE RECUPERADOS
-                  </span>
-                  <div className="flex text-amber-500 text-xs">★★★★★</div>
-                </div>
-                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
-                  Relato Espontâneo via WhatsApp
-                </h3>
-                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
-                  "Ele cresceu, tá mais vultoso! Eu não usava ele solto pq era muito ressecado e sem vida, sem brilho."
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
-              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5 flex items-center justify-center">
-                <img
-                  src="/results/resultado-4.jpg"
-                  alt="Relato WhatsApp de paciente - Gratidão com as madeixas"
-                  className="w-full h-auto object-cover rounded-2xl max-h-[500px]"
-                />
-              </div>
-              <div className="space-y-2 px-2 pb-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
-                    MADEIXAS RENOVADAS & GRATIDÃO
-                  </span>
-                  <div className="flex text-amber-500 text-xs">★★★★★</div>
-                </div>
-                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
-                  Relato de Paciente Dra. Cris
-                </h3>
-                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
-                  "Cris, só gratidão a vc! Tô tão feliz ☺️ com minhas madeixas!"
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Video Testimonial Card with Auto-play on Scroll and Audio Toggle */}
-          <div className="mt-12">
-            <VideoTestimonialCard
-              videoSrc="/videos/depoimento-video-1.mp4"
-              badge="DEPOIMENTO EM VÍDEO COMPLETO"
-              title="Recuperação Estrutural na Prática"
-              subtitle="Relato em Vídeo de Paciente Sweet Therapy"
-              quote="Acompanhe o depoimento em vídeo sobre a restauração da fibra capilar e a volta do corpo e brilho dos fios."
-            />
-          </div>
+          {/* Clean Carousel Showcase (Showing Full Frame Media & Full Text) */}
+          <TestimonialsCarousel />
         </div>
       </section>
 
