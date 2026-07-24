@@ -110,9 +110,9 @@ export const TestimonialsCarousel: React.FC = () => {
                     : 'scale-90 opacity-55 z-10 border-tan-deep/20 hover:opacity-85'
                 }`}
               >
-                <div className="relative w-full h-[450px] sm:h-[580px] bg-neutral-950 flex items-center justify-center p-2">
+                <div className="relative w-full h-[450px] sm:h-[580px] bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center p-2 sm:p-3">
                   {slide.type === 'video' ? (
-                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl">
+                    <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/30">
                       <video
                         ref={isActive ? videoRef : null}
                         src={slide.src}
