@@ -688,11 +688,7 @@ export default function App() {
 
           <div className="mt-12 max-w-sm mx-auto">
             <a
-              href="#checkout"
-              onClick={(e) => {
-                e.preventDefault();
-                alert(`Direcionando para o gateway de pagamento seguro para o ${activeProtocol.name} (R$${activeProtocol.price})`);
-              }}
+              href={(activeProtocol as any).checkoutUrl || 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1'}
               className="inline-flex items-center justify-center w-full bg-gradient-to-r from-bordo to-bordo-deep hover:from-bordo-deep hover:to-bordo text-cream text-base font-sans font-bold py-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
               Comprar Protocolo Selecionado

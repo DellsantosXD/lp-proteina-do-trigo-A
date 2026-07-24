@@ -26,7 +26,8 @@ const protocols: ExtendedProtocol[] = [
       'Proteína do Trigo Pro Filler'
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
-    infoBox: 'Para quem deseja recuperar corpo e espessura no comprimento.'
+    infoBox: 'Para quem deseja recuperar corpo e espessura no comprimento.',
+    checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL'
   },
   {
     id: 2,
@@ -42,7 +43,8 @@ const protocols: ExtendedProtocol[] = [
       'Sérum Fortalecedor'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
-    infoBox: 'Para quem percebe afinamento também desde a raiz.'
+    infoBox: 'Para quem percebe afinamento também desde a raiz.',
+    checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL'
   },
   {
     id: 3,
@@ -62,7 +64,8 @@ const protocols: ExtendedProtocol[] = [
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
     infoBox: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
-    hasFreeShipping: true
+    hasFreeShipping: true,
+    checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1'
   }
 ];
 
@@ -244,11 +247,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
 
                 {/* CTA Button matching image style */}
                 <a
-                  href="#checkout"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    alert(`Direcionando para o gateway de pagamento seguro para o ${protocol.name} (R$${protocol.price})`);
-                  }}
+                  href={protocol.checkoutUrl}
                   className={`min-h-[58px] w-full inline-flex items-center justify-center font-sans font-extrabold text-sm sm:text-base py-3.5 px-6 rounded-full transition-all duration-300 cursor-pointer text-center ${
                     isSelected
                       ? 'bg-[#4E141C] hover:bg-[#6E1F2B] text-white shadow-[0_8px_20px_rgba(78,20,28,0.35)] scale-[1.02]'
