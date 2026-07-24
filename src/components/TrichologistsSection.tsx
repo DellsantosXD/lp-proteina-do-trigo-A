@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Play, CheckCircle2 } from 'lucide-react';
+import ConversionCta from './ConversionCta';
 
 interface Trichologist {
   id: string;
@@ -150,6 +151,17 @@ export const TrichologistsSection: React.FC = () => {
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Transition CTA Card before Offer Section */}
+        <div className="mt-14 max-w-3xl mx-auto">
+          <ConversionCta
+            tone="dark"
+            eyebrow="Seu próximo passo"
+            title="Mais de uma década de pesquisa, milhares de mulheres atendidas e uma tecnologia validada na prática trouxeram você até aqui."
+            description="Agora falta apenas uma decisão: escolher o protocolo ideal para o seu nível de afinamento."
+            label="Escolher meu protocolo"
+          />
         </div>
       </div>
     </section>

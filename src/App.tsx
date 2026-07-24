@@ -11,6 +11,7 @@ import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
 import { TestimonialsCarousel } from './components/TestimonialsCarousel';
 import { TrichologistsSection } from './components/TrichologistsSection';
+import ConversionCta from './components/ConversionCta';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -31,61 +32,6 @@ const leadParagraphs = [
   'Antes de ajudar milhares de mulheres a recuperarem cabelos visivelmente mais encorpados, eu precisei encontrar uma solução para o meu próprio cabelo.',
   'Foi justamente dessa busca que nasceu a tecnologia que você vai conhecer nesta página.'
 ];
-
-type ConversionCtaProps = {
-  eyebrow: string;
-  title: string;
-  description: string;
-  href?: string;
-  label: string;
-  tone?: 'light' | 'dark';
-};
-
-function ConversionCta({ eyebrow, title, description, href = '#oferta', label, tone = 'light' }: ConversionCtaProps) {
-  const isDark = tone === 'dark';
-
-  return (
-    <motion.div
-      className={`relative overflow-hidden rounded-3xl border p-6 sm:p-8 text-center shadow-[0_18px_44px_rgba(78,20,28,0.12)] ${
-        isDark
-          ? 'border-cream/20 bg-cream/10 text-cream'
-          : 'border-tan-deep/30 bg-gradient-to-br from-cream to-white text-ink'
-      }`}
-      initial={{ opacity: 0, y: 18 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
-      transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <div className="absolute inset-0 bg-[linear-gradient(115deg,transparent_0%,rgba(255,255,255,0.24)_48%,transparent_70%)] pointer-events-none" />
-      <div className="relative z-10">
-        <span className={`mb-3 block text-[11px] font-mono font-bold uppercase tracking-widest ${isDark ? 'text-rose' : 'text-bordo'}`}>
-          {eyebrow}
-        </span>
-        <h3 className={`mx-auto max-w-2xl font-serif text-2xl font-black leading-tight sm:text-3xl ${isDark ? 'text-cream' : 'text-bordo'}`}>
-          {title}
-        </h3>
-        <p className={`mx-auto mt-3 max-w-xl text-sm leading-relaxed sm:text-base ${isDark ? 'text-cream/78' : 'text-ink-soft'}`}>
-          {description}
-        </p>
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <a
-            href={href}
-            className={`inline-flex w-full max-w-sm items-center justify-center rounded-full px-7 py-4 text-sm font-sans font-extrabold shadow-[0_10px_24px_rgba(78,20,28,0.22)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 sm:w-auto ${
-              isDark
-                ? 'bg-cream text-bordo hover:bg-rose'
-                : 'bg-gradient-to-r from-bordo to-bordo-deep text-cream hover:from-bordo-deep hover:to-bordo'
-            }`}
-          >
-            {label}
-          </a>
-          <span className={`text-[10px] font-mono uppercase tracking-widest ${isDark ? 'text-cream/55' : 'text-ink-soft/60'}`}>
-            Compra segura · Envio rápido
-          </span>
-        </div>
-      </div>
-    </motion.div>
-  );
-}
 
 export default function App() {
   const [selectedProtocolId, setSelectedProtocolId] = useState<number>(3); // Default to protocol 3 (most popular)
@@ -691,15 +637,15 @@ export default function App() {
       {/* OFERTA SECTION */}
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-widest block mb-3">
-              Tabela de Protocolos
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-3">
+              TABELA DE PROTOCOLOS
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
-              Escolha Seu Protocolo Clínico
+              Qual protocolo foi desenvolvido para o estágio atual do seu cabelo?
             </h2>
-            <p className="text-sm md:text-base text-ink-soft mt-3 max-w-xl mx-auto leading-relaxed">
-              Tratamentos desenvolvidos pela Dra. Cris de acordo com o nível e as causas do seu afinamento capilar.
+            <p className="text-sm sm:text-base text-ink-soft mt-3 max-w-2xl mx-auto leading-relaxed font-normal">
+              Os protocolos utilizam a mesma tecnologia de Reconstrução Molecular em 3 Camadas. O que muda é o nível de tratamento recomendado para cada necessidade.
             </p>
           </div>
 
