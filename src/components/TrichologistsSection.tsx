@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Play } from 'lucide-react';
+import { Play, CheckCircle2 } from 'lucide-react';
 
 interface Trichologist {
   id: string;
@@ -127,6 +127,29 @@ export const TrichologistsSection: React.FC = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Bloco de Confiança */}
+        <div className="mt-16 max-w-3xl mx-auto bg-cream/10 border border-cream/20 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-left shadow-2xl">
+          <h3 className="font-serif font-black text-2xl sm:text-3xl text-cream mb-6 tracking-tight">
+            Em mais de 11 anos
+          </h3>
+
+          <ul className="space-y-4">
+            {[
+              'Mais de 18 mil clientes tratados',
+              'Mais de 3.500 profissionais formados',
+              'Clientes em todos os estados brasileiros',
+              'Primeira marca dedicada exclusivamente à terapia capilar em casa',
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-start gap-3.5 text-cream/95 font-sans font-medium text-base sm:text-lg">
+                <div className="w-6 h-6 rounded-full bg-rose/30 border border-rose/60 flex items-center justify-center shrink-0 mt-0.5 text-cream">
+                  <CheckCircle2 className="w-4 h-4 text-rose" />
+                </div>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
