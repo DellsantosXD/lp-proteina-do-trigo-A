@@ -557,6 +557,9 @@ export default function App() {
             <p className="text-xl sm:text-2xl font-serif text-cream/90 italic font-semibold mt-2 max-w-3xl mx-auto leading-relaxed">
               a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
             </p>
+            <p className="text-base sm:text-lg font-sans text-cream/85 max-w-2xl mx-auto mt-4 leading-relaxed">
+              Toda essa ciência precisava ganhar uma forma simples de chegar até a casa das mulheres. Foi assim que nasceu o Pro Filler.
+            </p>
           </div>
 
           {/* Pro Filler Video Container - Native 100% Autoplay Loop HTML5 Video */}
