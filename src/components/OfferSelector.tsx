@@ -41,6 +41,7 @@ const protocols: ExtendedProtocol[] = [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor'
     ],
+    imageUrl: '/products/protocolo-2-kit-cutout.png',
     infoBox: 'Para quem percebe afinamento também desde a raiz.'
   },
   {
@@ -183,37 +184,15 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className={`relative my-3 flex items-center justify-center overflow-visible ${
-                protocol.id === 1 ? 'h-64 sm:h-72' : 'h-44 sm:h-52 rounded-3xl bg-gradient-to-br from-cream via-white to-rose/20'
-              }`}>
+              <div className="relative my-3 flex items-center justify-center overflow-visible h-64 sm:h-72">
                 <div className="absolute inset-x-8 bottom-5 h-14 rounded-full bg-bordo/12 blur-2xl" />
-                {protocol.id === 1 && (
+                {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
-                    alt="Proteína do Trigo Pro Filler"
+                    alt={protocol.name}
                     className="relative z-10 h-[118%] w-[118%] object-contain object-center drop-shadow-[0_18px_24px_rgba(78,20,28,0.18)]"
                   />
-                )}
-
-                {protocol.id === 2 && (
-                  <div className="relative flex justify-center items-center w-full">
-                    {/* Left Background Bottle */}
-                    <div className="absolute left-1/2 -translate-x-12 scale-85 opacity-85 mt-2 z-0">
-                      <GlassBottle className="w-20 h-28" />
-                    </div>
-                    {/* Right Background Bottle (Free) */}
-                    <div className="absolute left-1/2 translate-x-1 scale-85 opacity-85 mt-2 z-0">
-                      <GlassBottle className="w-20 h-28" />
-                    </div>
-                    {/* Foreground Center Bottle */}
-                    <div className="relative z-10">
-                      <GlassBottle className="w-24 h-32" />
-                    </div>
-
-                  </div>
-                )}
-
-                {protocol.id === 3 && (
+                ) : (
                   <div className="relative flex justify-center items-center w-full">
                     {/* Back Row (3 Bottles) */}
                     <div className="absolute left-1/2 -translate-x-16 scale-75 opacity-70 mt-3 z-0">
@@ -233,7 +212,6 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     <div className="absolute left-1/2 translate-x-0 scale-95 z-10 mt-1">
                       <GlassBottle className="w-22 h-30" />
                     </div>
-
                   </div>
                 )}
               </div>
