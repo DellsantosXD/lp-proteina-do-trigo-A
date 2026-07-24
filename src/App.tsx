@@ -835,14 +835,12 @@ export default function App() {
             {/* Left Column: Logo & Description */}
             <div className="flex flex-col gap-4 text-left">
               <div className="flex items-center gap-3">
-                {/* Elegant monogram emblem */}
-                <div className="w-10 h-10 rounded-full border border-cream/30 flex items-center justify-center shrink-0">
-                  <span className="font-serif font-black text-lg text-cream tracking-tighter">ST</span>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-lg font-serif font-black text-cream tracking-tight leading-none">Sweet Therapy</span>
-                  <span className="text-[9px] font-mono tracking-[0.2em] text-cream/60 uppercase mt-1">Terapia Capilar</span>
-                </div>
+                <img
+                  src="https://iili.io/ftbkqiv.webp"
+                  alt="Sweet Therapy Logo"
+                  className="h-10 w-auto object-contain filter brightness-0 invert opacity-90"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <p className="text-xs sm:text-sm text-cream/70 font-sans tracking-wide leading-relaxed max-w-sm">
                 Tecnologia avançada para saúde capilar. Tratamentos desenvolvidos com rigor científico para resultados reais.
