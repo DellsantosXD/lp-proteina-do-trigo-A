@@ -13,6 +13,7 @@ import { TestimonialsCarousel } from './components/TestimonialsCarousel';
 import { TrichologistsSection } from './components/TrichologistsSection';
 import ConversionCta from './components/ConversionCta';
 import TreatmentExperienceSection from './components/TreatmentExperienceSection';
+import ProtocolOverviewCards from './components/ProtocolOverviewCards';
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -659,6 +660,9 @@ export default function App() {
               A aplicação isolada da <strong>Proteína Pro Filler (Protocolo 1)</strong> reconstrói a estrutura do fio em toda a sua extensão. Porém, se você sente o afinamento surgindo já desde o couro cabeludo, o <strong>Protocolo 2</strong> soma o Sérum que cuida do bulbo do fio. Caso o seu cabelo apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o <strong>Protocolo 3 (Completo)</strong> prepara perfeitamente o terreno folicular.
             </p>
           </div>
+
+          {/* Quick Protocol Overview Selection Cards */}
+          <ProtocolOverviewCards onSelectProtocol={setSelectedProtocolId} />
 
           {/* Protocol interactive pricing blocks */}
           <OfferSelector selectedId={selectedProtocolId} onSelect={setSelectedProtocolId} />
