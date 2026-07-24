@@ -167,7 +167,7 @@ export default function App() {
             <span className="inline-block px-3 py-1 bg-bordo/10 text-bordo font-mono text-xs font-bold uppercase tracking-widest rounded-full mb-3">
               Análise Especializada
             </span>
-            <h2 className="text-2xl sm:text-3xl font-serif text-bordo font-black tracking-tight">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif text-bordo font-black tracking-tight leading-tight">
               O Diagnóstico Clínico
             </h2>
           </div>
@@ -182,10 +182,10 @@ export default function App() {
               transition={{ duration: 0.5 }}
               className="bg-cream/30 border border-tan-deep/20 rounded-2xl p-6 sm:p-8"
             >
-              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed mb-4">
+              <p className="text-base sm:text-xl text-ink font-extrabold leading-relaxed mb-4">
                 {leadParagraphs[0]}
               </p>
-              <p className="text-sm sm:text-base text-ink-soft leading-relaxed mb-4">
+              <p className="text-sm sm:text-lg text-ink font-semibold leading-relaxed mb-4">
                 {leadParagraphs[1]}
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
@@ -225,13 +225,13 @@ export default function App() {
               className="bg-gradient-to-br from-rose/30 via-rose/15 to-transparent border border-rose/60 rounded-2xl p-6 sm:p-8 relative overflow-hidden"
             >
               <div className="relative z-10 space-y-3">
-                <p className="text-base sm:text-lg text-bordo-deep font-bold leading-relaxed">
+                <p className="text-base sm:text-xl text-bordo-deep font-extrabold leading-relaxed">
                   {leadParagraphs[5]}
                 </p>
-                <p className="text-sm sm:text-base text-ink-soft leading-relaxed">
+                <p className="text-sm sm:text-lg text-ink font-semibold leading-relaxed">
                   {leadParagraphs[6]}
                 </p>
-                <p className="text-sm sm:text-base text-ink-soft leading-relaxed font-medium">
+                <p className="text-sm sm:text-lg text-ink font-semibold leading-relaxed">
                   {leadParagraphs[7]}
                 </p>
               </div>
