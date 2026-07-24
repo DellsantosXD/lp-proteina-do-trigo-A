@@ -547,17 +547,17 @@ export default function App() {
       <section className="relative overflow-hidden py-24 px-6 bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] border-t border-cream/15" id="pro-filler">
         <div className="absolute inset-0 bg-[linear-gradient(35deg,transparent_0%,rgba(255,255,255,0.06)_52%,transparent_74%)] pointer-events-none" />
         <div className="max-w-5xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <span className="text-xs font-mono text-rose uppercase font-bold tracking-widest block mb-3">
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <span className="text-xs font-mono text-rose uppercase font-bold tracking-[0.2em] block mb-3">
               A TECNOLOGIA EM SUA FORMA MAIS PURA
             </span>
             <h2 className="text-3xl sm:text-5xl font-serif text-cream font-black tracking-tight leading-tight">
               Conheça o Pro Filler:
             </h2>
-            <p className="text-xl sm:text-2xl font-serif text-cream/90 italic font-semibold mt-2 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-2xl font-serif text-cream/90 italic font-semibold mt-2 leading-snug">
               a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
             </p>
-            <p className="text-base sm:text-lg font-sans text-cream/85 max-w-2xl mx-auto mt-4 leading-relaxed">
+            <p className="text-sm sm:text-base font-sans text-cream/80 max-w-xl mx-auto mt-5 leading-relaxed font-normal">
               Toda essa ciência precisava ganhar uma forma simples de chegar até a casa das mulheres. Foi assim que nasceu o Pro Filler.
             </p>
           </div>
