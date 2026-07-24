@@ -77,8 +77,8 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   5: {
     src: '/timeline/card-5.jpg',
     alt: 'Foi estudando a estrutura da fibra que encontrei a resposta',
-    position: 'object-[left_bottom]',
-    height: 'h-64 sm:h-80'
+    position: 'object-[center_top]',
+    height: 'h-72 sm:h-[420px]'
   },
   6: {
     src: '/timeline/card-6.jpg',
