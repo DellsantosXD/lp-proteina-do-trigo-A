@@ -16,51 +16,50 @@ interface ExtendedProtocol extends Protocol {
 const protocols: ExtendedProtocol[] = [
   {
     id: 1,
-    name: 'Protocolo 1',
+    name: 'Protocolo Essencial',
     priceLabel: 'R$169',
-    subtitle: 'Reconstrói o fio de dentro pra fora.',
+    subtitle: 'Para quem deseja recuperar corpo e espessura no comprimento.',
     price: 169,
     installments: '16,97',
-    description: 'Reconstrói o fio de dentro pra fora.',
+    description: 'Para quem deseja recuperar corpo e espessura no comprimento.',
     items: [
       'Proteína do Trigo Pro Filler'
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
-    infoBox: 'Ideal para quem quer reconstruir a fibra capilar no comprimento e nas pontas com o ativo principal do protocolo.'
+    infoBox: 'Para quem deseja recuperar corpo e espessura no comprimento.'
   },
   {
     id: 2,
-    name: 'Protocolo 2',
+    name: 'Protocolo Intensivo',
     priceLabel: 'R$247',
-    subtitle: 'Reconstrói o fio e cuida do couro, de onde o próximo fio nasce.',
+    subtitle: 'Para quem percebe afinamento também desde a raiz.',
     price: 247,
     installments: '24,80',
-    note: 'Teste A / Teste B, nenhum rodando ainda',
-    badge: 'Teste A/B',
-    description: 'Reconstrói o fio e cuida do couro, de onde o próximo fio nasce.',
+    badge: 'Recomendado',
+    description: 'Para quem percebe afinamento também desde a raiz.',
     items: [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor'
     ],
-    infoBox: 'Perfeito para quem quer tratar comprimento e couro cabeludo no mesmo protocolo.'
+    infoBox: 'Para quem percebe afinamento também desde a raiz.'
   },
   {
     id: 3,
-    name: 'Protocolo 3',
+    name: 'Protocolo Completo',
     priceLabel: 'R$297',
-    subtitle: 'Reconstrução completa: prepara o couro, reconstrói o fio, cuida da raiz.',
+    subtitle: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 297,
     installments: '29,82',
     badge: 'Mais completo',
-    description: 'Reconstrução completa: prepara o couro, reconstrói o fio, cuida da raiz.',
+    description: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
     items: [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor',
       'Shampoo Antioxidante Mineral',
       'Frete grátis incluso'
     ],
-    infoBox: 'O protocolo mais completo para preparar couro cabeludo, fortalecer raiz e reconstruir o comprimento.',
+    infoBox: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
     hasFreeShipping: true
   }
 ];
@@ -137,6 +136,7 @@ const renderNumberedText = (text: string, numberClassName = 'number-inline') =>
 
 export default function OfferSelector({ selectedId, onSelect }: OfferSelectorProps) {
   return (
+    <>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
       {protocols.map((protocol) => {
         return (
@@ -286,6 +286,28 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
         );
       })}
     </div>
+
+    {/* Guarantees & Features List from Image 2 */}
+    <div className="max-w-xl mx-auto mt-12 bg-cream/40 border border-tan-deep/20 rounded-2xl p-6 sm:p-7 text-left shadow-sm">
+      <ul className="space-y-3 font-sans font-medium text-ink">
+        <li className="flex items-center gap-3">
+          <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
+          <span className="font-semibold text-bordo text-sm sm:text-base">Resultado visível desde as primeiras aplicações*</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
+          <span className="font-semibold text-bordo text-sm sm:text-base">Garantia de 30 dias</span>
+        </li>
+        <li className="flex items-center gap-3">
+          <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
+          <span className="font-semibold text-bordo text-sm sm:text-base">Envio prioritário</span>
+        </li>
+      </ul>
+      <p className="text-xs font-sans text-ink-soft/75 mt-4 border-t border-tan-deep/15 pt-3 italic">
+        *Resultados podem variar de acordo com cada tipo de fibra e nível de afinamento capilar.
+      </p>
+    </div>
+    </>
   );
 }
 
