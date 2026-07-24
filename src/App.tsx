@@ -663,6 +663,76 @@ export default function App() {
         </div>
       </section>
 
+      {/* ANTES E DEPOIS / RESULTADOS REAIS SECTION */}
+      <section className="py-24 px-6 bg-cream/40 border-t border-tan-deep/20" id="resultados">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-3">
+              TRANSFORMAÇÃO REAL DA FIBRA
+            </span>
+            <h2 className="text-3xl sm:text-5xl font-serif text-bordo font-black tracking-tight leading-tight">
+              Veja o que acontece quando a fibra recupera sua estrutura.
+            </h2>
+            <p className="text-base sm:text-lg font-sans text-ink-soft max-w-2xl mx-auto mt-4 leading-relaxed font-normal">
+              Relatos espontâneos e resultados reais enviados por clientes que restauraram o corpo, o brilho e a densidade dos fios.
+            </p>
+          </div>
+
+          {/* Premium Showcase Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {/* Card 1 */}
+            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5">
+                <img
+                  src="/results/resultado-1.jpg"
+                  alt="Resultado real de recuperação capilar - Roberta Mazoni"
+                  className="w-full h-auto object-cover rounded-2xl max-h-[500px]"
+                />
+              </div>
+              <div className="space-y-2 px-2 pb-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
+                    RECUPERAÇÃO DE COMPRIMENTO & DENSIDADE
+                  </span>
+                  <div className="flex text-amber-500 text-xs">★★★★★</div>
+                </div>
+                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
+                  Roberta Mazoni
+                </h3>
+                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
+                  "Olha o tamanho do meu cabelo com seu protocolo! Recuperou corpo e peso de forma impressionante."
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white border border-tan-deep/25 rounded-3xl p-4 sm:p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+              <div className="relative overflow-hidden rounded-2xl border border-tan-deep/20 mb-5 bg-black/5">
+                <img
+                  src="/results/resultado-2.jpg"
+                  alt="Resultado real de recuperação capilar - Mari"
+                  className="w-full h-full object-cover rounded-2xl max-h-[500px]"
+                />
+              </div>
+              <div className="space-y-2 px-2 pb-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-bordo bg-bordo/10 px-3 py-1 rounded-full">
+                    RESTAURAÇÃO DE BRILHO & MASSA
+                  </span>
+                  <div className="flex text-amber-500 text-xs">★★★★★</div>
+                </div>
+                <h3 className="font-serif font-bold text-lg text-bordo pt-1">
+                  Depoimento de Paciente
+                </h3>
+                <p className="text-sm font-sans text-ink-soft italic leading-relaxed">
+                  "O brilho já voltou e eu estou muito feliz com os resultados... Nem se compara com nada do que já usei!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* OFERTA SECTION */}
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
         <div className="max-w-4xl mx-auto">
