@@ -671,15 +671,15 @@ export default function App() {
           <div className="mt-12 grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-4">
             <div className="flex items-center justify-center gap-3 rounded-2xl border border-bordo/18 bg-gradient-to-br from-cream to-white px-4 py-4 text-center font-sans text-sm font-bold text-ink shadow-[0_12px_28px_rgba(78,20,28,0.08)]">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-verde text-sm font-black text-cream shadow-[0_8px_18px_rgba(30,61,44,0.18)]">✓</span>
-              <span>Cabelo encorpado na <span className="number-inline-small">1</span>ª aplicação</span>
+              <span>Tecnologia desenvolvida por tricologistas</span>
             </div>
             <div className="flex items-center justify-center gap-3 rounded-2xl border border-bordo/18 bg-gradient-to-br from-cream to-white px-4 py-4 text-center font-sans text-sm font-bold text-ink shadow-[0_12px_28px_rgba(78,20,28,0.08)]">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-verde text-sm font-black text-cream shadow-[0_8px_18px_rgba(30,61,44,0.18)]">✓</span>
-              <span><span className="number-inline-small">30</span> Dias de Garantia Científica</span>
+              <span><span className="number-inline-small">30</span> dias de garantia</span>
             </div>
             <div className="flex items-center justify-center gap-3 rounded-2xl border border-bordo/18 bg-gradient-to-br from-cream to-white px-4 py-4 text-center font-sans text-sm font-bold text-ink shadow-[0_12px_28px_rgba(78,20,28,0.08)]">
               <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-verde text-sm font-black text-cream shadow-[0_8px_18px_rgba(30,61,44,0.18)]">✓</span>
-              <span>Despacho Prioritário em <span className="number-inline-small">24</span>h</span>
+              <span>Despacho em até <span className="number-inline-small">24</span> horas</span>
             </div>
           </div>
           <p className="text-center text-[11px] text-ink-soft/70 mt-4 leading-none">
