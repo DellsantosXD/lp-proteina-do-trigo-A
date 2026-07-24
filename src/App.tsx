@@ -126,17 +126,17 @@ export default function App() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="font-serif text-bordo font-black tracking-tight leading-tight text-3xl sm:text-5xl md:text-6xl max-w-4xl text-balance"
+              className="font-serif text-bordo font-black tracking-tight leading-tight text-4xl sm:text-6xl md:text-7xl max-w-4xl text-balance"
             >
               Seu rabo de cavalo virou um fiapo.
             </motion.h1>
           </div>
 
-          <div className="max-w-2xl mx-auto mb-10 space-y-3">
-            <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
+          <div className="max-w-2xl mx-auto mb-10 space-y-4">
+            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
               O afinamento pode ter diferentes causas. A boa notícia é que a fibra capilar pode recuperar estrutura quando recebe a tecnologia certa.
             </p>
-            <p className="text-base sm:text-lg text-ink font-medium leading-relaxed">
+            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
               A Reconstrução Molecular em 3 Camadas foi desenvolvida para restaurar a estrutura da fibra afinada, devolvendo corpo, densidade e resistência aos fios, sem depender de salão.
             </p>
           </div>
