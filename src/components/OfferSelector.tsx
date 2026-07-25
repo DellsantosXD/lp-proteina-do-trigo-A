@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { AlertTriangle, CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
+import { CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
 import { Protocol } from '../types';
 
 interface ExtendedProtocol extends Protocol {
@@ -240,11 +240,6 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               </div>
 
               <div className={`${protocol.hasFreeShipping ? 'mt-auto' : 'mt-1'} pt-1`}>
-                {/* Urgência Alert */}
-                <div className="min-h-[34px] text-[11px] font-sans font-extrabold text-[#E54B4B] tracking-wider uppercase mb-3 select-none flex items-center justify-center gap-1">
-                  <AlertTriangle size={14} aria-hidden="true" /> ÚLTIMAS UNIDADES COM DESCONTO
-                </div>
-
                 {/* CTA Button matching image style */}
                 <a
                   href={protocol.checkoutUrl}
