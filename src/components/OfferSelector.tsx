@@ -18,44 +18,44 @@ const protocols: ExtendedProtocol[] = [
     id: 1,
     name: 'Protocolo Essencial',
     priceLabel: 'R$169',
-    subtitle: 'Para quem deseja recuperar corpo e espessura no comprimento.',
+    subtitle: 'Reconstrói e devolve corpo à fibra afinada.',
     price: 169,
     installments: '16,97',
-    description: 'Para quem deseja recuperar corpo e espessura no comprimento.',
+    description: 'Reconstrói e devolve corpo à fibra afinada.',
     items: [
       'Proteína do Trigo Pro Filler'
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
-    infoBox: 'Para quem deseja recuperar corpo e espessura no comprimento.',
+    infoBox: 'Reconstrói e devolve corpo à fibra afinada.',
     checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL'
   },
   {
     id: 2,
     name: 'Protocolo Intensivo',
     priceLabel: 'R$247',
-    subtitle: 'Para quem percebe afinamento também desde a raiz.',
+    subtitle: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     price: 247,
     installments: '24,80',
     badge: 'Recomendado',
-    description: 'Para quem percebe afinamento também desde a raiz.',
+    description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     items: [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
-    infoBox: 'Para quem percebe afinamento também desde a raiz.',
+    infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL'
   },
   {
     id: 3,
     name: 'Protocolo Completo',
     priceLabel: 'R$297',
-    subtitle: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
+    subtitle: 'O protocolo mais completo para reconstrução da fibra e equilíbrio do couro cabeludo.',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 297,
     installments: '29,82',
     badge: 'Mais completo',
-    description: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
+    description: 'O protocolo mais completo para reconstrução da fibra e equilíbrio do couro cabeludo.',
     items: [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor',
@@ -63,7 +63,7 @@ const protocols: ExtendedProtocol[] = [
       'Frete grátis incluso'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
-    infoBox: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
+    infoBox: 'O protocolo mais completo para reconstrução da fibra e equilíbrio do couro cabeludo.',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1'
   }
