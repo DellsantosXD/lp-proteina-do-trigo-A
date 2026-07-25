@@ -352,7 +352,7 @@ export default function App() {
           <div className="mt-16 space-y-7">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                <h3 className="text-lg sm:text-xl font-serif font-black text-bordo mb-3 uppercase tracking-wider leading-snug">
                   O BRILHO NÃO SIGNIFICA QUE A FIBRA FOI RESTAURADA.
                 </h3>
                 <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
@@ -360,7 +360,7 @@ export default function App() {
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                <h3 className="text-lg sm:text-xl font-serif font-black text-bordo mb-3 uppercase tracking-wider leading-snug">
                   A TECNOLOGIA RECONHECE EXATAMENTE ONDE O FIO PRECISA DE REPARO.
                 </h3>
                 <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
@@ -368,7 +368,7 @@ export default function App() {
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                <h3 className="text-lg sm:text-xl font-serif font-black text-bordo mb-3 uppercase tracking-wider leading-snug">
                   O VERDADEIRO ENCORPAMENTO ACONTECE QUANDO A FIBRA RECUPERA SUA DENSIDADE.
                 </h3>
                 <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
@@ -376,7 +376,7 @@ export default function App() {
                 </p>
               </div>
               <div className="bg-cream/40 border border-tan-deep/20 rounded-2xl p-7 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
-                <h3 className="text-base sm:text-lg font-sans font-black text-bordo mb-3 uppercase tracking-wide leading-snug">
+                <h3 className="text-lg sm:text-xl font-serif font-black text-bordo mb-3 uppercase tracking-wider leading-snug">
                   DEPOIS DE RECONSTRUIR, É PRECISO PROTEGER ESSE RESULTADO.
                 </h3>
                 <p className="text-sm sm:text-base text-ink font-semibold leading-relaxed">
