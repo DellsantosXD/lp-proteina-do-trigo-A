@@ -32,7 +32,7 @@ const items: OverviewItem[] = [
     name: 'Protocolo 3',
     tag: 'COMPLETO',
     badge: '🔥 Mais Completo',
-    description: 'O protocolo mais completo para reconstrução da fibra e equilíbrio do couro cabeludo.',
+    description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
   },
 ];
 
