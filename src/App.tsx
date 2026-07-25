@@ -163,15 +163,6 @@ export default function App() {
       {/* LEAD SECTION - PROBLEM OUTLINE */}
       <section className="py-20 px-6 border-t border-tan-deep/25 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center md:text-left mb-10">
-            <span className="inline-block px-3 py-1 bg-bordo/10 text-bordo font-mono text-xs font-bold uppercase tracking-widest rounded-full mb-3">
-              Análise Especializada
-            </span>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-serif text-bordo font-black tracking-tight leading-tight">
-              O Diagnóstico Clínico
-            </h2>
-          </div>
-
           {/* Structured Storytelling Cards */}
           <div className="space-y-6 mb-12">
             {/* Card 1: Memória & Identificação */}
