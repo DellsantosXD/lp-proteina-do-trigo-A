@@ -528,7 +528,7 @@ export default function App() {
                 'BLINDA O RESULTADO',
                 'SEM PESAR OS FIOS',
                 'USO EM CASA',
-                'RESULTADO DURADOURO'
+                'ENCORPA OS FIOS'
               ].map((benefit, idx) => (
                 <div key={idx} className="flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl bg-cream/5 border border-cream/10 hover:border-rose/40 transition-all duration-300">
                   <div className="w-8 h-8 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
