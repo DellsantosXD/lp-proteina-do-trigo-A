@@ -286,11 +286,8 @@ export default function App() {
               <h3 className="text-lg sm:text-xl font-sans font-black text-ink mb-3 leading-snug">
                 Não conseguem manter os ativos dentro da fibra por tempo suficiente.
               </h3>
-              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed mb-4">
+              <p className="text-base sm:text-lg text-ink font-semibold leading-relaxed">
                 Sem uma etapa de blindagem molecular, parte dos ativos é perdida já nas primeiras lavagens, reduzindo rapidamente a sensação de fios mais encorpados.
-              </p>
-              <p className="text-sm sm:text-base font-bold text-bordo leading-relaxed pt-3 border-t border-tan-deep/25">
-                Isso prepara perfeitamente a etapa 3 da tecnologia.
               </p>
             </div>
           </div>
