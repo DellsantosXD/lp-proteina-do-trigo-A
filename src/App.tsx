@@ -515,6 +515,13 @@ export default function App() {
             </div>
           </div>
 
+          {/* Paragraph right after the jar/video and before the bullets */}
+          <div className="max-w-3xl mx-auto mt-8 text-center px-4">
+            <p className="text-base sm:text-lg font-sans text-cream/90 leading-relaxed font-medium">
+              O Pro Filler foi desenvolvido para restaurar a estrutura da fibra através da combinação exclusiva do Complexo TriMolecular Inteligente, do NV Redensifier e da Cera de Farelo de Arroz Hidrofóbica. Em poucos minutos de aplicação, os três ativos atuam em sequência para preencher, devolver densidade e proteger os fios, proporcionando um cabelo visivelmente mais encorpado, resistente e saudável.
+            </p>
+          </div>
+
           {/* Premium Benefits Grid below Video */}
           <div className="max-w-4xl sm:max-w-5xl mx-auto mt-10 bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-center">
             <h3 className="font-serif text-2xl sm:text-4xl font-black text-cream mb-6 uppercase tracking-wide">
