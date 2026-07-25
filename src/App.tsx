@@ -517,23 +517,24 @@ export default function App() {
 
           {/* Premium Benefits Grid below Video */}
           <div className="max-w-4xl sm:max-w-5xl mx-auto mt-10 bg-cream/10 border border-cream/15 rounded-3xl p-6 sm:p-8 backdrop-blur-md text-center">
-            <h3 className="font-serif italic text-2xl sm:text-3xl font-bold text-cream mb-6">
-              Mais do que uma reconstrução.
+            <h3 className="font-serif text-2xl sm:text-4xl font-black text-cream mb-6 uppercase tracking-wide">
+              MAIS DO QUE UMA RECONSTRUÇÃO.
             </h3>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 justify-center items-center">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4 justify-center items-center">
               {[
-                'Preenche a fibra',
-                'Devolve densidade',
-                'Blinda o resultado',
-                'Sem pesar os fios',
-                'Uso em casa'
+                'PREENCHE A FIBRA',
+                'DEVOLVE DENSIDADE',
+                'BLINDA O RESULTADO',
+                'SEM PESAR OS FIOS',
+                'USO EM CASA',
+                'RESULTADO DURADOURO'
               ].map((benefit, idx) => (
-                <div key={idx} className="flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl bg-cream/5 border border-cream/10">
+                <div key={idx} className="flex flex-col items-center gap-2 p-3 sm:p-4 rounded-2xl bg-cream/5 border border-cream/10 hover:border-rose/40 transition-all duration-300">
                   <div className="w-8 h-8 rounded-full bg-rose/30 border border-rose/50 flex items-center justify-center shrink-0 text-cream">
                     <CheckCircle2 className="w-4 h-4 text-rose" />
                   </div>
-                  <span className="text-xs sm:text-sm font-sans font-semibold text-cream/95 leading-tight">
+                  <span className="text-xs sm:text-sm font-sans font-extrabold uppercase tracking-wider text-cream leading-tight">
                     {benefit}
                   </span>
                 </div>
