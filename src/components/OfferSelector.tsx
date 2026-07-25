@@ -242,15 +242,20 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               </div>
 
               {protocol.bonuses && protocol.bonuses.length > 0 && (
-                <div className="mb-4 rounded-2xl border border-gold/35 bg-gradient-to-br from-gold/15 via-cream/80 to-tan/25 p-4 text-left shadow-sm">
-                  <span className="inline-block bg-bordo text-cream font-mono text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full tracking-wider mb-2">
-                    🎁 BÔNUS INCLUSO
-                  </span>
-                  <ul className="space-y-2">
+                <div className="mb-4 rounded-2xl border border-amber-500/40 bg-gradient-to-br from-amber-500/10 via-cream/90 to-amber-100/40 p-4 text-left shadow-sm">
+                  <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-amber-500/20">
+                    <span className="inline-flex items-center gap-1 bg-[#4E141C] text-cream font-mono text-[10px] font-black uppercase px-2.5 py-1 rounded-full tracking-wider shadow-xs">
+                      🎁 2 BÔNUS EXCLUSIVOS INCLUSOS
+                    </span>
+                    <span className="text-[10px] font-mono font-bold text-[#16A34A] uppercase tracking-widest">
+                      100% GRÁTIS
+                    </span>
+                  </div>
+                  <ul className="space-y-2.5">
                     {protocol.bonuses.map((bonus, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-2 text-xs text-ink font-semibold leading-snug">
-                        <span className="text-bordo font-black shrink-0">✓</span>
-                        <span>{bonus}</span>
+                      <li key={bIdx} className="flex items-start gap-2 text-xs text-ink font-bold leading-snug">
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#16A34A] text-[9px] font-black text-white mt-0.5 shadow-xs">✓</span>
+                        <span className="font-sans">{bonus} <span className="text-[#16A34A] font-extrabold text-[11px]">(INCLUSO)</span></span>
                       </li>
                     ))}
                   </ul>
