@@ -29,7 +29,8 @@ const protocols: ExtendedProtocol[] = [
     infoBox: 'Reconstrói e devolve corpo à fibra afinada.',
     checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL',
     bonuses: [
-      'E-book: “Como encorpar seus cabelos em casa”'
+      'E-book: “Como encorpar seus cabelos em casa”',
+      'E-book: “Manual completo de massagem capilar em casa”'
     ]
   },
   {
@@ -49,7 +50,8 @@ const protocols: ExtendedProtocol[] = [
     infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonuses: [
-      'E-book: “Como encorpar seus cabelos em casa”'
+      'E-book: “Como encorpar seus cabelos em casa”',
+      'E-book: “Manual completo de massagem capilar em casa”'
     ]
   },
   {
