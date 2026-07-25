@@ -16,23 +16,23 @@ interface OverviewItem {
 const items: OverviewItem[] = [
   {
     id: 1,
-    name: 'Protocolo 1',
+    name: 'Protocolo Essencial',
     tag: 'ESSENCIAL',
-    description: 'Reconstrói e devolve corpo à fibra afinada.',
+    description: 'Para quem deseja recuperar corpo e espessura no comprimento.',
   },
   {
     id: 2,
-    name: 'Protocolo 2',
+    name: 'Protocolo Intensivo',
     tag: 'INTENSIVO',
     badge: 'Recomendado',
-    description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
+    description: 'Para quem percebe afinamento também desde a raiz.',
   },
   {
     id: 3,
-    name: 'Protocolo 3',
+    name: 'Protocolo Completo',
     tag: 'COMPLETO',
     badge: '🔥 Mais Completo',
-    description: 'O protocolo mais completo para reconstrução da fibra e equilíbrio do couro cabeludo.',
+    description: 'Para quem deseja tratar couro cabeludo, fibra e manutenção em um único protocolo.',
   },
 ];
 
