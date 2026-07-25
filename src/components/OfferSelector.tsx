@@ -27,7 +27,10 @@ const protocols: ExtendedProtocol[] = [
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
     infoBox: 'Reconstrói e devolve corpo à fibra afinada.',
-    checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL'
+    checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL',
+    bonuses: [
+      'E-book: “Como encorpar seus cabelos em casa”'
+    ]
   },
   {
     id: 2,
@@ -44,7 +47,10 @@ const protocols: ExtendedProtocol[] = [
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
     infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
-    checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL'
+    checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
+    bonuses: [
+      'E-book: “Como encorpar seus cabelos em casa”'
+    ]
   },
   {
     id: 3,
@@ -232,6 +238,22 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   ))}
                 </ul>
               </div>
+
+              {protocol.bonuses && protocol.bonuses.length > 0 && (
+                <div className="mb-4 rounded-2xl border border-gold/35 bg-gradient-to-br from-gold/15 via-cream/80 to-tan/25 p-4 text-left shadow-sm">
+                  <span className="inline-block bg-bordo text-cream font-mono text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full tracking-wider mb-2">
+                    🎁 BÔNUS INCLUSO
+                  </span>
+                  <ul className="space-y-2">
+                    {protocol.bonuses.map((bonus, bIdx) => (
+                      <li key={bIdx} className="flex items-start gap-2 text-xs text-ink font-semibold leading-snug">
+                        <span className="text-bordo font-black shrink-0">✓</span>
+                        <span>{bonus}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
 
               <div className="mb-4 text-center">
                 <span className="text-xs sm:text-sm text-ink-soft block mt-1">
