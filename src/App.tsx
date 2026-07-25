@@ -656,8 +656,8 @@ export default function App() {
             <h4 className="font-serif font-bold text-bordo text-base md:text-lg mb-2">
               Qual Protocolo é o Ideal Para Você?
             </h4>
-            <p className="text-sm text-ink-soft leading-relaxed">
-              A aplicação isolada da <strong>Proteína Pro Filler (Protocolo 1)</strong> reconstrói a estrutura do fio em toda a sua extensão. Porém, se você sente o afinamento surgindo já desde o couro cabeludo, o <strong>Protocolo 2</strong> soma o Sérum que cuida do bulbo do fio. Caso o seu cabelo apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o <strong>Protocolo 3 (Completo)</strong> prepara perfeitamente o terreno folicular.
+            <p className="text-sm sm:text-base text-ink font-medium leading-relaxed">
+              A aplicação isolada da <strong>Proteína Pro Filler (Protocolo Essencial)</strong> reconstrói a estrutura do fio em toda a sua extensão. Porém, se você sente o afinamento surgindo já desde o couro cabeludo, o <strong>Protocolo Intensivo</strong> soma o Sérum que cuida do bulbo do fio. Caso o seu cabelo apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o <strong>Protocolo Completo</strong> prepara perfeitamente o terreno folicular.
             </p>
           </div>
 
