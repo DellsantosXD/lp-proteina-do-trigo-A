@@ -478,6 +478,13 @@ export default function App() {
               label="Quero iniciar meu tratamento"
             />
           </div>
+
+          {/* Transition Block matching reference image */}
+          <div className="mt-10 p-5 md:p-6 bg-cream/40 border-l-4 border-bordo rounded-r-2xl border-y border-r border-tan-deep/25 max-w-3xl mx-auto shadow-sm text-left">
+            <p className="text-base sm:text-lg font-sans font-semibold text-ink leading-relaxed">
+              Toda essa ciência precisava ganhar uma forma simples de chegar até a casa das mulheres. Foi assim que nasceu o Pro Filler.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -494,9 +501,6 @@ export default function App() {
             </h2>
             <p className="text-lg sm:text-2xl font-serif text-cream/90 italic font-semibold mt-2 leading-snug">
               a tecnologia que tornou a Reconstrução Molecular em 3 Camadas possível.
-            </p>
-            <p className="text-sm sm:text-base font-sans text-cream/80 max-w-xl mx-auto mt-5 leading-relaxed font-normal">
-              Toda essa ciência precisava ganhar uma forma simples de chegar até a casa das mulheres. Foi assim que nasceu o Pro Filler.
             </p>
           </div>
 
