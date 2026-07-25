@@ -68,8 +68,10 @@ const slides: SlideItem[] = [
 export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
+  const [slideWidth, setSlideWidth] = useState(372);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef<number | null>(null);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -77,6 +79,34 @@ export const TestimonialsCarousel: React.FC = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (window.innerWidth < 640) {
+        setSlideWidth(296); // 280px + 16px mx
+      } else {
+        setSlideWidth(372); // 340px + 32px mx
+      }
+    };
+    updateWidth();
+    window.addEventListener('resize', updateWidth);
+    return () => window.removeEventListener('resize', updateWidth);
+  }, []);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const diff = touchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 40) {
+      nextSlide();
+    } else if (diff < -40) {
+      prevSlide();
+    }
+    touchStartX.current = null;
   };
 
   useEffect(() => {
@@ -112,13 +142,18 @@ export const TestimonialsCarousel: React.FC = () => {
   };
 
   return (
-    <div ref={containerRef} className="w-full relative py-6 overflow-hidden">
+    <div
+      ref={containerRef}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      className="w-full relative py-6 overflow-hidden touch-pan-y"
+    >
       {/* Peeking Carousel Slider Stage */}
       <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center min-h-[460px] sm:min-h-[620px]">
         <div
           className="flex transition-transform duration-500 ease-out items-center"
           style={{
-            transform: `translateX(calc(50% - ${(currentIndex * 340) + 170}px))`,
+            transform: `translateX(calc(50% - ${(currentIndex * slideWidth) + (slideWidth / 2)}px))`,
           }}
         >
           {slides.map((slide, idx) => {
@@ -128,7 +163,7 @@ export const TestimonialsCarousel: React.FC = () => {
               <div
                 key={slide.id}
                 onClick={() => setCurrentIndex(idx)}
-                className={`shrink-0 w-[290px] sm:w-[340px] mx-3 sm:mx-4 cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden bg-white border shadow-lg ${
+                className={`shrink-0 w-[280px] sm:w-[340px] mx-2 sm:mx-4 cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden bg-white border shadow-lg ${
                   isActive
                     ? 'scale-100 opacity-100 z-20 border-bordo/40 ring-4 ring-bordo/10 shadow-2xl'
                     : 'scale-90 opacity-55 z-10 border-tan-deep/20 hover:opacity-85'
