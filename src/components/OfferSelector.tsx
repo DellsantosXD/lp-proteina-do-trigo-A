@@ -67,13 +67,16 @@ const protocols: ExtendedProtocol[] = [
     items: [
       'Proteína do Trigo Pro Filler',
       'Sérum Fortalecedor',
-      'Shampoo Antioxidante Mineral',
-      'Frete grátis incluso'
+      'Shampoo Antioxidante Mineral'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
     infoBox: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
     hasFreeShipping: true,
-    checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1'
+    checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
+    bonuses: [
+      'E-book: “Como encorpar seus cabelos em casa”',
+      'E-book: “Manual completo de massagem capilar em casa”'
+    ]
   }
 ];
 
@@ -229,6 +232,12 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   </div>
                 )}
               </div>
+
+              {protocol.hasFreeShipping && (
+                <div className="my-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-[#16A34A]/15 border border-[#16A34A]/30 px-3.5 py-1.5 font-sans text-xs font-black uppercase text-[#16A34A] tracking-wider shadow-xs">
+                  <Truck className="w-4 h-4 text-[#16A34A]" /> FRETE GRÁTIS INCLUSO
+                </div>
+              )}
 
               <div className="my-4 rounded-2xl border border-tan-deep/15 bg-cream/55 p-4 sm:p-5">
                 <ul className="space-y-3">
