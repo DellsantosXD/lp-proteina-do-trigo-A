@@ -614,9 +614,9 @@ export default function App() {
       </section>
 
       {/* ANTES E DEPOIS / RESULTADOS REAIS SECTION */}
-      <section className="py-24 px-6 bg-cream/40 border-t border-tan-deep/20" id="resultados">
+      <section className="pt-20 pb-28 sm:py-24 px-4 sm:px-6 bg-cream/40 border-t border-tan-deep/20" id="resultados">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
             <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-3">
               TRANSFORMAÇÃO REAL DA FIBRA
             </span>
