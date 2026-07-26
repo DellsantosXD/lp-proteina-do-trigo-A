@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, Maximize2, X, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 
 interface SlideItem {
   id: string;
@@ -79,9 +79,12 @@ export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [modalIndex, setModalIndex] = useState<number | null>(null);
+  const [zoomScale, setZoomScale] = useState(1.6);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const modalTouchStartX = useRef<number | null>(null);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -89,6 +92,25 @@ export const TestimonialsCarousel: React.FC = () => {
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  const openModal = (idx: number) => {
+    setModalIndex(idx);
+    setZoomScale(1.6);
+  };
+
+  const closeModal = () => {
+    setModalIndex(null);
+  };
+
+  const prevModalSlide = () => {
+    setModalIndex((prev) => (prev === null || prev === 0 ? slides.length - 1 : prev - 1));
+    setZoomScale(1.6);
+  };
+
+  const nextModalSlide = () => {
+    setModalIndex((prev) => (prev === null || prev === slides.length - 1 ? 0 : prev + 1));
+    setZoomScale(1.6);
   };
 
   useEffect(() => {
@@ -99,6 +121,18 @@ export const TestimonialsCarousel: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (modalIndex === null) return;
+      if (e.key === 'Escape') closeModal();
+      if (e.key === 'ArrowLeft') prevModalSlide();
+      if (e.key === 'ArrowRight') nextModalSlide();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [modalIndex]);
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
@@ -113,6 +147,21 @@ export const TestimonialsCarousel: React.FC = () => {
       prevSlide();
     }
     touchStartX.current = null;
+  };
+
+  const handleModalTouchStart = (e: React.TouchEvent) => {
+    modalTouchStartX.current = e.touches[0].clientX;
+  };
+
+  const handleModalTouchEnd = (e: React.TouchEvent) => {
+    if (modalTouchStartX.current === null) return;
+    const diff = modalTouchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 50) {
+      nextModalSlide();
+    } else if (diff < -50) {
+      prevModalSlide();
+    }
+    modalTouchStartX.current = null;
   };
 
   useEffect(() => {
@@ -203,10 +252,18 @@ export const TestimonialsCarousel: React.FC = () => {
                 ? 'h-[320px] sm:h-[440px]'
                 : 'h-[440px] sm:h-[580px]';
 
+            const handleCardClick = () => {
+              if (isActive) {
+                openModal(idx);
+              } else {
+                setCurrentIndex(idx);
+              }
+            };
+
             return (
               <div
                 key={slide.id}
-                onClick={() => setCurrentIndex(idx)}
+                onClick={handleCardClick}
                 className={`shrink-0 ${cardWidthClass} mx-2 sm:mx-4 cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden bg-white border shadow-lg ${
                   isActive
                     ? 'scale-100 opacity-100 z-20 border-bordo/40 ring-4 ring-bordo/10 shadow-2xl'
@@ -214,6 +271,14 @@ export const TestimonialsCarousel: React.FC = () => {
                 }`}
               >
                 <div className={`relative w-full ${containerHeightClass} bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center p-2 sm:p-3`}>
+                  {/* Discreet Toque Para Ampliar Badge */}
+                  {isActive && slide.type === 'image' && (
+                    <div className="absolute top-3 left-3 z-30 inline-flex items-center gap-1.5 rounded-full bg-black/70 backdrop-blur-md px-3 py-1.5 text-[11px] font-sans font-bold text-cream border border-white/20 shadow-md">
+                      <Maximize2 className="w-3.5 h-3.5 text-rose shrink-0" />
+                      <span>Toque para ampliar</span>
+                    </div>
+                  )}
+
                   {slide.type === 'video' ? (
                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/30">
                       <video
@@ -294,6 +359,127 @@ export const TestimonialsCarousel: React.FC = () => {
           />
         ))}
       </div>
+
+      {/* FULLSCREEN LIGHTBOX MODAL WITH ZOOM & PAN */}
+      {modalIndex !== null && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-xl flex flex-col justify-between p-3 sm:p-5 select-none animate-fadeIn"
+          onClick={closeModal}
+        >
+          {/* Header Controls Bar */}
+          <div
+            className="flex items-center justify-between w-full max-w-4xl mx-auto z-10 pb-3 border-b border-white/15 text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center gap-2 min-w-0 pr-2">
+              <span className="text-xs sm:text-sm font-sans font-bold text-cream/95 truncate">
+                {slides[modalIndex].alt}
+              </span>
+              <span className="text-[10px] font-mono text-cream/60 shrink-0">
+                ({modalIndex + 1}/{slides.length})
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              {/* Zoom Controls (Images only) */}
+              {slides[modalIndex].type === 'image' && (
+                <>
+                  <button
+                    onClick={() => setZoomScale((prev) => Math.max(1, prev - 0.4))}
+                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-cream transition-all active:scale-95"
+                    title="Reduzir zoom"
+                  >
+                    <ZoomOut className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </button>
+
+                  <span className="text-xs font-mono font-bold text-rose w-10 text-center">
+                    {Math.round(zoomScale * 100)}%
+                  </span>
+
+                  <button
+                    onClick={() => setZoomScale((prev) => Math.min(3.2, prev + 0.4))}
+                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-cream transition-all active:scale-95"
+                    title="Aumentar zoom"
+                  >
+                    <ZoomIn className="w-4 h-4 sm:w-5 sm:h-5" />
+                  </button>
+
+                  <button
+                    onClick={() => setZoomScale(1.6)}
+                    className="p-2 rounded-full bg-white/10 hover:bg-white/20 text-cream transition-all active:scale-95"
+                    title="Tamanho ideal de leitura"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  </button>
+                </>
+              )}
+
+              {/* Close Button */}
+              <button
+                onClick={closeModal}
+                className="ml-1 p-2 rounded-full bg-rose text-white hover:bg-rose/80 transition-all shadow-lg active:scale-95"
+                title="Fechar"
+              >
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
+          </div>
+
+          {/* Main Modal Stage */}
+          <div
+            className="relative flex-1 w-full max-w-5xl mx-auto flex items-center justify-center overflow-auto py-3 cursor-grab active:cursor-grabbing"
+            onClick={(e) => e.stopPropagation()}
+            onTouchStart={handleModalTouchStart}
+            onTouchEnd={handleModalTouchEnd}
+          >
+            {slides[modalIndex].type === 'video' ? (
+              <video
+                src={slides[modalIndex].src}
+                controls
+                autoPlay
+                className="max-w-full max-h-[80vh] rounded-2xl shadow-2xl"
+              />
+            ) : (
+              <div
+                className="transition-transform duration-300 ease-out flex items-center justify-center max-w-full max-h-full"
+                style={{ transform: `scale(${zoomScale})` }}
+              >
+                <img
+                  src={slides[modalIndex].src}
+                  alt={slides[modalIndex].alt}
+                  className="max-w-full max-h-[78vh] object-contain rounded-xl shadow-2xl"
+                />
+              </div>
+            )}
+          </div>
+
+          {/* Footer Controls & Navigation */}
+          <div
+            className="flex items-center justify-between w-full max-w-3xl mx-auto z-10 pt-3 border-t border-white/15"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={prevModalSlide}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 text-cream text-xs font-sans font-bold transition-all active:scale-95"
+            >
+              <ChevronLeft className="w-4 h-4" />
+              <span>Anterior</span>
+            </button>
+
+            <span className="text-[11px] font-sans text-cream/70 text-center px-2">
+              🔍 Arraste para mover ou toque no zoom
+            </span>
+
+            <button
+              onClick={nextModalSlide}
+              className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 text-cream text-xs font-sans font-bold transition-all active:scale-95"
+            >
+              <span>Próximo</span>
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
