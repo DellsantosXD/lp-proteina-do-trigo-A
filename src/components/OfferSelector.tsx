@@ -17,10 +17,10 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 1,
     name: 'Protocolo Essencial',
-    priceLabel: 'R$169',
+    priceLabel: 'R$197',
     subtitle: 'Reconstrói e devolve corpo à fibra afinada.',
-    price: 169,
-    installments: '16,97',
+    price: 197,
+    installments: '19,78',
     description: 'Reconstrói e devolve corpo à fibra afinada.',
     items: [
       'Proteína do Trigo Pro Filler'
@@ -36,10 +36,10 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 2,
     name: 'Protocolo Intensivo',
-    priceLabel: 'R$247',
+    priceLabel: 'R$267',
     subtitle: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
-    price: 247,
-    installments: '24,80',
+    price: 267,
+    installments: '26,81',
     badge: 'Recomendado',
     description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     items: [
@@ -57,11 +57,11 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 3,
     name: 'Protocolo Completo',
-    priceLabel: 'R$297',
+    priceLabel: 'R$327',
     subtitle: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
-    price: 297,
-    installments: '29,82',
+    price: 327,
+    installments: '32,83',
     badge: 'Mais completo',
     description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
     items: [

@@ -104,9 +104,9 @@ export default function App() {
 
   const activeProtocol = getProtocolById(selectedProtocolId);
   const activeInstallment =
-    activeProtocol.price === 179 ? '17,97' :
-    activeProtocol.price === 297 ? '29,82' :
-    activeProtocol.price === 397 ? '39,86' :
+    activeProtocol.price === 197 ? '19,78' :
+    activeProtocol.price === 267 ? '26,81' :
+    activeProtocol.price === 327 ? '32,83' :
     (activeProtocol.price / 12).toFixed(2).replace('.', ',');
 
   return (
