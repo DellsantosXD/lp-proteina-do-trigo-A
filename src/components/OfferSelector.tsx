@@ -320,9 +320,14 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
           <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
           <span className="font-semibold text-bordo text-sm sm:text-base">Resultado visível desde as primeiras aplicações*</span>
         </li>
-        <li className="flex items-center gap-3">
-          <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
-          <span className="font-semibold text-bordo text-sm sm:text-base">Garantia de 30 dias</span>
+        <li className="flex flex-col gap-1">
+          <div className="flex items-center gap-3">
+            <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
+            <span className="font-semibold text-bordo text-sm sm:text-base">Garantia de 30 dias</span>
+          </div>
+          <p className="pl-8 text-xs sm:text-sm italic text-ink-soft/90 leading-relaxed font-normal">
+            *Se por qualquer motivo você desistir do tratamento basta nos devolver o seu tratamento 100% lacrado que devolvemos o seu dinheiro.
+          </p>
         </li>
         <li className="flex items-center gap-3">
           <CheckCircle2 className="w-5 h-5 text-bordo shrink-0 mt-0.5" />
