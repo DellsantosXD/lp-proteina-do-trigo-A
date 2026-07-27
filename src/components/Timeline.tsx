@@ -53,14 +53,14 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   1: {
     src: '/timeline/card-1.jpg',
     alt: 'Durante anos eu acompanhei milhares de histórias de afinamento',
-    position: 'object-[center_45%]',
+    position: 'object-[center_85%]',
     height: 'h-80 sm:h-[420px]'
   },
   2: {
     src: '/timeline/card-2.jpg',
     alt: 'Eu escondia o afinamento em vez de resolver',
-    position: 'object-[center_15%]',
-    height: 'h-64 sm:h-80'
+    position: 'object-[center_35%]',
+    height: 'h-80 sm:h-[440px]'
   },
   3: {
     src: '/timeline/card-3.jpg',
@@ -83,7 +83,7 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   6: {
     src: '/timeline/card-6.jpg',
     alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
-    position: 'object-[center_35%]',
+    position: 'object-[center_85%]',
     height: 'h-80 sm:h-[400px]'
   },
   7: {
