@@ -49,7 +49,7 @@ const items: TimelineItem[] = [
 
 const labels = ['Autoridade', 'Dano', 'Frustração', 'Virada', 'Pesquisa', 'Protocolo', 'Resultado'];
 
-const visuals: Record<number, { src: string; alt: string; position: string; height?: string }> = {
+const visuals: Record<number, { src: string; alt: string; position: string; height?: string; fit?: string }> = {
   1: {
     src: '/timeline/card-1.jpg',
     alt: 'Durante anos eu acompanhei milhares de histórias de afinamento',
@@ -59,8 +59,9 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   2: {
     src: '/timeline/card-2.jpg',
     alt: 'Eu escondia o afinamento em vez de resolver',
-    position: 'object-[center_35%]',
-    height: 'h-80 sm:h-[440px]'
+    position: 'object-center',
+    fit: 'object-contain bg-[#FAF6F0]',
+    height: 'h-auto max-h-[540px]'
   },
   3: {
     src: '/timeline/card-3.jpg',
@@ -83,8 +84,8 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   6: {
     src: '/timeline/card-6.jpg',
     alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
-    position: 'object-[center_85%]',
-    height: 'h-80 sm:h-[400px]'
+    position: 'object-[center_98%]',
+    height: 'h-56 sm:h-[260px]'
   },
   7: {
     src: '/timeline/card-7.jpg',
@@ -184,7 +185,7 @@ export default function Timeline() {
                       <motion.img
                         src={visual.src}
                         alt={visual.alt}
-                        className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.03] ${visual.height || 'h-48 sm:h-52'} ${visual.position}`}
+                        className={`w-full transition-transform duration-700 group-hover:scale-[1.03] ${visual.fit || 'object-cover'} ${visual.height || 'h-48 sm:h-52'} ${visual.position}`}
                         referrerPolicy="no-referrer"
                         initial={{ scale: 1.06, opacity: 0.82 }}
                         whileInView={{ scale: 1, opacity: 1 }}
