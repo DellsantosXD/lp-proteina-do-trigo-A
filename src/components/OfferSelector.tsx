@@ -320,7 +320,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     <span className="flex items-center gap-2 font-sans font-extrabold text-sm text-[#4E141C] uppercase tracking-wider">
                       🎁 {protocol.bonusSection.title}
                     </span>
-                    <span className="bg-white text-[#4E141C] font-sans font-extrabold text-xs px-3 py-1 rounded-full shadow-xs border border-[#ECE0CE]/70">
+                    <span className="bg-white text-[#4E141C] font-sans font-extrabold text-xs px-3 py-1 rounded-full shadow-xs border border-[#ECE0CE]/70 whitespace-nowrap shrink-0">
                       {protocol.bonusSection.itemCountLabel}
                     </span>
                   </div>
