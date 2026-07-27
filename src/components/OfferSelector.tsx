@@ -18,15 +18,15 @@ const protocols: ExtendedProtocol[] = [
     id: 1,
     name: 'Protocolo Essencial',
     priceLabel: 'R$197',
-    subtitle: 'Reconstrói e devolve corpo à fibra afinada.',
+    subtitle: 'Para começar',
     price: 197,
     installments: '19,78',
-    description: 'Reconstrói e devolve corpo à fibra afinada.',
+    description: 'Para começar',
     items: [
       'Proteína do Trigo Pro Filler (100g)'
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
-    infoBox: 'Reconstrói e devolve corpo à fibra afinada.',
+    infoBox: 'Para começar',
     checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL',
     bonuses: [
       'E-book: “Como encorpar seus cabelos em casa”',
@@ -37,17 +37,17 @@ const protocols: ExtendedProtocol[] = [
     id: 2,
     name: 'Protocolo Intensivo',
     priceLabel: 'R$267',
-    subtitle: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
+    subtitle: 'Mais escolhido',
     price: 267,
     installments: '26,81',
     badge: 'Recomendado',
-    description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
+    description: 'Mais escolhido',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
-    infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
+    infoBox: 'Mais escolhido',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonuses: [
       'E-book: “Como encorpar seus cabelos em casa”',
@@ -58,19 +58,19 @@ const protocols: ExtendedProtocol[] = [
     id: 3,
     name: 'Protocolo Completo',
     priceLabel: 'R$327',
-    subtitle: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
+    subtitle: 'Melhor experiência de cuidado',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 327,
     installments: '32,83',
     badge: 'Mais completo',
-    description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
+    description: 'Melhor experiência de cuidado',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)',
       'Shampoo Antioxidante Mineral (250 ml)'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
-    infoBox: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
+    infoBox: 'Melhor experiência de cuidado',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
     bonuses: [

@@ -18,21 +18,21 @@ const items: OverviewItem[] = [
     id: 1,
     name: 'Protocolo 1',
     tag: 'ESSENCIAL',
-    description: 'Reconstrói e devolve corpo à fibra afinada.',
+    description: 'Para começar',
   },
   {
     id: 2,
     name: 'Protocolo 2',
     tag: 'INTENSIVO',
     badge: 'Recomendado',
-    description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
+    description: 'Mais escolhido',
   },
   {
     id: 3,
     name: 'Protocolo 3',
     tag: 'COMPLETO',
     badge: '🔥 Mais Completo',
-    description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
+    description: 'Melhor experiência de cuidado',
   },
 ];
 
