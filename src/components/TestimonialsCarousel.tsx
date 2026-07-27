@@ -57,6 +57,30 @@ const slides: SlideItem[] = [
     src: '/testimonials/feedback-7.jpg',
     alt: 'Relato Cheiro Surreal WhatsApp',
   },
+  {
+    id: 'feedback-8',
+    type: 'image',
+    src: '/testimonials/feedback-8.jpg',
+    alt: 'Relato Gratidão Madeixas Lindas WhatsApp',
+  },
+  {
+    id: 'feedback-9',
+    type: 'image',
+    src: '/testimonials/feedback-9.jpg',
+    alt: 'Relato Couro Cabeludo Preenchido - Tatiana Macedo',
+  },
+  {
+    id: 'feedback-10',
+    type: 'image',
+    src: '/testimonials/feedback-10.jpg',
+    alt: 'Relato Cabelo Chupou a Proteína WhatsApp',
+  },
+  {
+    id: 'feedback-11',
+    type: 'image',
+    src: '/testimonials/feedback-11.jpg',
+    alt: 'Relato Unboxing Meus Queridinhos WhatsApp',
+  },
 ];
 
 export const TestimonialsCarousel: React.FC = () => {
