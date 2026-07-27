@@ -8,12 +8,20 @@ interface SlideItem {
   alt: string;
 }
 
-const slides: SlideItem[] = Array.from({ length: 11 }, (_, i) => ({
-  id: `v-${i + 1}`,
-  type: 'video',
-  src: `/videos/depoimentos/v${i + 1}.mp4`,
-  alt: `Depoimento em Vídeo ${i + 1}`,
-}));
+const slides: SlideItem[] = [
+  {
+    id: 'v-1',
+    type: 'video',
+    src: '/videos/depoimentos/v1.mp4',
+    alt: 'Depoimento em Vídeo - Resultado Cabelo Loiro',
+  },
+  {
+    id: 'v-6',
+    type: 'video',
+    src: '/videos/depoimentos/v6.mp4',
+    alt: 'Depoimento em Vídeo - Resultado Textura Fibra Capilar',
+  },
+];
 
 export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
