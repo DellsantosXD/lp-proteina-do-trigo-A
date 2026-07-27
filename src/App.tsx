@@ -245,14 +245,8 @@ export default function App() {
                   <span className="text-xs text-cream/70 font-mono uppercase tracking-wider">10+ Anos de Prática Clínica</span>
                 </div>
               </div>
-              <p className="text-sm sm:text-base text-cream/90 leading-relaxed mb-4">
-                {leadParagraphs[9]}
-              </p>
-              <p className="text-sm sm:text-base text-cream/90 leading-relaxed font-semibold mb-2">
-                {leadParagraphs[10]} {leadParagraphs[11]}
-              </p>
-              <p className="text-sm sm:text-base text-rose font-semibold leading-relaxed">
-                {leadParagraphs[12]}
+              <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
+                {leadParagraphs[9]} {leadParagraphs[10]} {leadParagraphs[11]} {leadParagraphs[12]}
               </p>
             </motion.div>
           </div>
