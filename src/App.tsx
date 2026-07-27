@@ -206,73 +206,77 @@ export default function App() {
                 </div>
               </div>
             </motion.div>
-
-            {/* Card Unificado com Foto Framed da Expert Cris Mendanha */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#4A0E19] text-cream rounded-3xl p-6 sm:p-9 shadow-2xl border border-cream/15 flex flex-col lg:flex-row items-center lg:items-start gap-8"
-            >
-              {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas elegantes */}
-              <div className="w-full lg:w-4/12 max-w-[280px] lg:max-w-none shrink-0">
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-white/20 shadow-xl group bg-[#3D0A14] aspect-[3/4]">
-                  <img
-                    src="/images/cris-mendanha-portrait.jpg"
-                    alt="Cris Mendanha - Tricologista"
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl text-center border border-white/15">
-                    <span className="font-serif text-xs font-bold text-cream block">Cris Mendanha</span>
-                    <span className="text-[10px] font-sans font-bold text-rose uppercase tracking-wider block mt-0.5">Tricologista · Mais de 10 Anos de Clínica</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Coluna dos Textos da Expert no lado direito */}
-              <div className="w-full lg:w-8/12 text-left space-y-6 flex flex-col justify-between">
-                {/* Parte 1: A Identificação */}
-                <div className="space-y-3 pb-5 border-b border-cream/15">
-                  <p className="text-xl sm:text-2xl font-serif font-bold text-cream leading-snug">
-                    Hoje, quando você prende o cabelo, ele vira um fiapo.
-                  </p>
-                  <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
-                    As pontas parecem cada vez mais finas.
-                  </p>
-                  <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
-                    E o volume que antes fazia parte da sua identidade parece desaparecer um pouco mais a cada ano.
-                  </p>
-                </div>
-
-                {/* Parte 2: Nome Maior como Título e Subtítulo sem ícone */}
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="font-serif text-3xl sm:text-4xl font-black text-cream tracking-tight">
-                      Cris Mendanha
-                    </h3>
-                    <span className="text-xs sm:text-sm font-sans font-bold text-rose uppercase tracking-widest block mt-1">
-                      TRICOLOGISTA · MAIS DE 10 ANOS DE PRÁTICA CLÍNICA
-                    </span>
-                  </div>
-
-                  <p className="text-sm sm:text-base text-cream/95 font-medium leading-relaxed">
-                    Meu nome é Cris Mendanha, sou tricologista, e até aqui já foram mais de 10 anos dedicados exclusivamente à terapia capilar, milhares de mulheres acompanhadas ao longo dessa jornada e mais de 3.500 profissionais formados com meu método.
-                  </p>
-                  
-                  <p className="text-sm sm:text-base text-cream/95 font-medium leading-relaxed">
-                    Mas existe algo que poucas pessoas sabem. Antes de ajudar milhares de mulheres a recuperarem cabelos visivelmente mais encorpados, eu precisei encontrar uma solução para o meu próprio cabelo.
-                  </p>
-
-                  <p className="text-sm sm:text-base text-amber-200 font-semibold leading-relaxed">
-                    Hoje estou assim, mas nem sempre tive este cabelo. E foi justamente dessa busca que nasceu a tecnologia que você vai conhecer nesta página.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
+        </div>
+      </section>
 
+      {/* STANDALONE SECTION - EXPERT CRIS MENDANHA */}
+      <section className="py-20 sm:py-24 px-6 bg-gradient-to-br from-[#4A0E19] via-[#5D1220] to-[#2D060C] text-white border-t border-b border-white/10 relative overflow-hidden" id="sobre-cris-mendanha">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_0%,rgba(255,255,255,0.06),transparent_60%)] pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-14">
+            {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas e tamanho maior */}
+            <div className="w-full lg:w-5/12 max-w-[340px] lg:max-w-[400px] shrink-0 mx-auto">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl group bg-[#3D0A14] aspect-[3/4]">
+                <img
+                  src="/images/cris-mendanha-portrait.jpg"
+                  alt="Cris Mendanha - Tricologista"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2.5 rounded-2xl text-center border border-white/15">
+                  <span className="font-serif text-sm font-bold text-white block">Cris Mendanha</span>
+                  <span className="text-[11px] font-sans font-bold text-rose-200 uppercase tracking-wider block mt-0.5">Tricologista · Mais de 10 Anos de Clínica</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Coluna dos Textos da Expert no lado direito - TODOS TEXTOS BRANCOS */}
+            <div className="w-full lg:w-7/12 text-left space-y-6">
+              {/* Parte 1: A Identificação */}
+              <div className="space-y-3 pb-6 border-b border-white/15">
+                <h2 className="text-2xl sm:text-4xl font-serif font-black text-white tracking-tight leading-snug">
+                  Hoje, quando você prende o cabelo, ele vira um fiapo.
+                </h2>
+                <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+                  As pontas parecem cada vez mais finas.
+                </p>
+                <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+                  E o volume que antes fazia parte da sua identidade parece desaparecer um pouco mais a cada ano.
+                </p>
+              </div>
+
+              {/* Parte 2: Nome Maior como Título e Bio da Cris Mendanha */}
+              <div className="space-y-4 pt-2">
+                <div>
+                  <h3 className="font-serif text-3xl sm:text-5xl font-black text-white tracking-tight">
+                    Cris Mendanha
+                  </h3>
+                  <span className="text-xs sm:text-sm font-sans font-bold text-rose-200 uppercase tracking-widest block mt-1">
+                    TRICOLOGISTA · MAIS DE 10 ANOS DE PRÁTICA CLÍNICA
+                  </span>
+                </div>
+
+                <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+                  Meu nome é Cris Mendanha, sou tricologista, e até aqui já foram mais de 10 anos dedicados exclusivamente à terapia capilar, milhares de mulheres acompanhadas ao longo dessa jornada e mais de 3.500 profissionais formados com meu método.
+                </p>
+
+                <p className="text-base sm:text-lg text-white font-medium leading-relaxed">
+                  Mas existe algo que poucas pessoas sabem. Antes de ajudar milhares de mulheres a recuperarem cabelos visivelmente mais encorpados, eu precisei encontrar uma solução para o meu próprio cabelo.
+                </p>
+
+                <p className="text-base sm:text-lg text-white font-semibold leading-relaxed">
+                  Hoje estou assim, mas nem sempre tive este cabelo. E foi justamente dessa busca que nasceu a tecnologia que você vai conhecer nesta página.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION - SCIENTIFIC EXPLANATION */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-3xl mx-auto">
           {/* Transition text */}
           <div className="space-y-4 mb-10 text-center md:text-left mt-8">
             <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
