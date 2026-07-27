@@ -246,14 +246,13 @@ export default function App() {
 
                 {/* Parte 2: Apresentação, Revelação e a Foto */}
                 <div className="space-y-4">
-                  <div className="hidden md:flex items-center gap-3 mb-2">
-                    <div className="w-9 h-9 rounded-full bg-cream/15 border border-cream/20 flex items-center justify-center text-cream shrink-0">
-                      <Activity className="w-4 h-4 text-rose" />
-                    </div>
-                    <div>
-                      <span className="block font-serif text-base font-bold text-cream">Cris Mendanha</span>
-                      <span className="text-[10px] text-cream/75 font-mono uppercase tracking-wider">Tricologista · 10+ Anos de Prática Clínica</span>
-                    </div>
+                  <div className="hidden md:block mb-3">
+                    <h3 className="font-serif text-2xl sm:text-3xl font-black text-cream tracking-tight">
+                      Cris Mendanha
+                    </h3>
+                    <span className="text-xs sm:text-sm font-mono font-bold text-rose/90 uppercase tracking-widest block mt-1">
+                      TRICOLOGISTA · 10+ ANOS DE PRÁTICA CLÍNICA
+                    </span>
                   </div>
 
                   <p className="text-sm sm:text-base text-cream/95 font-medium leading-relaxed">
