@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from 'lucide-react';
 
 interface SlideItem {
   id: string;
@@ -175,13 +175,14 @@ export const TestimonialsCarousel: React.FC = () => {
       {/* Peeking Carousel Slider Stage */}
       <div className="relative w-full max-w-6xl mx-auto flex items-center justify-center min-h-[460px] sm:min-h-[620px]">
         <div
-          className="flex transition-transform duration-500 ease-out items-center"
+          className="flex transition-transform duration-500 ease-out items-center will-change-transform transform-gpu"
           style={{
             transform: `translateX(calc(50% - ${(currentIndex * slideWidth) + (slideWidth / 2)}px))`,
           }}
         >
           {slides.map((slide, idx) => {
             const isActive = currentIndex === idx;
+            const isNear = Math.abs(currentIndex - idx) <= 1;
 
             return (
               <div
@@ -196,15 +197,27 @@ export const TestimonialsCarousel: React.FC = () => {
                 <div className="relative w-full h-[450px] sm:h-[580px] bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center p-2 sm:p-3">
                   {slide.type === 'video' ? (
                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/30">
-                      <video
-                        ref={isActive ? videoRef : null}
-                        src={slide.src}
-                        loop
-                        muted={isMuted}
-                        playsInline
-                        autoPlay={isActive}
-                        className="w-full h-full object-contain rounded-2xl"
-                      />
+                      {isNear ? (
+                        <video
+                          ref={isActive ? videoRef : null}
+                          src={slide.src}
+                          loop
+                          muted={isMuted}
+                          playsInline
+                          preload={isActive ? 'auto' : 'metadata'}
+                          autoPlay={isActive}
+                          className="w-full h-full object-contain rounded-2xl"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-[#3A0A13]/90 text-cream/80 p-4 rounded-2xl text-center">
+                          <div className="w-14 h-14 rounded-full bg-bordo/80 border border-cream/30 flex items-center justify-center shadow-lg">
+                            <Play className="w-6 h-6 text-cream fill-cream ml-1" />
+                          </div>
+                          <span className="text-xs font-sans font-bold uppercase tracking-wider text-cream/70">
+                            Clique para assistir
+                          </span>
+                        </div>
+                      )}
 
                       {isActive && (
                         <button
@@ -232,6 +245,7 @@ export const TestimonialsCarousel: React.FC = () => {
                     <img
                       src={slide.src}
                       alt={slide.alt}
+                      loading="lazy"
                       className="w-full h-full object-contain rounded-2xl"
                     />
                   )}
