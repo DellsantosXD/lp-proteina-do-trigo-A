@@ -84,6 +84,8 @@ export const TestimonialsCarousel: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const isSwiping = useRef<boolean>(false);
   const modalTouchStartX = useRef<number | null>(null);
 
   const prevSlide = () => {
@@ -136,17 +138,48 @@ export const TestimonialsCarousel: React.FC = () => {
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    isSwiping.current = false;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const diffX = Math.abs(e.touches[0].clientX - touchStartX.current);
+    const diffY = Math.abs(e.touches[0].clientY - touchStartY.current);
+
+    if (diffX > 10 && diffX > diffY) {
+      isSwiping.current = true;
+    }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const diff = touchStartX.current - e.changedTouches[0].clientX;
-    if (diff > 40) {
-      nextSlide();
-    } else if (diff < -40) {
-      prevSlide();
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const diffX = touchStartX.current - e.changedTouches[0].clientX;
+    const diffY = Math.abs(touchStartY.current - e.changedTouches[0].clientY);
+
+    if (Math.abs(diffX) > 25 && Math.abs(diffX) > diffY) {
+      if (diffX > 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
     }
+
+    setTimeout(() => {
+      isSwiping.current = false;
+    }, 150);
+
     touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
+  const handleCardClick = (idx: number, isActive: boolean) => {
+    if (isSwiping.current) return;
+    if (isActive) {
+      openModal(idx);
+    } else {
+      setCurrentIndex(idx);
+    }
   };
 
   const handleModalTouchStart = (e: React.TouchEvent) => {
@@ -156,9 +189,9 @@ export const TestimonialsCarousel: React.FC = () => {
   const handleModalTouchEnd = (e: React.TouchEvent) => {
     if (modalTouchStartX.current === null) return;
     const diff = modalTouchStartX.current - e.changedTouches[0].clientX;
-    if (diff > 50) {
+    if (diff > 40) {
       nextModalSlide();
-    } else if (diff < -50) {
+    } else if (diff < -40) {
       prevModalSlide();
     }
     modalTouchStartX.current = null;
@@ -222,6 +255,7 @@ export const TestimonialsCarousel: React.FC = () => {
     <div
       ref={containerRef}
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
       className="w-full relative py-4 sm:py-6 overflow-hidden touch-pan-y"
     >
@@ -252,18 +286,10 @@ export const TestimonialsCarousel: React.FC = () => {
                 ? 'h-[320px] sm:h-[440px]'
                 : 'h-[440px] sm:h-[580px]';
 
-            const handleCardClick = () => {
-              if (isActive) {
-                openModal(idx);
-              } else {
-                setCurrentIndex(idx);
-              }
-            };
-
             return (
               <div
                 key={slide.id}
-                onClick={handleCardClick}
+                onClick={() => handleCardClick(idx, isActive)}
                 className={`shrink-0 ${cardWidthClass} mx-2 sm:mx-4 cursor-pointer transition-all duration-500 rounded-3xl overflow-hidden bg-white border shadow-lg ${
                   isActive
                     ? 'scale-100 opacity-100 z-20 border-bordo/40 ring-4 ring-bordo/10 shadow-2xl'
