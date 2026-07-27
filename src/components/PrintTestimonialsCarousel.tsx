@@ -7,73 +7,11 @@ interface PrintSlideItem {
   alt: string;
 }
 
-const printSlides: PrintSlideItem[] = [
-  {
-    id: 'print-1',
-    src: '/testimonials/feedback-1.jpg',
-    alt: 'Resultado WhatsApp - Roberta Mazoni',
-  },
-  {
-    id: 'print-2',
-    src: '/testimonials/feedback-2.jpg',
-    alt: 'Depoimento Comentário - Eleneide',
-  },
-  {
-    id: 'print-3',
-    src: '/testimonials/feedback-3.jpg',
-    alt: 'Depoimento WhatsApp - Loirrana Moura',
-  },
-  {
-    id: 'print-4',
-    src: '/testimonials/feedback-4.jpg',
-    alt: 'Depoimento Instagram DM',
-  },
-  {
-    id: 'print-5',
-    src: '/testimonials/feedback-5.jpg',
-    alt: 'Relato Unboxing - Rosi Oliveira',
-  },
-  {
-    id: 'print-6',
-    src: '/testimonials/feedback-6.jpg',
-    alt: 'Relato Gratidão Madeixas WhatsApp',
-  },
-  {
-    id: 'print-7',
-    src: '/testimonials/feedback-7.jpg',
-    alt: 'Relato Cheiro Surreal WhatsApp',
-  },
-  {
-    id: 'print-8',
-    src: '/testimonials/feedback-8.jpg',
-    alt: 'Relato Madeixas Lindas WhatsApp',
-  },
-  {
-    id: 'print-9',
-    src: '/testimonials/feedback-9.jpg',
-    alt: 'Relato Couro Cabeludo Preenchido - Tatiana Macedo',
-  },
-  {
-    id: 'print-10',
-    src: '/testimonials/feedback-10.jpg',
-    alt: 'Relato Cabelo Chupou a Proteína WhatsApp',
-  },
-  {
-    id: 'print-11',
-    src: '/testimonials/feedback-11.jpg',
-    alt: 'Relato Unboxing Meus Queridinhos WhatsApp',
-  },
-  {
-    id: 'print-12',
-    src: '/testimonials/drive_feedback_7.png',
-    alt: 'Relato Resultado Capilar Drive',
-  },
-  {
-    id: 'print-13',
-    src: '/testimonials/drive_feedback_12.png',
-    alt: 'Relato Resultado Capilar Drive 2',
-  },
-];
+const printSlides: PrintSlideItem[] = Array.from({ length: 35 }, (_, i) => ({
+  id: `print-${i + 1}`,
+  src: `/prints/print-${i + 1}.jpg`,
+  alt: `Relato de Cliente WhatsApp - Print ${i + 1}`,
+}));
 
 export const PrintTestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
