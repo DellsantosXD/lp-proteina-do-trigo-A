@@ -216,18 +216,13 @@ export default function App() {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-14">
             {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas e tamanho maior */}
-            <div className="w-full lg:w-5/12 max-w-[340px] lg:max-w-[400px] shrink-0 mx-auto">
+            <div className="w-full lg:w-5/12 max-w-[380px] sm:max-w-[440px] lg:max-w-[460px] shrink-0 mx-auto">
               <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl group bg-[#3D0A14] aspect-[3/4]">
                 <img
                   src="/images/cris-mendanha-portrait.jpg"
                   alt="Cris Mendanha - Tricologista"
                   className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 bg-black/60 backdrop-blur-md px-4 py-2.5 rounded-2xl text-center border border-white/15">
-                  <span className="font-serif text-sm font-bold text-white block">Cris Mendanha</span>
-                  <span className="text-[11px] font-sans font-bold text-rose-200 uppercase tracking-wider block mt-0.5">Tricologista · Mais de 10 Anos de Clínica</span>
-                </div>
               </div>
             </div>
 
