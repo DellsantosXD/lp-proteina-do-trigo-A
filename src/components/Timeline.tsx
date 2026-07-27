@@ -84,8 +84,8 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   6: {
     src: '/timeline/card-6.jpg',
     alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
-    position: 'object-[center_98%]',
-    height: 'h-56 sm:h-[260px]'
+    position: 'object-[right_20%]',
+    height: 'h-80 sm:h-[450px]'
   },
   7: {
     src: '/timeline/card-7.jpg',
