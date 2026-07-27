@@ -273,13 +273,6 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   </ul>
                 </div>
               )}
-
-              <div className="mb-4 text-center">
-                <span className="text-xs sm:text-sm text-ink-soft block mt-1">
-                  ou <span className="font-extrabold text-[#4E141C]"><span className="number-inline-small">12</span>x de R$ <span className="number-inline-small">{protocol.installments}</span></span>
-                </span>
-              </div>
-
               <div className={`${protocol.hasFreeShipping ? 'mt-auto' : 'mt-1'} pt-1`}>
                 {/* CTA Button matching image style */}
                 <a

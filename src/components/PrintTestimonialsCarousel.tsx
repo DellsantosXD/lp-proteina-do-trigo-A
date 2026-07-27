@@ -58,9 +58,6 @@ export const PrintTestimonialsCarousel: React.FC = () => {
   return (
     <div className="w-full mt-12 pt-8 border-t border-tan-deep/15">
       <div className="text-center mb-8">
-        <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-2">
-          FEEDBACKS & PRINTS REAIS
-        </span>
         <h3 className="font-serif font-black text-2xl sm:text-3xl text-bordo">
           O que dizem as clientes no WhatsApp e redes sociais
         </h3>
