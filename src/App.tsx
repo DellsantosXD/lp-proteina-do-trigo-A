@@ -10,6 +10,7 @@ import SocialProof from './components/SocialProof';
 import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
 import { TestimonialsCarousel } from './components/TestimonialsCarousel';
+import { PrintTestimonialsCarousel } from './components/PrintTestimonialsCarousel';
 import { TrichologistsSection } from './components/TrichologistsSection';
 import ConversionCta from './components/ConversionCta';
 import TreatmentExperienceSection from './components/TreatmentExperienceSection';
@@ -645,6 +646,9 @@ export default function App() {
 
           {/* Clean Carousel Showcase (Showing Full Frame Media & Full Text) */}
           <TestimonialsCarousel />
+
+          {/* Prints & Screenshots Carousel */}
+          <PrintTestimonialsCarousel />
         </div>
       </section>
 
