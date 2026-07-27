@@ -4,15 +4,15 @@ export default function Header() {
   return (
     <div className="relative">
       {/* Top Shopify-Style Marquee Announcement Ticker Bar */}
-      <div className="relative z-50 bg-[#4A0E19] py-2.5 overflow-hidden border-b border-[#651524]/60 shadow-xs select-none">
-        <div className="animate-marquee whitespace-nowrap flex items-center gap-8 sm:gap-12">
+      <div className="relative z-50 bg-[#4A0E19] py-3.5 sm:py-4 overflow-hidden border-b border-[#651524]/60 shadow-xs select-none">
+        <div className="animate-marquee whitespace-nowrap flex items-center gap-10 sm:gap-16">
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="flex items-center gap-8 sm:gap-12 shrink-0">
-              <span className="text-[11px] sm:text-xs font-sans font-bold tracking-wide text-cream/95 flex items-center gap-2">
-                <span className="text-amber-400 font-normal">✨</span>
+            <div key={i} className="flex items-center gap-10 sm:gap-16 shrink-0">
+              <span className="text-sm sm:text-base font-sans font-extrabold tracking-wide text-cream flex items-center gap-2.5">
+                <span className="text-amber-400 font-normal text-base sm:text-lg">✨</span>
                 Sua condição especial está disponível neste momento. Aproveite o valor promocional e inicie hoje mesmo sua Reconstrução Molecular em 3 Camadas.
               </span>
-              <span className="text-cream/35 text-[10px] font-mono">✦</span>
+              <span className="text-cream/40 text-xs font-mono">✦</span>
             </div>
           ))}
         </div>
