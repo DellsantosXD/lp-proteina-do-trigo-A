@@ -2,6 +2,17 @@ import { motion } from 'motion/react';
 import { CheckCircle2, ShieldCheck, Truck } from 'lucide-react';
 import { Protocol } from '../types';
 
+interface BonusItem {
+  title: string;
+  subtext?: string;
+}
+
+interface BonusSection {
+  title: string;
+  itemCountLabel: string;
+  items: BonusItem[];
+}
+
 interface ExtendedProtocol extends Protocol {
   priceLabel: string;
   subtitle: string;
@@ -11,6 +22,7 @@ interface ExtendedProtocol extends Protocol {
   imageUrl?: string;
   hasFreeShipping?: boolean;
   topHeaderBadge?: string;
+  bonusSection: BonusSection;
 }
 
 const protocols: ExtendedProtocol[] = [
@@ -28,10 +40,20 @@ const protocols: ExtendedProtocol[] = [
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
     infoBox: 'Para começar',
     checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL',
-    bonuses: [
-      'E-book: “Como encorpar seus cabelos em casa”',
-      'E-book: “Manual completo de massagem capilar em casa”'
-    ]
+    bonusSection: {
+      title: 'BÔNUS',
+      itemCountLabel: '2 itens',
+      items: [
+        {
+          title: 'Guia: Como Encorpar Fios Finos em Casa',
+          subtext: 'Hábitos e técnicas para aumentar volume e densidade.'
+        },
+        {
+          title: 'Manual de Massagem Capilar',
+          subtext: 'Passo a passo para potencializar a absorção dos ativos.'
+        }
+      ]
+    }
   },
   {
     id: 2,
@@ -49,10 +71,26 @@ const protocols: ExtendedProtocol[] = [
     imageUrl: '/products/protocolo-2-kit-cutout.png',
     infoBox: 'Mais escolhido',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
-    bonuses: [
-      'E-book: “Como encorpar seus cabelos em casa”',
-      'E-book: “Manual completo de massagem capilar em casa”'
-    ]
+    bonusSection: {
+      title: 'BÔNUS',
+      itemCountLabel: '4 itens',
+      items: [
+        {
+          title: 'Guia: Como Encorpar Fios Finos em Casa'
+        },
+        {
+          title: 'Manual de Massagem Capilar'
+        },
+        {
+          title: 'Cronograma Terapêutico Sweet Therapy',
+          subtext: 'Como organizar reconstrução, hidratação e nutrição.'
+        },
+        {
+          title: 'Guia de Alimentação e Hábitos para Fortalecer os Fios',
+          subtext: 'Como sono, alimentação e rotina influenciam a saúde capilar.'
+        }
+      ]
+    }
   },
   {
     id: 3,
@@ -73,10 +111,33 @@ const protocols: ExtendedProtocol[] = [
     infoBox: 'Melhor experiência de cuidado',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
-    bonuses: [
-      'E-book: “Como encorpar seus cabelos em casa”',
-      'E-book: “Manual completo de massagem capilar em casa”'
-    ]
+    bonusSection: {
+      title: 'KIT EXCLUSIVO',
+      itemCountLabel: '6 itens',
+      items: [
+        {
+          title: 'Guia: Como Encorpar Fios Finos em Casa'
+        },
+        {
+          title: 'Manual de Massagem Capilar'
+        },
+        {
+          title: 'Cronograma Terapêutico Sweet Therapy'
+        },
+        {
+          title: 'Guia de Alimentação e Hábitos para Fortalecer os Fios',
+          subtext: 'Como sono, alimentação e rotina influenciam a saúde capilar.'
+        },
+        {
+          title: 'Planner de 30 Dias do Tratamento',
+          subtext: 'Checklist diário para acompanhar a evolução.'
+        },
+        {
+          title: 'Calendário de Aplicação dos Protocolos',
+          subtext: 'Quando usar cada produto para melhor desempenho.'
+        }
+      ]
+    }
   }
 ];
 
@@ -253,24 +314,35 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 </ul>
               </div>
 
-              {protocol.bonuses && protocol.bonuses.length > 0 && (
-                <div className="mb-4 rounded-2xl border border-amber-500/35 bg-gradient-to-br from-amber-500/10 via-cream/80 to-amber-100/30 p-4 text-left shadow-sm">
-                  <div className="flex flex-wrap items-center justify-between gap-1.5 mb-3 pb-2 border-b border-amber-500/20">
-                    <span className="inline-flex items-center gap-1.5 bg-[#4E141C] text-cream font-sans text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wide shadow-xs whitespace-nowrap">
-                      🎁 2 BÔNUS EXCLUSIVOS
+              {protocol.bonusSection && (
+                <div className="mb-5 rounded-2xl sm:rounded-3xl border border-[#ECE0CE] bg-[#FAF3E8] p-4 sm:p-5 text-left shadow-xs">
+                  <div className="flex items-center justify-between gap-2 mb-3.5 pb-2.5 border-b border-[#ECE0CE]">
+                    <span className="flex items-center gap-2 font-sans font-extrabold text-sm text-[#4E141C] uppercase tracking-wider">
+                      🎁 {protocol.bonusSection.title}
                     </span>
-                    <span className="text-[11px] font-sans font-black text-[#16A34A] uppercase tracking-wider bg-[#16A34A]/10 px-2.5 py-0.5 rounded-full whitespace-nowrap">
-                      100% GRÁTIS
+                    <span className="bg-white text-[#4E141C] font-sans font-extrabold text-xs px-3 py-1 rounded-full shadow-xs border border-[#ECE0CE]/70">
+                      {protocol.bonusSection.itemCountLabel}
                     </span>
                   </div>
-                  <ul className="space-y-2.5">
-                    {protocol.bonuses.map((bonus, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-2 text-xs text-ink font-bold leading-snug">
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[#16A34A] text-[9px] font-black text-white mt-0.5 shadow-xs">✓</span>
-                        <span className="font-sans">{bonus} <span className="text-[#16A34A] font-extrabold text-[11px]">(INCLUSO)</span></span>
-                      </li>
+                  <div className="space-y-3.5">
+                    {protocol.bonusSection.items.map((bonus, bIdx) => (
+                      <div key={bIdx} className="flex items-start gap-3 text-left">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#5C1D24] text-xs font-bold text-white mt-0.5 shadow-xs">
+                          {bIdx + 1}
+                        </span>
+                        <div>
+                          <p className="font-sans font-bold text-sm text-[#2A1D1A] leading-snug">
+                            {bonus.title}
+                          </p>
+                          {bonus.subtext && (
+                            <p className="font-sans text-xs text-[#6B5E57] leading-relaxed mt-0.5">
+                              {bonus.subtext}
+                            </p>
+                          )}
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               )}
               <div className={`${protocol.hasFreeShipping ? 'mt-auto' : 'mt-1'} pt-1`}>
