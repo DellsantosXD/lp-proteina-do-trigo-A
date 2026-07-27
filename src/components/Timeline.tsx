@@ -59,9 +59,8 @@ const visuals: Record<number, { src: string; alt: string; position: string; heig
   2: {
     src: '/timeline/card-2.jpg',
     alt: 'Eu escondia o afinamento em vez de resolver',
-    position: 'object-center',
-    fit: 'object-contain bg-[#FAF6F0]',
-    height: 'h-auto max-h-[540px]'
+    position: 'object-[center_20%]',
+    height: 'h-80 sm:h-[480px]'
   },
   3: {
     src: '/timeline/card-3.jpg',
