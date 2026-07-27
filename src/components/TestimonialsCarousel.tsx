@@ -218,28 +218,6 @@ export const TestimonialsCarousel: React.FC = () => {
                           </span>
                         </div>
                       )}
-
-                      {isActive && (
-                        <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleMute();
-                          }}
-                          className="absolute bottom-4 right-4 z-30 flex items-center gap-2 bg-bordo/90 hover:bg-bordo text-cream border border-cream/30 px-3.5 py-2 rounded-full backdrop-blur-md text-xs font-sans font-semibold shadow-lg transition-all active:scale-95"
-                        >
-                          {isMuted ? (
-                            <>
-                              <VolumeX className="w-4 h-4 text-cream/70" />
-                              <span>Ativar Som</span>
-                            </>
-                          ) : (
-                            <>
-                              <Volume2 className="w-4 h-4 text-rose animate-pulse" />
-                              <span>Som Ativado</span>
-                            </>
-                          )}
-                        </button>
-                      )}
                     </div>
                   ) : (
                     <img
