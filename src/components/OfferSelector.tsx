@@ -44,7 +44,7 @@ const protocols: ExtendedProtocol[] = [
     description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
-      'Sérum Fortalecedor (60ml)'
+      'Sérum Fortalecedor (60 ml)'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
     infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
@@ -66,8 +66,8 @@ const protocols: ExtendedProtocol[] = [
     description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
-      'Sérum Fortalecedor (60ml)',
-      'Shampoo Antioxidante Mineral (250ml)'
+      'Sérum Fortalecedor (60 ml)',
+      'Shampoo Antioxidante Mineral (250 ml)'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
     infoBox: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
