@@ -10,12 +10,6 @@ interface SlideItem {
 
 const slides: SlideItem[] = [
   {
-    id: 'drive-1',
-    type: 'image',
-    src: '/testimonials/drive_feedback_1.jpg',
-    alt: 'Resultado Capilar 1 - Antes e Depois',
-  },
-  {
     id: 'drive-2',
     type: 'video',
     src: '/testimonials/drive_feedback_2.mp4',
