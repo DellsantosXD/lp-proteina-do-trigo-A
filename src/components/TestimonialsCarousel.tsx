@@ -21,6 +21,30 @@ const slides: SlideItem[] = [
     src: '/videos/depoimentos/v6.mp4',
     alt: 'Depoimento em Vídeo - Resultado Textura Fibra Capilar',
   },
+  {
+    id: 'v-12',
+    type: 'video',
+    src: '/videos/depoimentos/v12.mp4',
+    alt: 'Depoimento em Vídeo - Resultado 12',
+  },
+  {
+    id: 'v-13',
+    type: 'video',
+    src: '/videos/depoimentos/v13.mp4',
+    alt: 'Depoimento em Vídeo - Resultado 13',
+  },
+  {
+    id: 'v-14',
+    type: 'video',
+    src: '/videos/depoimentos/v14.mp4',
+    alt: 'Depoimento em Vídeo - Resultado 14',
+  },
+  {
+    id: 'v-15',
+    type: 'video',
+    src: '/videos/depoimentos/v15.mp4',
+    alt: 'Depoimento em Vídeo - Resultado 15',
+  },
 ];
 
 export const TestimonialsCarousel: React.FC = () => {
