@@ -639,7 +639,7 @@ export default function App() {
               Veja o que acontece quando a fibra recupera sua estrutura.
             </h2>
             <p className="text-base sm:text-lg font-sans text-ink-soft max-w-2xl mx-auto mt-4 leading-relaxed font-normal">
-              Relatos espontâneos e resultados reais enviados por clientes que restauraram o corpo, o brilho e a densidade dos fios.
+              Relatos espontâneos e resultados reais enviados por clientes que restauraram a força, o brilho e a densidade dos fios.
             </p>
           </div>
 
