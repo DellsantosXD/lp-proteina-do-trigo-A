@@ -10,76 +10,16 @@ interface SlideItem {
 
 const slides: SlideItem[] = [
   {
+    id: 'drive-feedback-1',
+    type: 'image',
+    src: '/testimonials/drive_feedback_1.jpg',
+    alt: 'Resultado do Tratamento Capilar - Antes e Depois',
+  },
+  {
     id: 'video-1',
     type: 'video',
     src: '/videos/depoimento-video-1.mp4',
     alt: 'Depoimento em Vídeo de Paciente',
-  },
-  {
-    id: 'feedback-1',
-    type: 'image',
-    src: '/testimonials/feedback-1.jpg',
-    alt: 'Resultado WhatsApp - Roberta Mazoni',
-  },
-  {
-    id: 'feedback-2',
-    type: 'image',
-    src: '/testimonials/feedback-2.jpg',
-    alt: 'Depoimento Comentário - Eleneide',
-  },
-  {
-    id: 'feedback-3',
-    type: 'image',
-    src: '/testimonials/feedback-3.jpg',
-    alt: 'Depoimento WhatsApp - Loirrana Moura',
-  },
-  {
-    id: 'feedback-4',
-    type: 'image',
-    src: '/testimonials/feedback-4.jpg',
-    alt: 'Depoimento Instagram DM - Resultado com Proteína ST',
-  },
-  {
-    id: 'feedback-5',
-    type: 'image',
-    src: '/testimonials/feedback-5.jpg',
-    alt: 'Relato Unboxing WhatsApp - Rosi Oliveira',
-  },
-  {
-    id: 'feedback-6',
-    type: 'image',
-    src: '/testimonials/feedback-6.jpg',
-    alt: 'Relato Gratidão Madeixas WhatsApp',
-  },
-  {
-    id: 'feedback-7',
-    type: 'image',
-    src: '/testimonials/feedback-7.jpg',
-    alt: 'Relato Cheiro Surreal WhatsApp',
-  },
-  {
-    id: 'feedback-8',
-    type: 'image',
-    src: '/testimonials/feedback-8.jpg',
-    alt: 'Relato Gratidão Madeixas Lindas WhatsApp',
-  },
-  {
-    id: 'feedback-9',
-    type: 'image',
-    src: '/testimonials/feedback-9.jpg',
-    alt: 'Relato Couro Cabeludo Preenchido - Tatiana Macedo',
-  },
-  {
-    id: 'feedback-10',
-    type: 'image',
-    src: '/testimonials/feedback-10.jpg',
-    alt: 'Relato Cabelo Chupou a Proteína WhatsApp',
-  },
-  {
-    id: 'feedback-11',
-    type: 'image',
-    src: '/testimonials/feedback-11.jpg',
-    alt: 'Relato Unboxing Meus Queridinhos WhatsApp',
   },
 ];
 
