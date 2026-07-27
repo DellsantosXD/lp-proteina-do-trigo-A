@@ -247,7 +247,7 @@ export default function App() {
                   <h3 className="font-serif text-3xl sm:text-5xl font-black text-white tracking-tight">
                     Cris Mendanha
                   </h3>
-                  <span className="text-xs sm:text-sm font-sans font-bold text-rose-200 uppercase tracking-widest block mt-1">
+                  <span className="text-xs sm:text-sm font-sans font-bold text-white uppercase tracking-widest block mt-1">
                     TRICOLOGISTA · MAIS DE 10 ANOS DE PRÁTICA CLÍNICA
                   </span>
                 </div>
