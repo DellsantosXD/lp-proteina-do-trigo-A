@@ -39,6 +39,24 @@ const slides: SlideItem[] = [
     src: '/testimonials/feedback-4.jpg',
     alt: 'Depoimento Instagram DM - Resultado com Proteína ST',
   },
+  {
+    id: 'feedback-5',
+    type: 'image',
+    src: '/testimonials/feedback-5.jpg',
+    alt: 'Relato Unboxing WhatsApp - Rosi Oliveira',
+  },
+  {
+    id: 'feedback-6',
+    type: 'image',
+    src: '/testimonials/feedback-6.jpg',
+    alt: 'Relato Gratidão Madeixas WhatsApp',
+  },
+  {
+    id: 'feedback-7',
+    type: 'image',
+    src: '/testimonials/feedback-7.jpg',
+    alt: 'Relato Cheiro Surreal WhatsApp',
+  },
 ];
 
 export const TestimonialsCarousel: React.FC = () => {
