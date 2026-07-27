@@ -23,7 +23,7 @@ const protocols: ExtendedProtocol[] = [
     installments: '19,78',
     description: 'Reconstrói e devolve corpo à fibra afinada.',
     items: [
-      'Proteína do Trigo Pro Filler'
+      'Proteína do Trigo Pro Filler (100g)'
     ],
     imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
     infoBox: 'Reconstrói e devolve corpo à fibra afinada.',
@@ -43,8 +43,8 @@ const protocols: ExtendedProtocol[] = [
     badge: 'Recomendado',
     description: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
     items: [
-      'Proteína do Trigo Pro Filler',
-      'Sérum Fortalecedor'
+      'Proteína do Trigo Pro Filler (100g)',
+      'Sérum Fortalecedor (60ml)'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.png',
     infoBox: 'Além da fibra, fortalece o ambiente onde o novo fio nasce.',
@@ -65,9 +65,9 @@ const protocols: ExtendedProtocol[] = [
     badge: 'Mais completo',
     description: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
     items: [
-      'Proteína do Trigo Pro Filler',
-      'Sérum Fortalecedor',
-      'Shampoo Antioxidante Mineral'
+      'Proteína do Trigo Pro Filler (100g)',
+      'Sérum Fortalecedor (60ml)',
+      'Shampoo Antioxidante Mineral (250ml)'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.png',
     infoBox: 'Para quem deseja tratar fios afinados, crescimento capilar e detox do couro cabeludo em um único tratamento.',
