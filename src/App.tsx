@@ -464,7 +464,7 @@ export default function App() {
                     NV Redensifier de Alta Performance
                   </h3>
                   <p className="text-sm text-ink-soft leading-relaxed">
-                    Nanoestruturas inteligentes expandem-se no interior da fibra, aumentando seu diâmetro e devolvendo massa onde houve afinamento. O resultado é um cabelo visivelmente mais encorpado, com mais corpo e resistência.
+                    Nanoestruturas inteligentes expandem-se no interior da fibra, aumentando seu diâmetro e devolvendo massa onde houve afinamento. O resultado é um cabelo visivelmente mais encorpado, com mais força e resistência.
                   </p>
                 </div>
               </div>
