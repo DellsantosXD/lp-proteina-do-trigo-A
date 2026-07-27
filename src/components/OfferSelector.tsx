@@ -251,12 +251,12 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               </div>
 
               {protocol.bonuses && protocol.bonuses.length > 0 && (
-                <div className="mb-4 rounded-2xl border border-amber-500/40 bg-gradient-to-br from-amber-500/10 via-cream/90 to-amber-100/40 p-4 text-left shadow-sm">
-                  <div className="flex items-center justify-between gap-2 mb-3 pb-2 border-b border-amber-500/20">
-                    <span className="inline-flex items-center gap-1 bg-[#4E141C] text-cream font-mono text-[10px] font-black uppercase px-2.5 py-1 rounded-full tracking-wider shadow-xs">
-                      🎁 2 BÔNUS EXCLUSIVOS INCLUSOS
+                <div className="mb-4 rounded-2xl border border-amber-500/35 bg-gradient-to-br from-amber-500/10 via-cream/80 to-amber-100/30 p-4 text-left shadow-sm">
+                  <div className="flex flex-wrap items-center justify-between gap-1.5 mb-3 pb-2 border-b border-amber-500/20">
+                    <span className="inline-flex items-center gap-1.5 bg-[#4E141C] text-cream font-sans text-[11px] font-black uppercase px-3 py-1 rounded-full tracking-wide shadow-xs whitespace-nowrap">
+                      🎁 2 BÔNUS EXCLUSIVOS
                     </span>
-                    <span className="text-[10px] font-mono font-bold text-[#16A34A] uppercase tracking-widest">
+                    <span className="text-[11px] font-sans font-black text-[#16A34A] uppercase tracking-wider bg-[#16A34A]/10 px-2.5 py-0.5 rounded-full whitespace-nowrap">
                       100% GRÁTIS
                     </span>
                   </div>
