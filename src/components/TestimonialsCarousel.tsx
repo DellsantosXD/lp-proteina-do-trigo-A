@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Volume2, VolumeX, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
 interface SlideItem {
   id: string;
@@ -8,80 +8,12 @@ interface SlideItem {
   alt: string;
 }
 
-const slides: SlideItem[] = [
-  {
-    id: 'drive-2',
-    type: 'video',
-    src: '/testimonials/drive_feedback_2.mp4',
-    alt: 'Depoimento em Vídeo 2',
-  },
-  {
-    id: 'drive-3',
-    type: 'video',
-    src: '/testimonials/drive_feedback_3.mp4',
-    alt: 'Depoimento em Vídeo 3',
-  },
-  {
-    id: 'drive-4',
-    type: 'video',
-    src: '/testimonials/drive_feedback_4.mp4',
-    alt: 'Depoimento em Vídeo 4',
-  },
-  {
-    id: 'drive-5',
-    type: 'video',
-    src: '/testimonials/drive_feedback_5.mp4',
-    alt: 'Depoimento em Vídeo 5',
-  },
-  {
-    id: 'drive-6',
-    type: 'video',
-    src: '/testimonials/drive_feedback_6.mp4',
-    alt: 'Depoimento em Vídeo 6',
-  },
-  {
-    id: 'drive-7',
-    type: 'image',
-    src: '/testimonials/drive_feedback_7.png',
-    alt: 'Resultado Capilar 7',
-  },
-  {
-    id: 'drive-8',
-    type: 'video',
-    src: '/testimonials/drive_feedback_8.mp4',
-    alt: 'Depoimento em Vídeo 8',
-  },
-  {
-    id: 'drive-9',
-    type: 'video',
-    src: '/testimonials/drive_feedback_9.mp4',
-    alt: 'Depoimento em Vídeo 9',
-  },
-  {
-    id: 'drive-10',
-    type: 'video',
-    src: '/testimonials/drive_feedback_10.mp4',
-    alt: 'Depoimento em Vídeo 10',
-  },
-  {
-    id: 'drive-11',
-    type: 'video',
-    src: '/testimonials/drive_feedback_11.mp4',
-    alt: 'Depoimento em Vídeo 11',
-  },
-  {
-    id: 'drive-12',
-    type: 'image',
-    src: '/testimonials/drive_feedback_12.png',
-    alt: 'Resultado Capilar 12',
-  },
-  {
-    id: 'drive-13',
-    type: 'video',
-    src: '/testimonials/drive_feedback_13.mp4',
-    alt: 'Depoimento em Vídeo 13',
-  },
-];
+const slides: SlideItem[] = Array.from({ length: 11 }, (_, i) => ({
+  id: `v-${i + 1}`,
+  type: 'video',
+  src: `/videos/depoimentos/v${i + 1}.mp4`,
+  alt: `Depoimento em Vídeo ${i + 1}`,
+}));
 
 export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -102,9 +34,9 @@ export const TestimonialsCarousel: React.FC = () => {
   useEffect(() => {
     const updateWidth = () => {
       if (window.innerWidth < 640) {
-        setSlideWidth(296); // 280px + 16px mx
+        setSlideWidth(296);
       } else {
-        setSlideWidth(372); // 340px + 32px mx
+        setSlideWidth(372);
       }
     };
     updateWidth();
@@ -129,7 +61,7 @@ export const TestimonialsCarousel: React.FC = () => {
 
   useEffect(() => {
     const videoElem = videoRef.current;
-    if (slides[currentIndex].type === 'video' && videoElem) {
+    if (slides[currentIndex]?.type === 'video' && videoElem) {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -150,14 +82,6 @@ export const TestimonialsCarousel: React.FC = () => {
       return () => observer.disconnect();
     }
   }, [currentIndex]);
-
-  const toggleMute = () => {
-    if (videoRef.current) {
-      const nextState = !isMuted;
-      videoRef.current.muted = nextState;
-      setIsMuted(nextState);
-    }
-  };
 
   return (
     <div
@@ -235,7 +159,6 @@ export const TestimonialsCarousel: React.FC = () => {
         >
           <ChevronLeft className="w-6 h-6 stroke-[2.5]" />
         </button>
-
         <button
           onClick={nextSlide}
           className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-white/95 hover:bg-white text-bordo border border-tan-deep/30 flex items-center justify-center shadow-xl backdrop-blur-md transition-all hover:scale-110 active:scale-95"
@@ -245,8 +168,8 @@ export const TestimonialsCarousel: React.FC = () => {
         </button>
       </div>
 
-      {/* Pagination Dots */}
-      <div className="flex items-center justify-center gap-2.5 mt-6">
+      {/* Carousel Pagination Dots */}
+      <div className="flex items-center justify-center gap-2 mt-6">
         {slides.map((_, idx) => (
           <button
             key={idx}
@@ -256,10 +179,12 @@ export const TestimonialsCarousel: React.FC = () => {
                 ? 'w-8 bg-bordo'
                 : 'w-2.5 bg-bordo/25 hover:bg-bordo/50'
             }`}
-            aria-label={`Ir para depoimento ${idx + 1}`}
+            aria-label={`Ir para o depoimento ${idx + 1}`}
           />
         ))}
       </div>
     </div>
   );
 };
+
+export default TestimonialsCarousel;
