@@ -54,8 +54,11 @@ export const ProtocolOverviewCards: React.FC<ProtocolOverviewCardsProps> = ({ on
           GUIA RÁPIDO DE ESCOLHA
         </span>
         <h3 className="font-serif font-black text-2xl sm:text-3xl text-bordo">
-          Qual o protocolo ideal para o seu momento?
+          Escolha o nível de cuidado ideal para o seu cabelo
         </h3>
+        <p className="text-sm sm:text-base font-sans text-ink-soft max-w-2xl mx-auto mt-3 leading-relaxed font-normal">
+          Do encorpamento dos fios ao cuidado completo do couro cabeludo: compare os protocolos e encontre a opção mais adequada para o seu momento.
+        </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
