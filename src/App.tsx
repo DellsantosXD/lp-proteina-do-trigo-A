@@ -215,17 +215,27 @@ export default function App() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="bg-[#4A0E19] text-cream rounded-3xl overflow-hidden shadow-2xl border border-cream/15 flex flex-col md:flex-row items-stretch"
             >
-              {/* Coluna da Foto da Expert Cris Mendanha */}
-              <div className="md:w-5/12 relative bg-[#3D0A14] flex items-center justify-center min-h-[340px] sm:min-h-[440px] shrink-0">
+              {/* Coluna da Foto da Expert Cris Mendanha com Animação Premium */}
+              <div className="md:w-5/12 relative bg-[#3D0A14] flex items-center justify-center min-h-[340px] sm:min-h-[440px] shrink-0 overflow-hidden group">
+                {/* Ambient Shimmer Glow */}
+                <div className="absolute inset-0 bg-radial-[circle_at_50%_0%] from-rose/30 via-transparent to-transparent pointer-events-none z-10" />
+
+                {/* Floating Glassmorphism Badge Desktop */}
+                <div className="absolute top-4 left-4 z-20 hidden md:inline-flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur-md px-3.5 py-1.5 text-xs font-sans font-bold text-cream border border-white/20 shadow-lg transition-transform duration-500 group-hover:scale-105">
+                  <Sparkles className="w-3.5 h-3.5 text-rose shrink-0" />
+                  <span>Cris Mendanha · Tricologista</span>
+                </div>
+
                 <img
                   src="/images/cris-mendanha-portrait.jpg"
                   alt="Cris Mendanha - Tricologista & Especialista Capilar"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 />
+                
                 <div className="absolute inset-0 bg-gradient-to-t from-[#4A0E19] via-transparent to-transparent md:hidden" />
-                <div className="absolute bottom-4 left-4 right-4 md:hidden bg-black/60 backdrop-blur-md px-3.5 py-2 rounded-xl text-center border border-white/10">
+                <div className="absolute bottom-4 left-4 right-4 md:hidden bg-black/65 backdrop-blur-md px-4 py-2.5 rounded-2xl text-center border border-white/15 shadow-xl z-20">
                   <span className="font-serif text-sm font-bold text-cream block">Cris Mendanha</span>
-                  <span className="text-[10px] font-mono text-rose uppercase tracking-wider block">Tricologista · 10+ Anos de Clínica</span>
+                  <span className="text-[11px] font-sans font-bold text-rose uppercase tracking-wider block mt-0.5">Tricologista · 10+ Anos de Clínica</span>
                 </div>
               </div>
 
@@ -250,7 +260,7 @@ export default function App() {
                     <h3 className="font-serif text-2xl sm:text-3xl font-black text-cream tracking-tight">
                       Cris Mendanha
                     </h3>
-                    <span className="text-xs sm:text-sm font-mono font-bold text-rose/90 uppercase tracking-widest block mt-1">
+                    <span className="text-xs sm:text-sm font-sans font-bold text-rose/90 uppercase tracking-widest block mt-1">
                       TRICOLOGISTA · 10+ ANOS DE PRÁTICA CLÍNICA
                     </span>
                   </div>
