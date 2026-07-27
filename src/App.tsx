@@ -28,7 +28,7 @@ const leadParagraphs = [
   'Hoje, quando você prende o cabelo, ele vira um fiapo.',
   'As pontas parecem cada vez mais finas.',
   'E o volume que antes fazia parte da sua identidade parece desaparecer um pouco mais a cada ano.',
-  'Sou tricologista.',
+  'Sou tricologista, meu nome é Cris Mendanha.',
   'Foram mais de 10 anos dedicados exclusivamente à terapia capilar, milhares de mulheres acompanhadas ao longo dessa jornada e mais de 3.500 profissionais formados.',
   'Mas existe algo que poucas pessoas sabem.',
   'Antes de ajudar milhares de mulheres a recuperarem cabelos visivelmente mais encorpados, eu precisei encontrar uma solução para o meu próprio cabelo.',
@@ -207,47 +207,42 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Card 2: A Realidade Atual */}
+            {/* Card Unificado: A Realidade & A Jornada da Tricologista Cris Mendanha */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-gradient-to-br from-rose/30 via-rose/15 to-transparent border border-rose/60 rounded-2xl p-6 sm:p-8 relative overflow-hidden"
+              className="bg-bordo text-cream rounded-2xl p-6 sm:p-9 shadow-xl relative space-y-6"
             >
-              <div className="relative z-10 space-y-3">
-                <p className="text-base sm:text-xl text-bordo-deep font-extrabold leading-relaxed">
+              {/* Parte 1: A Identificação */}
+              <div className="space-y-3 pb-6 border-b border-cream/15">
+                <p className="text-lg sm:text-2xl font-serif font-bold text-cream leading-snug">
                   {leadParagraphs[5]}
                 </p>
-                <p className="text-sm sm:text-lg text-ink font-semibold leading-relaxed">
+                <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
                   {leadParagraphs[6]}
                 </p>
-                <p className="text-sm sm:text-lg text-ink font-semibold leading-relaxed">
+                <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
                   {leadParagraphs[7]}
                 </p>
               </div>
-            </motion.div>
 
-            {/* Card 3: A Jornada da Tricologista */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-bordo text-cream rounded-2xl p-6 sm:p-8 shadow-lg relative"
-            >
-              <div className="mb-4 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-cream/15 border border-cream/20 flex items-center justify-center text-cream">
-                  <Activity className="w-5 h-5 text-cream" />
+              {/* Parte 2: Apresentação da Tricologista Cris Mendanha */}
+              <div>
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-cream/15 border border-cream/20 flex items-center justify-center text-cream shrink-0">
+                    <Activity className="w-5 h-5 text-cream" />
+                  </div>
+                  <div>
+                    <span className="block font-serif text-lg sm:text-xl font-bold text-cream">{leadParagraphs[8]}</span>
+                    <span className="text-xs text-cream/75 font-mono uppercase tracking-wider">10+ Anos de Prática Clínica</span>
+                  </div>
                 </div>
-                <div>
-                  <span className="block font-serif text-lg font-bold text-cream">{leadParagraphs[8]}</span>
-                  <span className="text-xs text-cream/70 font-mono uppercase tracking-wider">10+ Anos de Prática Clínica</span>
-                </div>
+                <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
+                  {leadParagraphs[9]} {leadParagraphs[10]} {leadParagraphs[11]} {leadParagraphs[12]}
+                </p>
               </div>
-              <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
-                {leadParagraphs[9]} {leadParagraphs[10]} {leadParagraphs[11]} {leadParagraphs[12]}
-              </p>
             </motion.div>
           </div>
 
