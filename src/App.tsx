@@ -655,9 +655,6 @@ export default function App() {
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 max-w-3xl mx-auto">
-            <span className="text-xs font-mono text-bordo uppercase font-bold tracking-[0.2em] block mb-3">
-              TABELA DE PROTOCOLOS
-            </span>
             <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
               Qual protocolo foi desenvolvido para o estágio atual do seu cabelo?
             </h2>

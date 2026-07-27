@@ -184,9 +184,12 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 <h3 className="offer-card-title text-center uppercase">
                   {protocol.name}
                 </h3>
-                <div className="mt-2 flex items-center justify-center gap-2">
-                  <span className="font-sans text-[38px] font-bold leading-none tracking-[-0.01em] text-[rgb(94,16,23)]">
+                <div className="mt-2 flex flex-wrap items-baseline justify-center gap-1.5 sm:gap-2">
+                  <span className="font-sans text-[28px] sm:text-[34px] font-bold leading-none tracking-[-0.01em] text-[rgb(94,16,23)]">
                     {protocol.priceLabel}
+                  </span>
+                  <span className="font-sans text-xs sm:text-sm font-semibold text-bordo/80 whitespace-nowrap">
+                    ou <strong className="font-bold text-[#4E141C]">12x de R$ {protocol.installments}</strong>
                   </span>
                 </div>
                 <p className="mx-auto mt-3 max-w-[18rem] font-sans text-sm font-medium leading-relaxed text-ink-soft">
