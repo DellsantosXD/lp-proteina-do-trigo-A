@@ -41,9 +41,9 @@ const slides: SlideItem[] = [
   },
   {
     id: 'v-15',
-    type: 'video',
-    src: '/videos/depoimentos/v15.mp4',
-    alt: 'Depoimento em Vídeo - Resultado 15',
+    type: 'image',
+    src: '/images/depoimentos/v15.jpg',
+    alt: 'Depoimento em Foto - Resultado 15',
   },
 ];
 
