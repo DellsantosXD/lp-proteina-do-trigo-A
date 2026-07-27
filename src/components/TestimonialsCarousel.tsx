@@ -10,16 +10,82 @@ interface SlideItem {
 
 const slides: SlideItem[] = [
   {
-    id: 'drive-feedback-1',
+    id: 'drive-1',
     type: 'image',
     src: '/testimonials/drive_feedback_1.jpg',
-    alt: 'Resultado do Tratamento Capilar - Antes e Depois',
+    alt: 'Resultado Capilar 1 - Antes e Depois',
   },
   {
-    id: 'video-1',
+    id: 'drive-2',
     type: 'video',
-    src: '/videos/depoimento-video-1.mp4',
-    alt: 'Depoimento em Vídeo de Paciente',
+    src: '/testimonials/drive_feedback_2.mp4',
+    alt: 'Depoimento em Vídeo 2',
+  },
+  {
+    id: 'drive-3',
+    type: 'video',
+    src: '/testimonials/drive_feedback_3.mp4',
+    alt: 'Depoimento em Vídeo 3',
+  },
+  {
+    id: 'drive-4',
+    type: 'video',
+    src: '/testimonials/drive_feedback_4.mp4',
+    alt: 'Depoimento em Vídeo 4',
+  },
+  {
+    id: 'drive-5',
+    type: 'video',
+    src: '/testimonials/drive_feedback_5.mp4',
+    alt: 'Depoimento em Vídeo 5',
+  },
+  {
+    id: 'drive-6',
+    type: 'video',
+    src: '/testimonials/drive_feedback_6.mp4',
+    alt: 'Depoimento em Vídeo 6',
+  },
+  {
+    id: 'drive-7',
+    type: 'image',
+    src: '/testimonials/drive_feedback_7.png',
+    alt: 'Resultado Capilar 7',
+  },
+  {
+    id: 'drive-8',
+    type: 'video',
+    src: '/testimonials/drive_feedback_8.mp4',
+    alt: 'Depoimento em Vídeo 8',
+  },
+  {
+    id: 'drive-9',
+    type: 'video',
+    src: '/testimonials/drive_feedback_9.mp4',
+    alt: 'Depoimento em Vídeo 9',
+  },
+  {
+    id: 'drive-10',
+    type: 'video',
+    src: '/testimonials/drive_feedback_10.mp4',
+    alt: 'Depoimento em Vídeo 10',
+  },
+  {
+    id: 'drive-11',
+    type: 'video',
+    src: '/testimonials/drive_feedback_11.mp4',
+    alt: 'Depoimento em Vídeo 11',
+  },
+  {
+    id: 'drive-12',
+    type: 'image',
+    src: '/testimonials/drive_feedback_12.png',
+    alt: 'Resultado Capilar 12',
+  },
+  {
+    id: 'drive-13',
+    type: 'video',
+    src: '/testimonials/drive_feedback_13.mp4',
+    alt: 'Depoimento em Vídeo 13',
   },
 ];
 
