@@ -207,43 +207,35 @@ export default function App() {
               </div>
             </motion.div>
 
-            {/* Card Unificado com Foto da Expert Cris Mendanha */}
+            {/* Card Unificado com Foto Framed da Expert Cris Mendanha */}
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="bg-[#4A0E19] text-cream rounded-3xl overflow-hidden shadow-2xl border border-cream/15 flex flex-col md:flex-row items-stretch"
+              className="bg-[#4A0E19] text-cream rounded-3xl p-6 sm:p-9 shadow-2xl border border-cream/15 flex flex-col lg:flex-row items-center lg:items-start gap-8"
             >
-              {/* Coluna da Foto da Expert Cris Mendanha com Animação Premium */}
-              <div className="md:w-5/12 relative bg-[#3D0A14] flex items-center justify-center min-h-[340px] sm:min-h-[440px] shrink-0 overflow-hidden group">
-                {/* Ambient Shimmer Glow */}
-                <div className="absolute inset-0 bg-radial-[circle_at_50%_0%] from-rose/30 via-transparent to-transparent pointer-events-none z-10" />
-
-                {/* Floating Glassmorphism Badge Desktop */}
-                <div className="absolute top-4 left-4 z-20 hidden md:inline-flex items-center gap-1.5 rounded-full bg-black/55 backdrop-blur-md px-3.5 py-1.5 text-xs font-sans font-bold text-cream border border-white/20 shadow-lg transition-transform duration-500 group-hover:scale-105">
-                  <Sparkles className="w-3.5 h-3.5 text-rose shrink-0" />
-                  <span>Cris Mendanha · Tricologista</span>
-                </div>
-
-                <img
-                  src="/images/cris-mendanha-portrait.jpg"
-                  alt="Cris Mendanha - Tricologista & Especialista Capilar"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                />
-                
-                <div className="absolute inset-0 bg-gradient-to-t from-[#4A0E19] via-transparent to-transparent md:hidden" />
-                <div className="absolute bottom-4 left-4 right-4 md:hidden bg-black/65 backdrop-blur-md px-4 py-2.5 rounded-2xl text-center border border-white/15 shadow-xl z-20">
-                  <span className="font-serif text-sm font-bold text-cream block">Cris Mendanha</span>
-                  <span className="text-[11px] font-sans font-bold text-rose uppercase tracking-wider block mt-0.5">Tricologista · 10+ Anos de Clínica</span>
+              {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas elegantes */}
+              <div className="w-full lg:w-4/12 max-w-[280px] lg:max-w-none shrink-0">
+                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border-2 border-white/20 shadow-xl group bg-[#3D0A14] aspect-[3/4]">
+                  <img
+                    src="/images/cris-mendanha-portrait.jpg"
+                    alt="Cris Mendanha - Tricologista"
+                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-xl text-center border border-white/15">
+                    <span className="font-serif text-xs font-bold text-cream block">Cris Mendanha</span>
+                    <span className="text-[10px] font-sans font-bold text-rose uppercase tracking-wider block mt-0.5">Tricologista · Mais de 10 Anos de Clínica</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Coluna dos Textos da Expert */}
-              <div className="md:w-7/12 p-6 sm:p-9 flex flex-col justify-between text-left space-y-6">
+              {/* Coluna dos Textos da Expert no lado direito */}
+              <div className="w-full lg:w-8/12 text-left space-y-6 flex flex-col justify-between">
                 {/* Parte 1: A Identificação */}
                 <div className="space-y-3 pb-5 border-b border-cream/15">
-                  <p className="text-lg sm:text-2xl font-serif font-bold text-cream leading-snug">
+                  <p className="text-xl sm:text-2xl font-serif font-bold text-cream leading-snug">
                     Hoje, quando você prende o cabelo, ele vira um fiapo.
                   </p>
                   <p className="text-sm sm:text-base text-cream/90 font-medium leading-relaxed">
@@ -254,14 +246,14 @@ export default function App() {
                   </p>
                 </div>
 
-                {/* Parte 2: Apresentação, Revelação e a Foto */}
+                {/* Parte 2: Nome Maior como Título e Subtítulo sem ícone */}
                 <div className="space-y-4">
-                  <div className="hidden md:block mb-3">
-                    <h3 className="font-serif text-2xl sm:text-3xl font-black text-cream tracking-tight">
+                  <div>
+                    <h3 className="font-serif text-3xl sm:text-4xl font-black text-cream tracking-tight">
                       Cris Mendanha
                     </h3>
-                    <span className="text-xs sm:text-sm font-sans font-bold text-rose/90 uppercase tracking-widest block mt-1">
-                      TRICOLOGISTA · 10+ ANOS DE PRÁTICA CLÍNICA
+                    <span className="text-xs sm:text-sm font-sans font-bold text-rose uppercase tracking-widest block mt-1">
+                      TRICOLOGISTA · MAIS DE 10 ANOS DE PRÁTICA CLÍNICA
                     </span>
                   </div>
 
