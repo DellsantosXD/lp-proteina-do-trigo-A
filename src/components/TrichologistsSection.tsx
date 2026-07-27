@@ -44,7 +44,7 @@ const trichologists: Trichologist[] = [
     id: '5',
     youtubeId: '5dX-Ct2Gsos',
     role: 'Tricologista',
-    name: 'Dra. Marisa',
+    name: 'Marisa',
     coverUrl: 'https://img.youtube.com/vi/5dX-Ct2Gsos/maxresdefault.jpg',
   },
 ];

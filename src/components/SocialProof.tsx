@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: 'Dra. Beatriz Santos',
+    name: 'Beatriz Santos',
     role: 'Terapêuta Capilar, Curitiba',
     text: 'Como profissional da área, pesquiso muito a composição antes de indicar. O Complexo TriMolecular com pesos de penetração seletiva por porosidade é genial. Ele reconstrói os vazios da fibra sem sobrecarregar ou endurecer o restante do cabelo.',
     rating: 5,
