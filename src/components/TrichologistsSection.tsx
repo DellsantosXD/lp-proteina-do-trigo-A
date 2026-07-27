@@ -70,6 +70,35 @@ export const TrichologistsSection: React.FC = () => {
           </p>
         </div>
 
+        {/* Cris Mendanha Featured Card */}
+        <div className="mb-16 max-w-4xl mx-auto bg-white rounded-3xl overflow-hidden shadow-2xl border border-tan-deep/20 flex flex-col md:flex-row items-stretch text-ink">
+          {/* Photo Side */}
+          <div className="md:w-1/2 relative bg-[#4A0E19] flex items-center justify-center min-h-[340px] sm:min-h-[440px]">
+            <img
+              src="/images/cris-mendanha-laptop.jpg"
+              alt="Cris Mendanha - Tricologista & Fundadora da Sweet Therapy"
+              className="w-full h-full object-cover object-top"
+            />
+            <div className="absolute right-0 top-0 bottom-0 w-2.5 bg-[#4A0E19] hidden md:block" />
+          </div>
+
+          {/* Bio Text Side */}
+          <div className="md:w-1/2 p-8 sm:p-12 flex flex-col justify-center text-left bg-white relative">
+            <h3 className="font-serif text-3xl sm:text-4xl font-bold text-[#4A0E19] tracking-tight mb-1">
+              Cris Mendanha
+            </h3>
+            <span className="text-xs font-mono font-bold text-[#4A0E19]/80 uppercase tracking-widest block mb-6">
+              TRICOLOGISTA · FUNDADORA DA SWEET THERAPY
+            </span>
+
+            <div className="relative">
+              <p className="text-sm sm:text-base font-sans italic text-ink-soft leading-relaxed font-medium">
+                “Ao acompanhar centenas de casos reais todos os dias por 10 anos, pude identificar o erro mais comum: em vez de estimular um couro com queda, o segredo estava em acalmar e tratar o couro inflamado e sem resposta. O que antes estava disponível apenas na clínica, agora você faz em casa.”
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Responsive Grid of Vertical Video Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {trichologists.map((t) => {
