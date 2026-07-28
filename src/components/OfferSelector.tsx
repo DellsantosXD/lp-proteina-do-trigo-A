@@ -29,7 +29,7 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 1,
     name: 'Protocolo Essencial',
-    priceLabel: 'R$197',
+    priceLabel: '197',
     subtitle: 'Para começar',
     price: 197,
     installments: '19,78',
@@ -58,7 +58,7 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 2,
     name: 'Protocolo Intensivo',
-    priceLabel: 'R$267',
+    priceLabel: '267',
     subtitle: 'Mais escolhido',
     price: 267,
     installments: '26,81',
@@ -95,7 +95,7 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 3,
     name: 'Protocolo Completo',
-    priceLabel: 'R$327',
+    priceLabel: '327',
     subtitle: 'Melhor experiência de cuidado',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 327,
@@ -250,7 +250,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     {protocol.priceLabel}
                   </span>
                   <span className="font-sans text-xs sm:text-sm font-semibold text-bordo/80 whitespace-nowrap">
-                    ou <strong className="font-bold text-[#4E141C]">12x de R$ {protocol.installments}</strong>
+                    ou <strong className="font-bold text-[#4E141C]">12x de {protocol.installments}</strong>
                   </span>
                 </div>
                 <p className="mx-auto mt-3 max-w-[18rem] font-sans text-sm font-medium leading-relaxed text-ink-soft">
@@ -263,15 +263,13 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-3 flex items-center justify-center overflow-visible h-64 sm:h-72">
-                <div className="absolute inset-x-8 bottom-5 h-14 rounded-full bg-bordo/12 blur-2xl" />
+              <div className="relative my-2 flex items-center justify-center h-48 sm:h-56 w-full overflow-hidden">
+                <div className="absolute inset-x-8 bottom-3 h-10 rounded-full bg-bordo/12 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className={`relative z-10 object-contain object-center drop-shadow-[0_18px_24px_rgba(78,20,28,0.18)] transition-transform duration-300 ${
-                      protocol.id >= 2 ? 'h-[135%] w-[135%] scale-110' : 'h-[118%] w-[118%]'
-                    }`}
+                    className="relative z-10 max-h-full max-w-full object-contain object-center drop-shadow-[0_12px_20px_rgba(78,20,28,0.18)]"
                   />
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
