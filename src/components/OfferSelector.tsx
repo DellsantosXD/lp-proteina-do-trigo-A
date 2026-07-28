@@ -73,7 +73,7 @@ const protocols: ExtendedProtocol[] = [
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonusSection: {
       title: 'BÔNUS',
-      itemCountLabel: '4 itens',
+      itemCountLabel: '5 itens',
       items: [
         {
           title: 'Guia: Como Encorpar Fios Finos em Casa'
@@ -88,6 +88,10 @@ const protocols: ExtendedProtocol[] = [
         {
           title: 'Guia de Alimentação e Hábitos para Fortalecer os Fios',
           subtext: 'Como sono, alimentação e rotina influenciam a saúde capilar.'
+        },
+        {
+          title: 'Vídeo aula ensinando a massagear o couro cabeludo com Cris Mendanha',
+          subtext: 'Passo a passo em vídeo para potencializar os resultados.'
         }
       ]
     }
@@ -129,8 +133,8 @@ const protocols: ExtendedProtocol[] = [
           subtext: 'Como sono, alimentação e rotina influenciam a saúde capilar.'
         },
         {
-          title: 'Planner de 30 Dias do Tratamento',
-          subtext: 'Checklist diário para acompanhar a evolução.'
+          title: 'Vídeo aula ensinando a massagear o couro cabeludo com Cris Mendanha',
+          subtext: 'Passo a passo em vídeo para potencializar os resultados.'
         },
         {
           title: 'Calendário de Aplicação dos Protocolos',
