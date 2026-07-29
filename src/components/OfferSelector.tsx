@@ -14,6 +14,7 @@ interface BonusSection {
 }
 
 interface ExtendedProtocol extends Protocol {
+  originalPrice?: string;
   priceLabel: string;
   subtitle: string;
   installments: string;
@@ -29,10 +30,10 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 1,
     name: 'Protocolo Essencial',
-    priceLabel: '197',
+    priceLabel: '169,00',
     subtitle: 'Para começar',
-    price: 197,
-    installments: '19,78',
+    price: 169,
+    installments: '16,98',
     description: 'Para começar',
     items: [
       'Proteína do Trigo Pro Filler (100g)'
@@ -58,7 +59,8 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 2,
     name: 'Protocolo Intensivo',
-    priceLabel: '267',
+    originalPrice: '348,00',
+    priceLabel: '267,00',
     subtitle: 'Mais escolhido',
     price: 267,
     installments: '26,81',
@@ -99,7 +101,8 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 3,
     name: 'Protocolo Completo',
-    priceLabel: '327',
+    originalPrice: '490,00',
+    priceLabel: '327,00',
     subtitle: 'Melhor experiência de cuidado',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 327,
@@ -249,11 +252,16 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 <h3 className="offer-card-title text-center uppercase">
                   {protocol.name}
                 </h3>
-                <div className="mt-2 flex flex-wrap items-baseline justify-center gap-1.5 sm:gap-2">
-                  <span className="font-sans text-[28px] sm:text-[34px] font-bold leading-none tracking-[-0.01em] text-[rgb(94,16,23)]">
+                <div className="mt-3 flex flex-col items-center justify-center">
+                  {protocol.originalPrice && (
+                    <span className="font-sans text-xs sm:text-sm font-semibold text-ink-soft/75 line-through mb-1">
+                      De {protocol.originalPrice} por:
+                    </span>
+                  )}
+                  <span className="font-sans text-[36px] sm:text-[46px] font-black leading-none tracking-tight text-[rgb(94,16,23)]">
                     {protocol.priceLabel}
                   </span>
-                  <span className="font-sans text-xs sm:text-sm font-semibold text-bordo/80 whitespace-nowrap">
+                  <span className="font-sans text-xs sm:text-sm font-semibold text-bordo/80 whitespace-nowrap mt-1.5">
                     ou <strong className="font-bold text-[#4E141C]">12x de {protocol.installments}</strong>
                   </span>
                 </div>
@@ -267,13 +275,13 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-3 flex items-center justify-center h-60 sm:h-72 w-full">
-                <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
+              <div className="relative my-4 flex items-center justify-center h-64 sm:h-80 w-full">
+                <div className="absolute inset-x-6 bottom-2 h-14 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className="relative z-10 h-full w-auto max-w-full object-contain object-center drop-shadow-[0_16px_28px_rgba(78,20,28,0.22)] transition-transform duration-300 hover:scale-105"
+                    className="relative z-10 h-full w-auto max-w-full object-contain object-center drop-shadow-[0_20px_32px_rgba(78,20,28,0.25)] transition-transform duration-300 hover:scale-105"
                   />
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
