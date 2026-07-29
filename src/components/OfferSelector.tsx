@@ -248,7 +248,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
             )}
 
             <div className="p-4 sm:p-6 md:p-7 flex flex-1 flex-col items-stretch text-center">
-              <div className="mb-3">
+              <div className="mb-2">
                 <h3 className="offer-card-title text-center uppercase">
                   {protocol.name}
                 </h3>
@@ -265,9 +265,6 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                     ou <strong className="font-bold text-[#4E141C]">12x de {protocol.installments}</strong>
                   </span>
                 </div>
-                <p className="mx-auto mt-3 max-w-[18rem] font-sans text-sm font-medium leading-relaxed text-ink-soft">
-                  {protocol.subtitle}
-                </p>
                 {protocol.note && (
                   <span className="mt-3 inline-flex rounded-full bg-bordo/8 px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-wider text-bordo/75">
                     {protocol.note}
@@ -275,13 +272,13 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-1 sm:my-2 flex items-center justify-center min-h-[300px] h-[340px] sm:h-[380px] w-full p-1">
+              <div className="relative my-2 flex items-center justify-center min-h-[340px] h-[380px] sm:h-[430px] w-full p-1">
                 <div className="absolute inset-x-4 bottom-1 h-14 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className="relative z-10 max-h-full max-w-full object-contain object-bottom scale-110 sm:scale-105 drop-shadow-[0_20px_32px_rgba(78,20,28,0.25)] transition-transform duration-300 hover:scale-115"
+                    className="relative z-10 max-h-full max-w-full object-contain object-bottom scale-120 sm:scale-110 drop-shadow-[0_20px_32px_rgba(78,20,28,0.25)] transition-transform duration-300 hover:scale-125"
                   />
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
@@ -306,6 +303,10 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   </div>
                 )}
               </div>
+
+              <p className="mx-auto my-3 max-w-[18rem] font-sans text-sm font-semibold leading-relaxed text-ink-soft">
+                {protocol.subtitle}
+              </p>
 
               {protocol.hasFreeShipping && (
                 <div className="my-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-[#16A34A]/15 border border-[#16A34A]/30 px-3.5 py-1.5 font-sans text-xs font-black uppercase text-[#16A34A] tracking-wider shadow-xs">
