@@ -247,8 +247,8 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               </div>
             )}
 
-            <div className="p-5 sm:p-6 md:p-7 flex flex-1 flex-col items-stretch text-center">
-              <div className="mb-4">
+            <div className="p-4 sm:p-6 md:p-7 flex flex-1 flex-col items-stretch text-center">
+              <div className="mb-3">
                 <h3 className="offer-card-title text-center uppercase">
                   {protocol.name}
                 </h3>
@@ -275,14 +275,14 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-2 sm:my-4 flex items-center justify-center h-[310px] sm:h-[340px] w-full">
-                <div className="absolute inset-x-6 bottom-2 h-14 rounded-full bg-bordo/10 blur-xl" />
+              <div className="relative my-2 sm:my-3 flex items-center justify-center h-[370px] sm:h-[420px] w-full">
+                <div className="absolute inset-x-4 bottom-2 h-16 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className={`relative z-10 h-full w-auto max-w-full object-contain object-center drop-shadow-[0_20px_32px_rgba(78,20,28,0.25)] transition-transform duration-300 hover:scale-105 ${
-                      protocol.id >= 2 ? 'scale-110 sm:scale-100' : 'scale-105 sm:scale-100'
+                    className={`relative z-10 h-full w-auto max-w-full object-contain object-center drop-shadow-[0_24px_40px_rgba(78,20,28,0.28)] transition-transform duration-300 hover:scale-110 ${
+                      protocol.id >= 2 ? 'scale-130 sm:scale-115' : 'scale-120 sm:scale-105'
                     }`}
                   />
                 ) : (
