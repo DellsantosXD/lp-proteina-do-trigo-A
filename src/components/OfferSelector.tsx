@@ -272,13 +272,13 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-2 flex items-center justify-center min-h-[340px] h-[380px] sm:h-[430px] w-full p-1">
-                <div className="absolute inset-x-4 bottom-1 h-14 rounded-full bg-bordo/10 blur-xl" />
+              <div className="relative my-3 flex items-center justify-center h-[280px] sm:h-[320px] w-full p-2">
+                <div className="absolute inset-x-4 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className="relative z-10 max-h-full max-w-full object-contain object-bottom scale-120 sm:scale-110 drop-shadow-[0_20px_32px_rgba(78,20,28,0.25)] transition-transform duration-300 hover:scale-125"
+                    className="relative z-10 max-h-full max-w-full object-contain object-center drop-shadow-[0_16px_28px_rgba(78,20,28,0.22)] transition-transform duration-300 hover:scale-105"
                   />
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
