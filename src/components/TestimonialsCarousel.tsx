@@ -149,15 +149,15 @@ export const TestimonialsCarousel: React.FC = () => {
                 <div className="relative w-full h-[450px] sm:h-[580px] bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center p-2 sm:p-3">
                   {slide.type === 'video' ? (
                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/30">
-                      {isNear ? (
+                      {isActive && isNear ? (
                         <video
-                          ref={isActive ? videoRef : null}
+                          ref={videoRef}
                           src={slide.src}
                           loop
                           muted={isMuted}
                           playsInline
-                          preload={isActive ? 'auto' : 'metadata'}
-                          autoPlay={isActive}
+                          preload="metadata"
+                          autoPlay
                           className="w-full h-full object-contain rounded-2xl"
                         />
                       ) : (

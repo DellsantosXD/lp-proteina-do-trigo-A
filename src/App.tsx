@@ -6,6 +6,7 @@ import OfferSelector, { getProtocolById } from './components/OfferSelector';
 import VideoPlayer from './components/VideoPlayer';
 import ConversionCta from './components/ConversionCta';
 import ProtocolOverviewCards from './components/ProtocolOverviewCards';
+import LazyVideo from './components/LazyVideo';
 
 // Lazy loaded offscreen components for optimal initial paint performance
 const InteractiveStrand = lazy(() => import('./components/InteractiveStrand'));
@@ -128,51 +129,7 @@ export default function App() {
     (activeProtocol.price / 12).toFixed(2).replace('.', ',');
 
   return (
-    <div className="min-h-screen bg-cream selection:bg-rose/50 relative pb-20 sm:pb-24">
-      <Header />
-
-      {/* HERO SECTION */}
-      <section id="hero-section" className="relative pt-16 pb-20 px-6 overflow-hidden">
-        {/* Shimmer Ambient Background */}
-        <div className="absolute inset-0 bg-radial-[circle_at_15%_0%] from-rose/20 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute inset-0 bg-radial-[circle_at_100%_20%] from-tan/25 via-transparent to-transparent pointer-events-none" />
-
-        <div className="max-w-6xl mx-auto text-center relative z-10">
-          {/* Headline */}
-          <div className="flex items-center justify-center mb-6">
-            <h1 className="font-serif text-bordo font-black tracking-tight leading-tight text-4xl sm:text-6xl md:text-7xl max-w-4xl text-balance">
-              Seu rabo de cavalo virou um fiapo.
-            </h1>
-          </div>
-
-          <div className="max-w-2xl mx-auto mb-10 space-y-4">
-            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
-              O afinamento pode ter diferentes causas. A boa notícia é que a fibra capilar pode recuperar estrutura quando recebe a tecnologia certa.
-            </p>
-            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
-              A Reconstrução Molecular em 3 Camadas foi desenvolvida para restaurar a estrutura da fibra afinada, devolvendo corpo, densidade e resistência aos fios, sem depender de salão.
-            </p>
-          </div>
-
-          {/* Premium Video Showcase representing clinical hair reconstruction in loop */}
-          <div className="mx-auto mb-12 max-w-5xl">
-            <VideoPlayer />
-          </div>
-
-          <div className="max-w-lg mx-auto">
-            <a
-              href="#oferta"
-              className="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-bordo to-bordo-deep hover:from-bordo-deep hover:to-bordo text-cream font-sans font-bold text-base md:text-lg px-8 py-5 rounded-full transition-all duration-300 shadow-[0_10px_25px_rgba(110,31,43,0.25)] hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
-            >
-              Quero minha Reconstrução Molecular em 3 Camadas
-            </a>
-            <span className="text-xxs font-mono text-ink-soft uppercase tracking-widest mt-3 block">
-              Compra 100% Segura · Satisfação Garantida
-            </span>
-          </div>
-        </div>
-      </section>
-
+    <>
       {/* LEAD SECTION - PROBLEM OUTLINE */}
       <section className="py-20 px-6 border-t border-tan-deep/25 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -543,12 +500,8 @@ export default function App() {
           {/* Pro Filler Video Container - Native 100% Autoplay Loop HTML5 Video */}
           <div className="max-w-4xl mx-auto relative overflow-hidden rounded-[28px] border border-cream/25 bg-black shadow-[0_28px_70px_rgba(0,0,0,0.6)] backdrop-blur-md">
             <div className="aspect-[16/9] w-full relative overflow-hidden rounded-[28px]">
-              <video
+              <LazyVideo
                 src="/videos/pro-filler-texture.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
                 className="w-full h-full object-cover rounded-[28px]"
               />
               <div className="absolute inset-0 pointer-events-none rounded-[28px] ring-1 ring-white/20" />
@@ -1005,6 +958,6 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </>
   );
 }
