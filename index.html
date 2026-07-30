@@ -164,21 +164,12 @@
           video.addEventListener('loadeddata', revealVideo, { once: true });
           video.addEventListener('canplay', revealVideo, { once: true });
 
-          // WebM support check
-          var canWebM = video.canPlayType('video/webm; codecs="vp9"').length > 0 ||
-                        video.canPlayType('video/webm; codecs="vp8"').length > 0 ||
-                        video.canPlayType('video/webm').length > 0;
-
-          if (canWebM) {
-            var sourceWebM = document.createElement('source');
-            sourceWebM.src = '/videos/pro-filler-video-mobile.webm';
-            sourceWebM.type = 'video/webm';
-            video.appendChild(sourceWebM);
-          }
-
           var sourceMP4 = document.createElement('source');
           sourceMP4.src = '/videos/pro-filler-video.mp4';
           sourceMP4.type = 'video/mp4';
+          sourceMP4.addEventListener('error', function() {
+            console.error('Falha no MP4', sourceMP4.src);
+          });
           video.appendChild(sourceMP4);
 
           video.load();
