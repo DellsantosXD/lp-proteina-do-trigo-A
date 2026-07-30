@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Sparkles, Dna, Activity, CheckCircle2 } from 'lucide-react';
 import Header from './components/Header';
 import InteractiveStrand from './components/InteractiveStrand';
 import Timeline from './components/Timeline';
@@ -992,6 +994,6 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
-      </div>
+    </div>
   );
 }
