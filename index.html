@@ -138,19 +138,50 @@
           var poster = document.getElementById('hero-poster');
           if (!video || !poster) return;
 
+          var playStarted = false;
+
+          video.addEventListener('error', function() {
+            console.error('Hero video error', {
+              error: video.error,
+              networkState: video.networkState,
+              readyState: video.readyState,
+              currentSrc: video.currentSrc
+            });
+          });
+
+          var revealVideo = async function() {
+            if (playStarted) return;
+            playStarted = true;
+            try {
+              await video.play();
+              poster.classList.remove('opacity-100');
+              poster.classList.add('opacity-0', 'pointer-events-none');
+            } catch (error) {
+              console.warn('Autoplay indisponível; poster mantido', error);
+            }
+          };
+
+          video.addEventListener('loadeddata', revealVideo, { once: true });
+          video.addEventListener('canplay', revealVideo, { once: true });
+
+          // WebM support check
+          var canWebM = video.canPlayType('video/webm; codecs="vp9"').length > 0 ||
+                        video.canPlayType('video/webm; codecs="vp8"').length > 0 ||
+                        video.canPlayType('video/webm').length > 0;
+
+          if (canWebM) {
+            var sourceWebM = document.createElement('source');
+            sourceWebM.src = '/videos/pro-filler-video-mobile.webm';
+            sourceWebM.type = 'video/webm';
+            video.appendChild(sourceWebM);
+          }
+
           var sourceMP4 = document.createElement('source');
           sourceMP4.src = '/videos/pro-filler-video.mp4';
           sourceMP4.type = 'video/mp4';
           video.appendChild(sourceMP4);
 
           video.load();
-
-          video.addEventListener('canplay', function() {
-            video.play().then(function() {
-              poster.classList.remove('opacity-100');
-              poster.classList.add('opacity-0', 'pointer-events-none');
-            }).catch(function() {});
-          }, { once: true });
 
           document.addEventListener('visibilitychange', function() {
             if (document.hidden) {

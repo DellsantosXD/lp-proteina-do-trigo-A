@@ -51,9 +51,25 @@ export const TestimonialsCarousel: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMuted, setIsMuted] = useState(true);
   const [slideWidth, setSlideWidth] = useState(372);
+  const [isSectionVisible, setIsSectionVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (isSectionVisible || !containerRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsSectionVisible(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '250px 0px' }
+    );
+    observer.observe(containerRef.current);
+    return () => observer.disconnect();
+  }, [isSectionVisible]);
 
   const prevSlide = () => {
     setCurrentIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -149,7 +165,7 @@ export const TestimonialsCarousel: React.FC = () => {
                 <div className="relative w-full h-[450px] sm:h-[580px] bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center p-2 sm:p-3">
                   {slide.type === 'video' ? (
                     <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-2xl bg-black/30">
-                      {isActive && isNear ? (
+                      {isSectionVisible && isActive ? (
                         <video
                           ref={videoRef}
                           src={slide.src}
