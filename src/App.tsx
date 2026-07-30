@@ -1,20 +1,19 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Sparkles, Dna, Activity, CheckCircle2 } from 'lucide-react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import Header from './components/Header';
-import InteractiveStrand from './components/InteractiveStrand';
-import Timeline from './components/Timeline';
 import OfferSelector, { getProtocolById } from './components/OfferSelector';
-import FaqAccordion from './components/FaqAccordion';
-import SocialProof from './components/SocialProof';
-import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
-import { TestimonialsCarousel } from './components/TestimonialsCarousel';
-import { PrintTestimonialsCarousel } from './components/PrintTestimonialsCarousel';
-import { TrichologistsSection } from './components/TrichologistsSection';
-import ConversionCta from './components/ConversionCta';
-import TreatmentExperienceSection from './components/TreatmentExperienceSection';
-import ProtocolOverviewCards from './components/ProtocolOverviewCards';
+
+const InteractiveStrand = lazy(() => import('./components/InteractiveStrand'));
+const Timeline = lazy(() => import('./components/Timeline'));
+const FaqAccordion = lazy(() => import('./components/FaqAccordion'));
+const SocialProof = lazy(() => import('./components/SocialProof'));
+const ProductVisualizer = lazy(() => import('./components/ProductVisualizer'));
+const TestimonialsCarousel = lazy(() => import('./components/TestimonialsCarousel'));
+const PrintTestimonialsCarousel = lazy(() => import('./components/PrintTestimonialsCarousel'));
+const TrichologistsSection = lazy(() => import('./components/TrichologistsSection').then(m => ({ default: m.TrichologistsSection })));
+const ConversionCta = lazy(() => import('./components/ConversionCta'));
+const TreatmentExperienceSection = lazy(() => import('./components/TreatmentExperienceSection'));
+const ProtocolOverviewCards = lazy(() => import('./components/ProtocolOverviewCards'));
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -126,8 +125,9 @@ export default function App() {
     (activeProtocol.price / 12).toFixed(2).replace('.', ',');
 
   return (
-    <div className="min-h-screen bg-cream selection:bg-rose/50 relative pb-20 sm:pb-24">
-      <Header />
+    <Suspense fallback={null}>
+      <div className="min-h-screen bg-cream selection:bg-rose/50 relative pb-20 sm:pb-24">
+        <Header />
 
       {/* HERO SECTION */}
       <section id="hero-section" className="relative pt-16 pb-20 px-6 overflow-hidden">
@@ -994,6 +994,7 @@ export default function App() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+      </div>
+    </Suspense>
   );
 }
