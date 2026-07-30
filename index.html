@@ -124,16 +124,21 @@
     <!-- REACT ROOT FOR BELOW-THE-FOLD INTERACTIVE COMPONENTS -->
     <div id="root"></div>
 
-    <!-- VANILLA JS FOR PROGRESSIVE HERO VIDEO AUTOPLAY -->
+    <!-- VANILLA JS FOR PROGRESSIVE HERO VIDEO AUTOPLAY ON FIRST USER INTERACTION -->
     <script>
-      window.addEventListener('load', function() {
+      (function() {
         var nav = navigator;
         var isSaveData = nav.connection && nav.connection.saveData;
         var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (isSaveData || isReducedMotion) return;
 
-        var scheduleTask = window.requestIdleCallback || function(cb) { setTimeout(cb, 1500); };
-        scheduleTask(function() {
+        var startEvents = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
+        var videoStarted = false;
+
+        var loadAndPlayHeroVideo = function() {
+          if (videoStarted) return;
+          videoStarted = true;
+
           var video = document.getElementById('hero-video');
           var poster = document.getElementById('hero-poster');
           if (!video || !poster) return;
@@ -181,8 +186,22 @@
               video.play().catch(function(){});
             }
           });
-        }, { timeout: 3000 });
-      });
+        };
+
+        var startHeroVideo = function() {
+          startEvents.forEach(function(event) {
+            window.removeEventListener(event, startHeroVideo);
+          });
+          loadAndPlayHeroVideo();
+        };
+
+        startEvents.forEach(function(event) {
+          window.addEventListener(event, startHeroVideo, {
+            once: true,
+            passive: true
+          });
+        });
+      })();
     </script>
 
     <!-- AUTOMATED SELF-VALIDATION SCRIPT FOR REQUIRED DOM SELECTORS -->
