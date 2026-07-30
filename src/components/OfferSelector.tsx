@@ -279,13 +279,11 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
-                    alt={protocol.id === 1 ? "Protocolo Essencial" : protocol.name}
+                    alt={protocol.name}
                     width={1570}
                     height={1668}
                     style={{ maxWidth: '100%', height: 'auto' }}
-                    loading="eager"
-                    fetchPriority="high"
-                    {...{ fetchpriority: 'high' }}
+                    loading="lazy"
                     decoding="async"
                     className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
                       protocol.id === 1
