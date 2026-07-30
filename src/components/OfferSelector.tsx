@@ -272,13 +272,21 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <div className="relative my-3 flex items-center justify-center h-[260px] sm:h-[300px] w-full px-4 py-1">
+              <div className={`relative my-2 sm:my-3 flex items-center justify-center w-full px-2 py-1 ${
+                protocol.id === 2 ? 'h-[300px] sm:h-[350px]' : protocol.id === 3 ? 'h-[320px] sm:h-[370px]' : 'h-[260px] sm:h-[300px]'
+              }`}>
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    className="relative z-10 max-h-full max-w-[88%] sm:max-w-[92%] object-contain object-center drop-shadow-[0_16px_28px_rgba(78,20,28,0.22)] transition-transform duration-300 hover:scale-105"
+                    className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
+                      protocol.id === 1
+                        ? 'max-w-[88%] sm:max-w-[92%]'
+                        : protocol.id === 2
+                        ? 'max-w-[96%] scale-110'
+                        : 'max-w-[96%] scale-115'
+                    }`}
                   />
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
