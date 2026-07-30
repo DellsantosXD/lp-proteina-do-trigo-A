@@ -140,14 +140,9 @@ export default function App() {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           {/* Headline */}
           <div className="flex items-center justify-center mb-6">
-            <motion.h1
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="font-serif text-bordo font-black tracking-tight leading-tight text-4xl sm:text-6xl md:text-7xl max-w-4xl text-balance"
-            >
+            <h1 className="font-serif text-bordo font-black tracking-tight leading-tight text-4xl sm:text-6xl md:text-7xl max-w-4xl text-balance">
               Seu rabo de cavalo virou um fiapo.
-            </motion.h1>
+            </h1>
           </div>
 
           <div className="max-w-2xl mx-auto mb-10 space-y-4">
