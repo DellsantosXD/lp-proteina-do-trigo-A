@@ -273,7 +273,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               </div>
 
               <div className={`relative my-2 sm:my-3 flex items-center justify-center w-full px-2 py-1 ${
-                protocol.id === 2 ? 'h-[330px] sm:h-[375px]' : protocol.id === 3 ? 'h-[320px] sm:h-[370px]' : 'h-[260px] sm:h-[300px]'
+                protocol.id === 2 ? 'h-[360px] sm:h-[410px]' : protocol.id === 3 ? 'h-[320px] sm:h-[370px]' : 'h-[260px] sm:h-[300px]'
               }`}>
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
@@ -284,7 +284,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                       protocol.id === 1
                         ? 'max-w-[88%] sm:max-w-[92%]'
                         : protocol.id === 2
-                        ? 'max-w-[98%] scale-122'
+                        ? 'max-w-[99%] scale-135'
                         : 'max-w-[96%] scale-115'
                     }`}
                   />
