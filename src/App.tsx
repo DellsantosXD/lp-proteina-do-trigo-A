@@ -36,11 +36,26 @@ const leadParagraphs = [
   'Foi justamente dessa busca que nasceu a tecnologia que você vai conhecer nesta página.'
 ];
 
+import { trackPageView, trackViewContent, trackInitiateCheckout } from './utils/analytics';
+
 export default function App() {
   const [selectedProtocolId, setSelectedProtocolId] = useState<number>(3); // Default to protocol 3 (most popular)
   const [showStickyBar, setShowStickyBar] = useState<boolean>(false);
   const [hasVisiblePageCta, setHasVisiblePageCta] = useState<boolean>(false);
-  const [isExpanded, setIsExpanded] = useState<boolean>(true); // Default to expanded so it matches the image perfectly on load!
+  const [isExpanded, setIsExpanded] = useState<boolean>(true);
+
+  // Trigger Meta Pixel PageView once on mount
+  useEffect(() => {
+    trackPageView();
+  }, []);
+
+  // Trigger Meta Pixel ViewContent when protocol is selected
+  useEffect(() => {
+    const protocol = getProtocolById(selectedProtocolId);
+    if (protocol) {
+      trackViewContent(protocol.name, protocol.price);
+    }
+  }, [selectedProtocolId]);
 
   // Monitor scroll height to trigger sticky bottom checkout bar after Hero
   useEffect(() => {
@@ -220,8 +235,10 @@ export default function App() {
             <div className="w-full lg:w-5/12 max-w-[380px] sm:max-w-[440px] lg:max-w-[460px] shrink-0 mx-auto">
               <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl group bg-[#3D0A14] aspect-[3/4]">
                 <img
-                  src="/images/cris-mendanha-portrait.jpg"
+                  src="/images/cris-mendanha-portrait.webp"
                   alt="Cris Mendanha - Tricologista"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                 />
               </div>
@@ -705,6 +722,7 @@ export default function App() {
           <div className="mt-12 max-w-sm mx-auto">
             <a
               href={(activeProtocol as any).checkoutUrl || 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1'}
+              onClick={() => trackInitiateCheckout(activeProtocol.name, activeProtocol.price, (activeProtocol as any).checkoutUrl)}
               className="inline-flex items-center justify-center w-full bg-gradient-to-r from-bordo to-bordo-deep hover:from-bordo-deep hover:to-bordo text-cream text-base font-sans font-bold py-5 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
             >
               Comprar Protocolo Selecionado

@@ -42,7 +42,7 @@ const slides: SlideItem[] = [
   {
     id: 'v-15',
     type: 'image',
-    src: '/images/depoimentos/v15.jpg',
+    src: '/images/depoimentos/v15.webp',
     alt: 'Depoimento em Foto - Resultado 15',
   },
 ];
@@ -77,11 +77,13 @@ export const TestimonialsCarousel: React.FC = () => {
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
+    if (e.touches && e.touches[0]) {
+      touchStartX.current = e.touches[0].clientX;
+    }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
+    if (touchStartX.current === null || !e.changedTouches || !e.changedTouches[0]) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
     if (diff > 40) {
       nextSlide();

@@ -2,8 +2,10 @@ import React from 'react';
 
 export default function VideoPlayer() {
   return (
-    <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(78,20,28,0.14)]">
+    <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(78,20,28,0.14)] bg-[#3D0A14] flex items-center justify-center">
       <iframe 
+        title="Reconstrução Molecular em 3 Camadas - Vídeo Demonstrativo"
+        loading="lazy"
         allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
         allowFullScreen 
         height="100%" 

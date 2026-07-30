@@ -9,7 +9,7 @@ interface PrintSlideItem {
 
 const printSlides: PrintSlideItem[] = Array.from({ length: 35 }, (_, i) => ({
   id: `print-${i + 1}`,
-  src: `/prints/print-${i + 1}.jpg`,
+  src: `/prints/print-${i + 1}.webp`,
   alt: `Relato de Cliente WhatsApp - Print ${i + 1}`,
 }));
 
@@ -41,11 +41,13 @@ export const PrintTestimonialsCarousel: React.FC = () => {
   }, []);
 
   const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
+    if (e.touches && e.touches[0]) {
+      touchStartX.current = e.touches[0].clientX;
+    }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
+    if (touchStartX.current === null || !e.changedTouches || !e.changedTouches[0]) return;
     const diff = touchStartX.current - e.changedTouches[0].clientX;
     if (diff > 40) {
       nextSlide();

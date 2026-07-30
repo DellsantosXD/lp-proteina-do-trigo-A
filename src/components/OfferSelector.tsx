@@ -38,7 +38,7 @@ const protocols: ExtendedProtocol[] = [
     items: [
       'Proteína do Trigo Pro Filler (100g)'
     ],
-    imageUrl: '/products/proteina-trigo-pro-filler-cutout.png',
+    imageUrl: '/products/proteina-trigo-pro-filler-cutout.webp',
     infoBox: 'Para começar',
     checkoutUrl: 'https://pay.youshop.com.br/JN9DUO3SJMXM1OQL',
     bonusSection: {
@@ -70,7 +70,7 @@ const protocols: ExtendedProtocol[] = [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)'
     ],
-    imageUrl: '/products/protocolo-2-kit-cutout.png',
+    imageUrl: '/products/protocolo-2-kit-cutout.webp',
     infoBox: 'Mais escolhido',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonusSection: {
@@ -114,7 +114,7 @@ const protocols: ExtendedProtocol[] = [
       'Sérum Fortalecedor (60 ml)',
       'Shampoo Antioxidante Mineral (250 ml)'
     ],
-    imageUrl: '/products/protocolo-3-kit-cutout.png',
+    imageUrl: '/products/protocolo-3-kit-cutout.webp',
     infoBox: 'Melhor experiência de cuidado',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
@@ -280,6 +280,8 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
+                    loading="lazy"
+                    decoding="async"
                     className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
                       protocol.id === 1
                         ? 'max-w-[88%] sm:max-w-[92%]'
