@@ -109,16 +109,29 @@ export default function App() {
 
   useEffect(() => {
     const target = document.getElementById('ra-verified-seal');
-    if (!target || document.getElementById('ra-embed-verified-seal')) return;
+    if (!target || document.getElementById('ra-embed-verified-seal') || !('IntersectionObserver' in window)) return;
 
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.id = 'ra-embed-verified-seal';
-    script.src = 'https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js';
-    script.dataset.id = 'NDRPc042QUtuT1VBYWNBazpzd2VldC10aGVyYXB5';
-    script.dataset.target = 'ra-verified-seal';
-    script.dataset.model = 'horizontal_2';
-    target.appendChild(script);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          if (!document.getElementById('ra-embed-verified-seal')) {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.id = 'ra-embed-verified-seal';
+            script.src = 'https://s3.amazonaws.com/raichu-beta/ra-verified/bundle.js';
+            script.dataset.id = 'NDRPc042QUtuT1VBYWNBazpzd2VldC10aGVyYXB5';
+            script.dataset.target = 'ra-verified-seal';
+            script.dataset.model = 'horizontal_2';
+            target.appendChild(script);
+          }
+          observer.disconnect();
+        }
+      },
+      { rootMargin: '250px 0px' }
+    );
+
+    observer.observe(target);
+    return () => observer.disconnect();
   }, []);
 
   const activeProtocol = getProtocolById(selectedProtocolId);
