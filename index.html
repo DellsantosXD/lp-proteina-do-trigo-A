@@ -165,7 +165,7 @@
           video.addEventListener('canplay', revealVideo, { once: true });
 
           var sourceMP4 = document.createElement('source');
-          sourceMP4.src = '/videos/pro-filler-video.mp4';
+          sourceMP4.src = '/videos/pro-filler-video-compatible.mp4';
           sourceMP4.type = 'video/mp4';
           sourceMP4.addEventListener('error', function() {
             console.error('Falha no MP4', sourceMP4.src);
