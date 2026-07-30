@@ -277,22 +277,46 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
               }`}>
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
-                  <img
-                    src={protocol.imageUrl}
-                    alt={protocol.name}
-                    width={1570}
-                    height={1668}
-                    style={{ maxWidth: '100%', height: 'auto' }}
-                    loading="lazy"
-                    decoding="async"
-                    className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
-                      protocol.id === 1
-                        ? 'max-w-[88%] sm:max-w-[92%]'
-                        : protocol.id === 2
-                        ? 'max-w-[99%] scale-135'
-                        : 'max-w-[96%] scale-115'
-                    }`}
-                  />
+                  <picture className="relative z-10 w-full h-full flex items-center justify-center">
+                    <source
+                      type="image/avif"
+                      srcSet={
+                        protocol.id === 1
+                          ? '/products/proteina-trigo-pro-filler-cutout-mob.avif 600w, /products/proteina-trigo-pro-filler-cutout.avif 1000w'
+                          : protocol.imageUrl.replace('.webp', '.avif')
+                      }
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                    <source
+                      type="image/webp"
+                      srcSet={
+                        protocol.id === 1
+                          ? '/products/proteina-trigo-pro-filler-cutout-mob.webp 600w, /products/proteina-trigo-pro-filler-cutout.webp 1570w'
+                          : protocol.imageUrl
+                      }
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
+                    <img
+                      src={
+                        protocol.id === 1
+                          ? '/products/proteina-trigo-pro-filler-cutout-mob.webp'
+                          : protocol.imageUrl
+                      }
+                      alt={protocol.name}
+                      width={1570}
+                      height={1668}
+                      style={{ maxWidth: '100%', height: 'auto' }}
+                      loading="lazy"
+                      decoding="async"
+                      className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
+                        protocol.id === 1
+                          ? 'max-w-[88%] sm:max-w-[92%]'
+                          : protocol.id === 2
+                          ? 'max-w-[99%] scale-135'
+                          : 'max-w-[96%] scale-115'
+                      }`}
+                    />
+                  </picture>
                 ) : (
                   <div className="relative flex justify-center items-center w-full">
                     {/* Back Row (3 Bottles) */}

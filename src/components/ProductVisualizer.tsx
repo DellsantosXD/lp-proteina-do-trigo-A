@@ -246,25 +246,37 @@ export default function ProductVisualizer({ type, className = '', variant = 'car
               : 'mt-4 bg-[#F5EFEB] border border-tan-deep/20 shadow-inner'
           }`}
         >
-          <img
-            src="/process-demo/molecular-cortex-empty.webp"
-            alt="Corte microscópico da fibra capilar com microfissuras abertas"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
-          />
-          <motion.img
-            src="/process-demo/molecular-cortex-sealed.webp"
-            alt="Fibra capilar reconstruída e selada"
-            loading="lazy"
-            decoding="async"
-            className="absolute inset-0 h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
-            animate={{
-              opacity: [0, 0, 0.42, 0.82, 0.82, 0],
-              clipPath: ['inset(0 100% 0 0)', 'inset(0 100% 0 0)', 'inset(0 44% 0 0)', 'inset(0 0% 0 0)', 'inset(0 0% 0 0)', 'inset(0 100% 0 0)']
-            }}
-            transition={{ duration: 12, times: [0, 0.22, 0.48, 0.62, 0.78, 1], repeat: Infinity, ease: 'easeInOut' }}
-          />
+          <picture className="absolute inset-0 h-full w-full">
+            <source type="image/avif" srcSet="/process-demo/molecular-cortex-empty-mob.avif 600w, /process-demo/molecular-cortex-empty.webp 1200w" sizes="(max-width: 640px) 100vw, 50vw" />
+            <source type="image/webp" srcSet="/process-demo/molecular-cortex-empty-mob.webp 600w, /process-demo/molecular-cortex-empty.webp 1200w" sizes="(max-width: 640px) 100vw, 50vw" />
+            <img
+              src="/process-demo/molecular-cortex-empty-mob.webp"
+              alt="Corte microscópico da fibra capilar com microfissuras abertas"
+              width={600}
+              height={338}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
+            />
+          </picture>
+          <picture className="absolute inset-0 h-full w-full">
+            <source type="image/avif" srcSet="/process-demo/molecular-cortex-sealed-mob.avif 600w, /process-demo/molecular-cortex-sealed.webp 1200w" sizes="(max-width: 640px) 100vw, 50vw" />
+            <source type="image/webp" srcSet="/process-demo/molecular-cortex-sealed-mob.webp 600w, /process-demo/molecular-cortex-sealed.webp 1200w" sizes="(max-width: 640px) 100vw, 50vw" />
+            <motion.img
+              src="/process-demo/molecular-cortex-sealed-mob.webp"
+              alt="Fibra capilar reconstruída e selada"
+              width={600}
+              height={338}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
+              animate={{
+                opacity: [0, 0, 0.42, 0.82, 0.82, 0],
+                clipPath: ['inset(0 100% 0 0)', 'inset(0 100% 0 0)', 'inset(0 44% 0 0)', 'inset(0 0% 0 0)', 'inset(0 0% 0 0)', 'inset(0 100% 0 0)']
+              }}
+              transition={{ duration: 12, times: [0, 0.22, 0.48, 0.62, 0.78, 1], repeat: Infinity, ease: 'easeInOut' }}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-transparent to-bordo/15 pointer-events-none" />
           {isFloating && (
             <>
