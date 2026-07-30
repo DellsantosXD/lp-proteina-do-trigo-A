@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function VideoPlayer() {
-  const [videoSrc, setVideoSrc] = useState<string | null>(null);
+  const [videoSrcs, setVideoSrcs] = useState<{ webm: string; mp4: string } | null>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -12,14 +12,17 @@ export default function VideoPlayer() {
     const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (isSaveData || isReducedMotion) {
-      return; // Do not load video if saveData or reduced motion is active
+      return;
     }
 
     const loadVideo = () => {
-      const scheduleTask = window.requestIdleCallback || ((cb: () => void) => setTimeout(cb, 1000));
+      const scheduleTask = window.requestIdleCallback || ((cb: () => void) => setTimeout(cb, 1500));
       scheduleTask(() => {
-        setVideoSrc('/videos/pro-filler-video.mp4'); // 917 KB ultra-optimized video
-      }, { timeout: 2000 });
+        setVideoSrcs({
+          webm: '/videos/pro-filler-video-mobile.webm',
+          mp4: '/videos/pro-filler-video.mp4'
+        });
+      }, { timeout: 3000 });
     };
 
     if (document.readyState === 'complete') {
@@ -28,6 +31,21 @@ export default function VideoPlayer() {
       window.addEventListener('load', loadVideo, { once: true });
     }
   }, []);
+
+  useEffect(() => {
+    if (videoSrcs && videoRef.current) {
+      const vid = videoRef.current;
+      vid.load();
+      const playVideo = () => {
+        vid.play().then(() => {
+          setIsVideoLoaded(true);
+        }).catch(() => {});
+      };
+
+      vid.addEventListener('canplay', playVideo, { once: true });
+      return () => vid.removeEventListener('canplay', playVideo);
+    }
+  }, [videoSrcs]);
 
   // Pause video when tab is hidden
   useEffect(() => {
@@ -47,7 +65,6 @@ export default function VideoPlayer() {
 
   return (
     <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(78,20,28,0.14)] bg-[#3D0A14] flex items-center justify-center">
-      {/* Instant WebP Poster Image (20 KB) */}
       <img
         src="/videos/hero-poster.webp"
         alt="Reconstrução Molecular em 3 Camadas"
@@ -59,24 +76,22 @@ export default function VideoPlayer() {
           isVideoLoaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       />
-
-      {/* Progressive Video Element */}
-      {videoSrc && (
-        <video
-          ref={videoRef}
-          muted
-          playsInline
-          loop
-          preload="none"
-          onCanPlay={() => {
-            setIsVideoLoaded(true);
-            videoRef.current?.play().catch(() => {});
-          }}
-          className="w-full h-full object-cover rounded-3xl z-0"
-        >
-          <source src={videoSrc} type="video/mp4" />
-        </video>
-      )}
+      <video
+        ref={videoRef}
+        muted
+        playsInline
+        loop
+        preload="none"
+        aria-label="Demonstração da Reconstrução Molecular em 3 Camadas"
+        className="w-full h-full object-cover rounded-3xl z-0"
+      >
+        {videoSrcs && (
+          <>
+            <source src={videoSrcs.webm} type="video/webm" />
+            <source src={videoSrcs.mp4} type="video/mp4" />
+          </>
+        )}
+      </video>
     </div>
   );
 }
