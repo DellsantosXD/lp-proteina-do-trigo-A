@@ -130,13 +130,17 @@ export default function InteractiveStrand() {
           }}
         >
           <img
-            src="/process-demo/base.png"
-            alt=""
+            src="/process-demo/base.webp"
+            alt="Cabelo danificado antes do tratamento"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-contain sm:object-cover select-none pointer-events-none saturate-[0.62] brightness-[0.76] opacity-70"
           />
           <img
-            src="/process-demo/treated.png"
-            alt=""
+            src="/process-demo/treated.webp"
+            alt="Cabelo tratado e reconstruído"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-contain sm:object-cover select-none pointer-events-none saturate-[1.08] contrast-[1.04] brightness-[1.02]"
             style={{ clipPath: `inset(0 ${100 - progress}% 0 0)` }}
           />

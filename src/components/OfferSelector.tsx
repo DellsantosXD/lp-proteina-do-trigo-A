@@ -280,8 +280,8 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                   <img
                     src={protocol.imageUrl}
                     alt={protocol.name}
-                    width={600}
-                    height={600}
+                    width={480}
+                    height={640}
                     loading="lazy"
                     decoding="async"
                     className={`relative z-10 max-h-full object-contain object-center drop-shadow-[0_18px_30px_rgba(78,20,28,0.24)] transition-transform duration-300 hover:scale-105 ${
