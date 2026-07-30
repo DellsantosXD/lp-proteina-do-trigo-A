@@ -1,34 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Play } from 'lucide-react';
 
 export default function VideoPlayer() {
-  const [isReady, setIsReady] = useState(false);
-
-  useEffect(() => {
-    // Automatically trigger video autoplay 1s after initial paint
-    const timer = setTimeout(() => {
-      setIsReady(true);
-    }, 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(78,20,28,0.14)] bg-[#3D0A14] flex items-center justify-center">
-      {isReady ? (
+    <div 
+      onClick={() => setIsPlaying(true)}
+      className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_18px_40px_rgba(78,20,28,0.14)] bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] flex items-center justify-center cursor-pointer group"
+    >
+      {isPlaying ? (
         <video
           src="/videos/hero-reconstrucao.mp4"
           autoPlay
-          loop
-          muted
+          controls
           playsInline
           className="w-full h-full object-cover rounded-3xl"
         />
       ) : (
-        <div className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-[#4A0E19] via-[#651524] to-[#2D060C] text-cream">
-          <div className="w-12 h-12 rounded-full bg-[#4E141C] border border-cream/30 flex items-center justify-center">
-            <svg className="w-6 h-6 text-cream fill-cream ml-0.5" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
+        <div className="relative w-full h-full flex flex-col items-center justify-center p-6 text-center text-cream">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#4E141C]/90 border-2 border-cream/40 flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300">
+            <Play className="w-8 h-8 sm:w-10 sm:h-10 text-cream fill-cream ml-1" />
           </div>
+          <span className="mt-4 text-xs sm:text-sm font-sans font-bold uppercase tracking-widest text-cream/90">
+            Assistir Reconstrução Molecular em 3 Camadas
+          </span>
         </div>
       )}
     </div>

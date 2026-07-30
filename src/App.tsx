@@ -1,20 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Sparkles, Dna, Activity, CheckCircle2 } from 'lucide-react';
 import Header from './components/Header';
-import InteractiveStrand from './components/InteractiveStrand';
-import Timeline from './components/Timeline';
 import OfferSelector, { getProtocolById } from './components/OfferSelector';
-import FaqAccordion from './components/FaqAccordion';
-import SocialProof from './components/SocialProof';
-import ProductVisualizer from './components/ProductVisualizer';
 import VideoPlayer from './components/VideoPlayer';
-import { TestimonialsCarousel } from './components/TestimonialsCarousel';
-import { PrintTestimonialsCarousel } from './components/PrintTestimonialsCarousel';
-import { TrichologistsSection } from './components/TrichologistsSection';
 import ConversionCta from './components/ConversionCta';
-import TreatmentExperienceSection from './components/TreatmentExperienceSection';
 import ProtocolOverviewCards from './components/ProtocolOverviewCards';
+
+// Lazy loaded offscreen components for optimal initial paint performance
+const InteractiveStrand = lazy(() => import('./components/InteractiveStrand'));
+const Timeline = lazy(() => import('./components/Timeline'));
+const FaqAccordion = lazy(() => import('./components/FaqAccordion'));
+const SocialProof = lazy(() => import('./components/SocialProof'));
+const ProductVisualizer = lazy(() => import('./components/ProductVisualizer'));
+const TreatmentExperienceSection = lazy(() => import('./components/TreatmentExperienceSection'));
+const TestimonialsCarousel = lazy(() => import('./components/TestimonialsCarousel').then(m => ({ default: m.TestimonialsCarousel })));
+const PrintTestimonialsCarousel = lazy(() => import('./components/PrintTestimonialsCarousel').then(m => ({ default: m.PrintTestimonialsCarousel })));
+const TrichologistsSection = lazy(() => import('./components/TrichologistsSection').then(m => ({ default: m.TrichologistsSection })));
 
 // Headline of Teste A
 const headlineText = 'Seu rabo de cavalo virou um fiapo.<br />Seja qual for o motivo, a fibra pode ser reconstruída.';
@@ -349,7 +351,9 @@ export default function App() {
             </h2>
           </div>
 
-          <Timeline />
+          <Suspense fallback={<div className="min-h-[300px]" />}>
+            <Timeline />
+          </Suspense>
 
           <div className="relative z-20 mt-12">
             <ConversionCta
@@ -379,7 +383,9 @@ export default function App() {
           </div>
 
           {/* Interactive complex SVG animation container */}
-          <InteractiveStrand />
+          <Suspense fallback={<div className="min-h-[250px]" />}>
+            <InteractiveStrand />
+          </Suspense>
 
           {/* Conceptual hair scientific breakdown */}
           <div className="mt-16 space-y-7">
@@ -445,7 +451,9 @@ export default function App() {
 
           <div className="relative mx-auto mb-12 max-w-3xl">
             <div className="absolute inset-x-8 -top-8 h-24 bg-rose/20 blur-3xl pointer-events-none" />
-            <ProductVisualizer type="hair-gif" variant="floating" className="relative z-10" />
+            <Suspense fallback={<div className="min-h-[250px]" />}>
+              <ProductVisualizer type="hair-gif" variant="floating" className="relative z-10" />
+            </Suspense>
           </div>
 
           <div className="text-center mb-10 max-w-3xl mx-auto">
@@ -662,15 +670,21 @@ export default function App() {
           </div>
 
           {/* Clean Carousel Showcase (Showing Full Frame Media & Full Text) */}
-          <TestimonialsCarousel />
+          <Suspense fallback={<div className="min-h-[250px]" />}>
+            <TestimonialsCarousel />
+          </Suspense>
 
           {/* Prints & Screenshots Carousel */}
-          <PrintTestimonialsCarousel />
+          <Suspense fallback={<div className="min-h-[250px]" />}>
+            <PrintTestimonialsCarousel />
+          </Suspense>
         </div>
       </section>
 
       {/* RECOMENDAÇÃO DE TRICOLOGISTAS SECTION */}
-      <TrichologistsSection />
+      <Suspense fallback={<div className="min-h-[250px]" />}>
+        <TrichologistsSection />
+      </Suspense>
 
       {/* OFERTA SECTION */}
       <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
@@ -829,7 +843,9 @@ export default function App() {
             </h2>
           </div>
 
-          <FaqAccordion />
+          <Suspense fallback={<div className="min-h-[250px]" />}>
+            <FaqAccordion />
+          </Suspense>
         </div>
       </section>
 
