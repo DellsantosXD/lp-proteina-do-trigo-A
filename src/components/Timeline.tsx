@@ -51,43 +51,43 @@ const labels = ['Autoridade', 'Dano', 'Frustração', 'Virada', 'Pesquisa', 'Pro
 
 const visuals: Record<number, { src: string; alt: string; position: string; height?: string; fit?: string }> = {
   1: {
-    src: '/timeline/card-1.jpg',
+    src: '/timeline/card-1.webp',
     alt: 'Durante anos eu acompanhei milhares de histórias de afinamento',
     position: 'object-[center_85%]',
     height: 'h-80 sm:h-[420px]'
   },
   2: {
-    src: '/timeline/card-2.jpg',
+    src: '/timeline/card-2.webp',
     alt: 'Eu escondia o afinamento em vez de resolver',
     position: 'object-[center_20%]',
     height: 'h-80 sm:h-[480px]'
   },
   3: {
-    src: '/timeline/card-3.jpg',
+    src: '/timeline/card-3.webp',
     alt: 'Fiz tudo o que diziam que funcionava',
     position: 'object-[left_bottom]',
     height: 'h-64 sm:h-80'
   },
   4: {
-    src: '/timeline/card-4.jpg',
+    src: '/timeline/card-4.webp',
     alt: 'No ensaio do nascimento do meu segundo filho',
     position: 'object-center',
     height: 'h-60 sm:h-72'
   },
   5: {
-    src: '/timeline/card-5.jpg',
+    src: '/timeline/card-5.webp',
     alt: 'Foi estudando a estrutura da fibra que encontrei a resposta',
     position: 'object-[center_top]',
     height: 'h-72 sm:h-[420px]'
   },
   6: {
-    src: '/timeline/card-6.jpg',
+    src: '/timeline/card-6.webp',
     alt: 'Foi assim que nasceu a Reconstrução Molecular em 3 Camadas',
     position: 'object-[right_center]',
     height: 'h-80 sm:h-[420px]'
   },
   7: {
-    src: '/timeline/card-7.jpg',
+    src: '/timeline/card-7.webp',
     alt: 'Quando vi que funcionava, decidi levar essa tecnologia para milhares de mulheres',
     position: 'object-[center_20%]',
     height: 'h-80 sm:h-[400px]'

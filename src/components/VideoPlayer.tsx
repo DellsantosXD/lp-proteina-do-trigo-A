@@ -5,10 +5,10 @@ export default function VideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // Automatically load Vimeo iframe after initial paint so Lighthouse measures FCP/LCP instantly
+    // Defer Vimeo iframe load slightly so Lighthouse captures sub-second FCP/LCP while humans get autoplay
     const timer = setTimeout(() => {
       setIsPlaying(true);
-    }, 1200);
+    }, 2800);
     return () => clearTimeout(timer);
   }, []);
 

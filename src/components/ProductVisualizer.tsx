@@ -247,13 +247,17 @@ export default function ProductVisualizer({ type, className = '', variant = 'car
           }`}
         >
           <img
-            src="/process-demo/molecular-cortex-empty.png"
+            src="/process-demo/molecular-cortex-empty.webp"
             alt="Corte microscópico da fibra capilar com microfissuras abertas"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
           />
           <motion.img
-            src="/process-demo/molecular-cortex-sealed.png"
+            src="/process-demo/molecular-cortex-sealed.webp"
             alt="Fibra capilar reconstruída e selada"
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 h-full w-full object-cover contrast-[1.18] saturate-[1.1]"
             animate={{
               opacity: [0, 0, 0.42, 0.82, 0.82, 0],
