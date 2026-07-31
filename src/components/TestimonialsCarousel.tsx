@@ -58,6 +58,7 @@ export const TestimonialsCarousel: React.FC = () => {
   const lightboxVideoRef = useRef<HTMLVideoElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const lightboxTouchStartX = useRef<number | null>(null);
 
   useEffect(() => {
     const updateDimensions = () => {
@@ -113,6 +114,24 @@ export const TestimonialsCarousel: React.FC = () => {
       prevSlide();
     }
     touchStartX.current = null;
+  };
+
+  // Lightbox swipe gesture
+  const handleLightboxTouchStart = (e: React.TouchEvent) => {
+    if (e.touches && e.touches[0]) {
+      lightboxTouchStartX.current = e.touches[0].clientX;
+    }
+  };
+
+  const handleLightboxTouchEnd = (e: React.TouchEvent) => {
+    if (lightboxTouchStartX.current === null || !e.changedTouches || !e.changedTouches[0]) return;
+    const diff = lightboxTouchStartX.current - e.changedTouches[0].clientX;
+    if (diff > 40) {
+      setLightboxIndex((prev) => (prev === slides.length - 1 ? 0 : (prev ?? 0) + 1));
+    } else if (diff < -40) {
+      setLightboxIndex((prev) => (prev === 0 ? slides.length - 1 : (prev ?? 0) - 1));
+    }
+    lightboxTouchStartX.current = null;
   };
 
   useEffect(() => {
@@ -286,22 +305,24 @@ export const TestimonialsCarousel: React.FC = () => {
         </div>
       </div>
 
-      {/* FULL SCREEN LIGHTBOX MODAL FOR VIDEOS & PHOTOS */}
+      {/* FULL SCREEN LIGHTBOX MODAL FOR VIDEOS & PHOTOS (z-[9999] HIGHEST PRIORITY OVERLAY) */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 animate-fadeIn"
+          className="fixed inset-0 z-[9999] bg-black/95 backdrop-blur-xl flex flex-col justify-between p-4 animate-fadeIn"
           onClick={() => setLightboxIndex(null)}
+          onTouchStart={handleLightboxTouchStart}
+          onTouchEnd={handleLightboxTouchEnd}
         >
           {/* Lightbox Header */}
-          <div className="w-full max-w-4xl mx-auto flex items-center justify-between text-white z-50 pt-2 px-2" onClick={(e) => e.stopPropagation()}>
+          <div className="w-full max-w-4xl mx-auto flex items-center justify-between text-white z-[9999] pt-2 px-2" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-mono font-bold bg-white/10 px-3 py-1 rounded-full text-cream">
+              <span className="text-xs font-mono font-bold bg-white/15 px-3 py-1 rounded-full text-cream">
                 Depoimento {lightboxIndex + 1} de {slides.length}
               </span>
             </div>
             <button
               onClick={() => setLightboxIndex(null)}
-              className="p-2.5 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all active:scale-90 flex items-center justify-center"
+              className="p-2.5 rounded-full bg-white/20 hover:bg-white/30 text-white transition-all active:scale-90 flex items-center justify-center shadow-lg"
               aria-label="Fechar vídeo"
             >
               <X className="w-6 h-6" />
@@ -320,32 +341,32 @@ export const TestimonialsCarousel: React.FC = () => {
                 controls
                 autoPlay
                 playsInline
-                className="max-w-full max-h-[80vh] rounded-2xl shadow-2xl bg-black"
+                className="max-w-full max-h-[75vh] sm:max-h-[80vh] rounded-2xl shadow-2xl bg-black"
               />
             ) : (
               <img
                 src={slides[lightboxIndex].src}
                 alt={slides[lightboxIndex].alt}
-                className="max-w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl"
+                className="max-w-full max-h-[75vh] sm:max-h-[80vh] object-contain rounded-2xl shadow-2xl"
               />
             )}
           </div>
 
-          {/* Lightbox Footer Controls */}
-          <div className="w-full max-w-md mx-auto flex items-center justify-between gap-4 pb-4 z-50" onClick={(e) => e.stopPropagation()}>
+          {/* Lightbox Bottom Controls (Positioned high above sticky bar) */}
+          <div className="w-full max-w-md mx-auto flex items-center justify-between gap-4 pb-12 sm:pb-6 z-[9999]" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setLightboxIndex((prev) => (prev === 0 ? slides.length - 1 : (prev ?? 0) - 1))}
-              className="flex-1 py-3 px-4 rounded-full bg-white/15 hover:bg-white/25 text-white font-sans font-bold text-sm flex items-center justify-center gap-2 border border-white/20 backdrop-blur-md transition-all active:scale-95"
+              className="flex-1 py-3.5 px-5 rounded-full bg-white/20 hover:bg-white/30 text-white font-sans font-bold text-sm flex items-center justify-center gap-2 border border-white/30 backdrop-blur-md transition-all active:scale-95 shadow-xl"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-5 h-5 stroke-[2.5]" />
               <span>Anterior</span>
             </button>
             <button
               onClick={() => setLightboxIndex((prev) => (prev === slides.length - 1 ? 0 : (prev ?? 0) + 1))}
-              className="flex-1 py-3 px-4 rounded-full bg-white/15 hover:bg-white/25 text-white font-sans font-bold text-sm flex items-center justify-center gap-2 border border-white/20 backdrop-blur-md transition-all active:scale-95"
+              className="flex-1 py-3.5 px-5 rounded-full bg-white/20 hover:bg-white/30 text-white font-sans font-bold text-sm flex items-center justify-center gap-2 border border-white/20 backdrop-blur-md transition-all active:scale-95 shadow-xl"
             >
               <span>Próximo</span>
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-5 h-5 stroke-[2.5]" />
             </button>
           </div>
         </div>

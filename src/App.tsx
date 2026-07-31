@@ -947,7 +947,7 @@ export default function App() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: 'spring', stiffness: 220, damping: 20 }}
-            className="fixed inset-x-3 bottom-3 z-50 sm:inset-x-6 sm:bottom-5"
+            className="fixed inset-x-3 bottom-3 z-40 sm:inset-x-6 sm:bottom-5"
           >
             <div className="mx-auto flex max-w-3xl items-center justify-between gap-3 rounded-full border border-tan-deep/30 bg-cream/78 px-4 py-2 shadow-[0_12px_34px_rgba(78,20,28,0.12)] backdrop-blur-xl sm:px-5">
               <div className="min-w-0 text-left">
