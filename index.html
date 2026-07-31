@@ -102,6 +102,7 @@
                 id="hero-video"
                 muted
                 playsinline
+                webkit-playsinline
                 loop
                 preload="none"
                 aria-label="Demonstração da Reconstrução Molecular em 3 Camadas"
@@ -124,7 +125,7 @@
     <!-- REACT ROOT FOR BELOW-THE-FOLD INTERACTIVE COMPONENTS -->
     <div id="root"></div>
 
-    <!-- VANILLA JS FOR PROGRESSIVE HERO VIDEO AUTOPLAY ON FIRST USER INTERACTION -->
+    <!-- VANILLA JS FOR GUARANTEED MOBILE & DESKTOP HERO VIDEO AUTOPLAY -->
     <script>
       (function() {
         var nav = navigator;
@@ -132,73 +133,99 @@
         var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (isSaveData || isReducedMotion) return;
 
-        var startEvents = ['pointerdown', 'touchstart', 'scroll', 'keydown'];
         var videoStarted = false;
+        var videoRevealed = false;
 
         var loadAndPlayHeroVideo = function() {
-          if (videoStarted) return;
-          videoStarted = true;
-
           var video = document.getElementById('hero-video');
           var poster = document.getElementById('hero-poster');
           if (!video || !poster) return;
 
-          var playStarted = false;
-
-          video.addEventListener('error', function() {
-            console.error('Hero video error', {
-              error: video.error,
-              networkState: video.networkState,
-              readyState: video.readyState,
-              currentSrc: video.currentSrc
-            });
-          });
-
-          var revealVideo = async function() {
-            if (playStarted) return;
-            playStarted = true;
-            try {
-              await video.play();
-              poster.classList.remove('opacity-100');
-              poster.classList.add('opacity-0', 'pointer-events-none');
-            } catch (error) {
-              console.warn('Autoplay indisponível; poster mantido', error);
-            }
+          // Helper to reveal video and fade out poster once video starts rendering
+          var revealPoster = function() {
+            if (videoRevealed) return;
+            videoRevealed = true;
+            poster.classList.remove('opacity-100');
+            poster.classList.add('opacity-0', 'pointer-events-none');
           };
 
-          video.addEventListener('loadeddata', revealVideo, { once: true });
-          video.addEventListener('canplay', revealVideo, { once: true });
-
-          var sourceMP4 = document.createElement('source');
-          sourceMP4.src = '/videos/pro-filler-video-compatible.mp4';
-          sourceMP4.type = 'video/mp4';
-          sourceMP4.addEventListener('error', function() {
-            console.error('Falha no MP4', sourceMP4.src);
+          video.addEventListener('playing', revealPoster, { once: true });
+          video.addEventListener('timeupdate', function() {
+            if (video.currentTime > 0.05) revealPoster();
           });
-          video.appendChild(sourceMP4);
 
-          video.load();
+          if (!videoStarted) {
+            videoStarted = true;
+
+            // Ensure attributes for iOS / Android mobile autoplay
+            video.muted = true;
+            video.defaultMuted = true;
+            video.playsInline = true;
+            video.setAttribute('muted', '');
+            video.setAttribute('playsinline', '');
+            video.setAttribute('webkit-playsinline', '');
+
+            video.addEventListener('error', function() {
+              console.error('Hero video error', {
+                error: video.error,
+                networkState: video.networkState,
+                readyState: video.readyState,
+                currentSrc: video.currentSrc
+              });
+            });
+
+            if (!video.querySelector('source')) {
+              var sourceMP4 = document.createElement('source');
+              sourceMP4.src = '/videos/pro-filler-video-compatible.mp4';
+              sourceMP4.type = 'video/mp4';
+              sourceMP4.addEventListener('error', function() {
+                console.error('Falha no MP4', sourceMP4.src);
+              });
+              video.appendChild(sourceMP4);
+              video.load();
+            }
+          }
+
+          // SYNCHRONOUS play invocation to preserve mobile touch user gesture activation
+          var playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.then(function() {
+              if (video.currentTime > 0) revealPoster();
+            }).catch(function(err) {
+              console.warn('Autoplay aguardando interação do usuário no celular:', err);
+            });
+          }
 
           document.addEventListener('visibilitychange', function() {
             if (document.hidden) {
               video.pause();
-            } else if (poster.classList.contains('opacity-0')) {
+            } else if (videoRevealed) {
               video.play().catch(function(){});
             }
           });
         };
 
+        // 1. Immediate attempt for browsers permitting muted autoplay
+        if (document.readyState === 'complete' || document.readyState === 'interactive') {
+          loadAndPlayHeroVideo();
+        } else {
+          window.addEventListener('DOMContentLoaded', loadAndPlayHeroVideo, { once: true });
+        }
+
+        // 2. Synchronous trigger on user interaction for iOS / Android mobile gesture activation
+        var startEvents = ['pointerdown', 'touchstart', 'scroll', 'touchmove', 'keydown', 'click'];
         var startHeroVideo = function() {
-          startEvents.forEach(function(event) {
-            window.removeEventListener(event, startHeroVideo);
+          startEvents.forEach(function(evt) {
+            window.removeEventListener(evt, startHeroVideo, true);
           });
           loadAndPlayHeroVideo();
         };
 
-        startEvents.forEach(function(event) {
-          window.addEventListener(event, startHeroVideo, {
+        startEvents.forEach(function(evt) {
+          window.addEventListener(evt, startHeroVideo, {
             once: true,
-            passive: true
+            passive: true,
+            capture: true
           });
         });
       })();
