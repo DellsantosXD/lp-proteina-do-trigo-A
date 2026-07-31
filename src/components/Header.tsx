@@ -23,13 +23,13 @@ export default function Header() {
         <div className="max-w-4xl mx-auto flex items-center justify-between">
           {/* Brandmark */}
           <div className="flex items-center gap-2 cursor-pointer select-none">
-            <div className="h-10 sm:h-12 flex items-center justify-center">
+            <div className="h-7 sm:h-8 flex items-center justify-center">
               <img
                 src="https://iili.io/ftbkqiv.webp"
                 alt="Sweet Therapy Logo"
-                className="h-full w-auto object-contain"
-                width="160"
-                height="48"
+                className="h-full w-auto object-contain max-h-7 sm:max-h-8"
+                width="140"
+                height="32"
                 referrerPolicy="no-referrer"
               />
             </div>

@@ -22,9 +22,9 @@ export default function BonusPage() {
       {/* HEADER */}
       <header className="border-b border-tan-deep/20 bg-cream/90 backdrop-blur-md px-4 py-5 sm:px-6">
         <div className="max-w-5xl mx-auto flex items-center justify-between">
-          <div className="h-10 sm:h-12 flex items-center justify-center">
+          <div className="h-7 sm:h-8 flex items-center justify-center">
             <a href="/">
-              <img src="https://iili.io/ftbkqiv.webp" alt="Sweet Therapy Logo" className="h-full w-auto object-contain" width={160} height={48} />
+              <img src="https://iili.io/ftbkqiv.webp" alt="Sweet Therapy Logo" className="h-full w-auto object-contain" width={140} height={32} />
             </a>
           </div>
           <span className={`text-xs sm:text-sm font-sans font-bold uppercase tracking-wider px-3.5 py-1 rounded-full ${
