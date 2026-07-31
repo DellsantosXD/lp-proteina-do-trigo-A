@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Seus Bônus Liberados · Sweet Therapy</title>
     <meta name="description" content="Acesse seus bônus exclusivos do Protocolo Essencial Proteína do Trigo Pro Filler." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,9 +39,11 @@
     <header class="border-b border-[#B08D4F]/20 bg-[#FBF8F2]/90 backdrop-blur-md px-4 py-5 sm:px-6">
       <div class="max-w-5xl mx-auto flex items-center justify-between">
         <div class="h-10 sm:h-12 flex items-center justify-center">
-          <img src="https://iili.io/ftbkqiv.webp" alt="Sweet Therapy Logo" class="h-full w-auto object-contain" width="160" height="48" referrerpolicy="no-referrer" />
+          <a href="/">
+            <img src="https://iili.io/ftbkqiv.webp" alt="Sweet Therapy Logo" class="h-full w-auto object-contain" width="160" height="48" referrerpolicy="no-referrer" />
+          </a>
         </div>
-        <span class="text-xs sm:text-sm font-sans font-bold text-[#6E1F2B] uppercase tracking-wider bg-[#6E1F2B]/10 px-3 py-1 rounded-full">
+        <span id="access-badge-header" class="text-xs sm:text-sm font-sans font-bold text-[#6E1F2B] uppercase tracking-wider bg-[#6E1F2B]/10 px-3.5 py-1 rounded-full">
           Área de Bônus
         </span>
       </div>
@@ -50,8 +53,8 @@
     <main class="flex-1 py-12 px-4 sm:px-6 md:py-16">
       <div class="max-w-4xl mx-auto text-center">
         
-        <!-- Badge Tag -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6E1F2B]/10 text-[#6E1F2B] font-sans font-bold text-xs sm:text-sm uppercase tracking-widest mb-6">
+        <!-- Status Badge -->
+        <div id="status-badge" class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#6E1F2B]/10 text-[#6E1F2B] font-sans font-bold text-xs sm:text-sm uppercase tracking-widest mb-6">
           <span>✨</span> Bônus Especiais Liberados
         </div>
 
@@ -61,9 +64,25 @@
         </h1>
 
         <!-- Subtitle -->
-        <p class="font-sans text-[#2A211B] font-medium text-base sm:text-xl leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16">
+        <p class="font-sans text-[#2A211B] font-medium text-base sm:text-xl leading-relaxed max-w-2xl mx-auto mb-10">
           Enquanto sua Proteína do Trigo Pro Filler está a caminho, comece a se preparar para aproveitar ao máximo o seu Protocolo Essencial.
         </p>
+
+        <!-- LOCKED WARNING BANNER (Hidden if validated) -->
+        <div id="locked-banner" class="hidden max-w-2xl mx-auto mb-12 p-6 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-900 text-left">
+          <div class="flex items-start gap-3">
+            <span class="text-2xl mt-0.5">🔒</span>
+            <div>
+              <h3 class="font-sans font-bold text-base text-[#4E141C] mb-1">Acesso Restrito a Clientes</h3>
+              <p class="text-sm text-[#5B4F45] leading-relaxed mb-3">
+                Esta área é exclusiva para clientes que adquiriram a Proteína do Trigo Pro Filler. Se você já realizou seu pedido, acesse a página através do link exclusivo enviado para o seu e-mail de confirmação ou redirecionado após o checkout.
+              </p>
+              <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#6E1F2B] underline hover:text-[#4E141C]">
+                Ir para a página oficial do produto &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
 
         <!-- BONUS CARDS GRID -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
@@ -84,14 +103,17 @@
                 Passo a passo completo com técnicas práticas e rotinas diárias para devolver volume, densidade e corpo aos cabelos finos e raleados.
               </p>
             </div>
+            
+            <!-- DOWNLOAD BUTTON 1 -->
             <a
+              id="btn-bonus-1"
               href="/bonus/guia-fios-finos.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#6E1F2B] to-[#4E141C] hover:from-[#4E141C] hover:to-[#6E1F2B] text-[#FBF8F2] font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(110,31,43,0.2)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
             >
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-              Baixar meu guia
+              <span>Baixar meu guia</span>
             </a>
           </div>
 
@@ -111,14 +133,17 @@
                 Técnicas de estímulo microcirculatório no couro cabeludo para potencializar a absorção da Proteína do Trigo e acelerar o crescimento forte.
               </p>
             </div>
+
+            <!-- DOWNLOAD BUTTON 2 -->
             <a
+              id="btn-bonus-2"
               href="/bonus/manual-massagem-capilar.pdf"
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#6E1F2B] to-[#4E141C] hover:from-[#4E141C] hover:to-[#6E1F2B] text-[#FBF8F2] font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(110,31,43,0.2)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
             >
               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-              Baixar meu manual
+              <span>Baixar meu manual</span>
             </a>
           </div>
 
@@ -126,7 +151,7 @@
 
         <!-- Trust Note -->
         <div class="mt-12 text-center">
-          <p class="text-xs font-mono text-[#5B4F45] uppercase tracking-widest">
+          <p id="trust-note" class="text-xs font-mono text-[#5B4F45] uppercase tracking-widest">
             🔒 Acesso Exclusivo para Clientes Sweet Therapy
           </p>
         </div>
@@ -141,5 +166,56 @@
       </div>
     </footer>
 
+    <!-- CHECKOUT PARAMETER VALIDATION SCRIPT -->
+    <script>
+      (function() {
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get('status');
+        var order = params.get('order');
+        var access = params.get('access');
+
+        // Valid query parameter keys sent by checkout platforms
+        var isValid = (status === 'cliente_confirmado' || status === 'approved' || status === 'paid' ||
+                       order === 'approved' || order === 'paid' ||
+                       access === 'liberado' || access === 'cliente');
+
+        var btn1 = document.getElementById('btn-bonus-1');
+        var btn2 = document.getElementById('btn-bonus-2');
+        var lockedBanner = document.getElementById('locked-banner');
+        var statusBadge = document.getElementById('status-badge');
+        var accessBadgeHeader = document.getElementById('access-badge-header');
+
+        if (isValid) {
+          // Access Approved State
+          if (lockedBanner) lockedBanner.classList.add('hidden');
+          if (statusBadge) {
+            statusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-600/10 text-emerald-700 font-sans font-bold text-xs sm:text-sm uppercase tracking-widest mb-6';
+            statusBadge.innerHTML = '<span>✅</span> Acesso Confirmado de Cliente';
+          }
+          if (accessBadgeHeader) {
+            accessBadgeHeader.className = 'text-xs sm:text-sm font-sans font-bold text-emerald-800 uppercase tracking-wider bg-emerald-500/15 px-3.5 py-1 rounded-full';
+            accessBadgeHeader.innerText = '✓ Compra Confirmada';
+          }
+        } else {
+          // Locked / Unauthorized Access State
+          if (lockedBanner) lockedBanner.classList.remove('hidden');
+          if (statusBadge) {
+            statusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-600/10 text-amber-800 font-sans font-bold text-xs sm:text-sm uppercase tracking-widest mb-6';
+            statusBadge.innerHTML = '<span>🔒</span> Acesso Não Confirmado';
+          }
+
+          var lockButton = function(btn) {
+            if (!btn) return;
+            btn.removeAttribute('href');
+            btn.removeAttribute('target');
+            btn.className = 'inline-flex items-center justify-center gap-2 w-full bg-gray-200 text-gray-400 font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full cursor-not-allowed opacity-75';
+            btn.innerHTML = '<svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg><span>Download Bloqueado (Exige Confirmação)</span>';
+          };
+
+          lockButton(btn1);
+          lockButton(btn2);
+        }
+      })();
+    </script>
   </body>
 </html>
