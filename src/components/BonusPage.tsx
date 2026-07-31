@@ -101,7 +101,7 @@ export default function BonusPage() {
               </div>
               {isValidated ? (
                 <a
-                  href="/bonus/guia-fios-finos.pdf"
+                  href="/bonus/guia-fios-finos-v2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-bordo to-bordo-deep hover:from-bordo-deep hover:to-bordo text-cream font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(110,31,43,0.2)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
@@ -138,7 +138,7 @@ export default function BonusPage() {
               </div>
               {isValidated ? (
                 <a
-                  href="/bonus/manual-massagem-capilar.pdf"
+                  href="/bonus/manual-massagem-capilar-v2.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-bordo to-bordo-deep hover:from-bordo-deep hover:to-bordo text-cream font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(110,31,43,0.2)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
