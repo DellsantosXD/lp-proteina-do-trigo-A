@@ -41,8 +41,8 @@
             <img src="https://iili.io/ftbkqiv.webp" alt="Sweet Therapy Logo" class="h-full w-auto object-contain max-h-6 sm:max-h-7" width="130" height="28" referrerpolicy="no-referrer" />
           </a>
         </div>
-        <a href="/meus-bonus/protocolo-2/?status=cliente_confirmado" class="text-xs font-sans font-bold text-[#6E1F2B] hover:underline">
-          &larr; Voltar para Meus Bônus
+        <a href="/meus-bonus/protocolo-2/?status=cliente_confirmado" class="text-xs font-sans font-bold text-[#6E1F2B] hover:underline flex items-center gap-1">
+          <span>&larr;</span> <span>Voltar para Meus Bônus</span>
         </a>
       </div>
     </header>
@@ -61,16 +61,33 @@
         </p>
 
         <!-- VIDEO PLAYER CONTAINER -->
-        <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(78,20,28,0.2)] bg-black max-w-3xl mx-auto border border-[#B08D4F]/30">
+        <div class="relative w-full aspect-video rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(78,20,28,0.2)] bg-black max-w-3xl mx-auto border border-[#B08D4F]/30 mb-8">
           <video
             controls
             playsinline
-            controlsList="nodownload"
+            preload="metadata"
             poster="/images/cris-mendanha-portrait.webp"
             class="w-full h-full object-cover"
           >
-            <source src="/videos/pro-filler-video-compatible.mp4" type="video/mp4" />
+            <source src="https://drive.usercontent.google.com/download?id=1ECCEaVfUaIko2keW5-oNwa5zEb21MAm7&export=download&confirm=t" type="video/mp4" />
+            Seu navegador não suporta a reprodução de vídeo.
           </video>
+        </div>
+
+        <!-- DIRECT DOWNLOAD BUTTON (BYPASSES GOOGLE DRIVE INTERFACE) -->
+        <div class="max-w-md mx-auto space-y-3">
+          <a
+            href="https://drive.usercontent.google.com/download?id=1ECCEaVfUaIko2keW5-oNwa5zEb21MAm7&export=download&confirm=t"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2.5 w-full bg-gradient-to-r from-[#6E1F2B] to-[#4E141C] hover:from-[#4E141C] hover:to-[#6E1F2B] text-[#FBF8F2] font-sans font-bold text-base px-8 py-4 rounded-full transition-all duration-300 shadow-[0_10px_25px_rgba(110,31,43,0.25)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
+          >
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+            <span>Baixar Vídeo Aula em MP4 (Download Direto)</span>
+          </a>
+          <span class="text-xs font-mono text-[#5B4F45] uppercase tracking-widest block">
+            🔒 Download Direto Automático · Sem abrir tela do Google Drive
+          </span>
         </div>
       </div>
     </main>
