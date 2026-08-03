@@ -44,7 +44,7 @@
       gtag('config', 'G-TB4MSW91XD');
 
       document.addEventListener('click', function (event) {
-        const cta = event.target.closest('a[href="#checkout"], a[href*="checkout"], a[href="#oferta"], a[href*="kiwify"], a[href*="pay."], [data-checkout-btn]');
+        const cta = event.target.closest('a[href^="https://pay.youshop.com.br/"]');
         if (!cta) return;
         gtag('event', 'begin_checkout', {
           cta_text: (cta.textContent || '').trim(),
