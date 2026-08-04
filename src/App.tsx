@@ -648,7 +648,7 @@ export default function App() {
       </Suspense>
 
       {/* OFERTA SECTION */}
-      <section className="py-24 px-6 bg-white border-t border-tan-deep/20" id="oferta">
+      <section className="py-20 px-6 bg-white border-t border-tan-deep/20">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 max-w-3xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-serif text-bordo font-black tracking-tight leading-tight">
@@ -671,6 +671,9 @@ export default function App() {
 
           {/* Quick Protocol Overview Selection Cards */}
           <ProtocolOverviewCards onSelectProtocol={setSelectedProtocolId} />
+
+          {/* Anchor target placed directly above the offer cards for 100% exact scroll landing */}
+          <div id="oferta" className="scroll-mt-20 sm:scroll-mt-28" />
 
           {/* Protocol interactive pricing blocks */}
           <OfferSelector selectedId={selectedProtocolId} onSelect={setSelectedProtocolId} />
