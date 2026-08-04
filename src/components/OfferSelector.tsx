@@ -30,10 +30,10 @@ const protocols: ExtendedProtocol[] = [
   {
     id: 1,
     name: 'Protocolo Essencial',
-    priceLabel: '169,00',
+    priceLabel: '197,00',
     subtitle: 'Para começar',
-    price: 169,
-    installments: '16,98',
+    price: 197,
+    installments: '19,78',
     description: 'Para começar',
     items: [
       'Proteína do Trigo Pro Filler (100g)'
@@ -63,7 +63,7 @@ const protocols: ExtendedProtocol[] = [
     priceLabel: '267,00',
     subtitle: 'Mais escolhido',
     price: 267,
-    installments: '26,81',
+    installments: '27,85',
     badge: 'Recomendado',
     description: 'Mais escolhido',
     items: [
