@@ -341,7 +341,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <p className="mx-auto my-3 max-w-md font-sans text-sm font-semibold leading-relaxed text-ink-soft">
+              <p className="mx-auto my-3 max-w-md font-sans text-sm font-semibold leading-relaxed text-bordo">
                 {protocol.subtitle}
               </p>
 
