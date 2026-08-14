@@ -13,6 +13,7 @@ const FaqAccordion = lazy(() => import('./components/FaqAccordion'));
 const SocialProof = lazy(() => import('./components/SocialProof'));
 const ProductVisualizer = lazy(() => import('./components/ProductVisualizer'));
 const TreatmentExperienceSection = lazy(() => import('./components/TreatmentExperienceSection'));
+const ProfessionalRecommendationBlock = lazy(() => import('./components/ProfessionalRecommendationBlock'));
 const TestimonialsCarousel = lazy(() => import('./components/TestimonialsCarousel').then(m => ({ default: m.TestimonialsCarousel })));
 const PrintTestimonialsCarousel = lazy(() => import('./components/PrintTestimonialsCarousel').then(m => ({ default: m.PrintTestimonialsCarousel })));
 const TrichologistsSection = lazy(() => import('./components/TrichologistsSection').then(m => ({ default: m.TrichologistsSection })));
@@ -626,6 +627,11 @@ export default function App() {
 
       {/* EXPERIÊNCIA DO SEU PROTOCOLO SECTION */}
       <TreatmentExperienceSection />
+
+      {/* RECOMENDAÇÃO PROFISSIONAL — repetida após a experiência do protocolo */}
+      <Suspense fallback={<div className="min-h-[250px]" />}>
+        <ProfessionalRecommendationBlock />
+      </Suspense>
 
       {/* DECISION CROSSROADS SECTION - VIBRANT HIGH IMPACT */}
       <section className="py-24 px-6 bg-gradient-to-b from-[#2D060C] via-[#4A0E19] to-[#2D060C] text-cream border-t border-cream/15 relative overflow-hidden" id="decisao">
