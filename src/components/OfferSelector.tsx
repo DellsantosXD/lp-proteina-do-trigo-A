@@ -31,7 +31,7 @@ const protocols: ExtendedProtocol[] = [
     id: 1,
     name: 'Protocolo Essencial',
     priceLabel: '197,00',
-    subtitle: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
+    subtitle: 'Se você deseja fios restaurados e encorpados, a aplicação isolada da Proteína Pro Filler reconstrói a estrutura do fio em toda a sua extensão.',
     price: 197,
     installments: '19,78',
     description: 'Para começar',
