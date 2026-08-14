@@ -521,22 +521,7 @@ export default function App() {
             </div>
 
             {/* Active Ingredient Cards Breakdown */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8 text-left border-t border-cream/15 pt-8">
-              {/* Active 2 */}
-              <div className="bg-cream/5 border border-cream/10 rounded-2xl p-5 backdrop-blur-sm flex flex-col justify-between hover:border-rose/40 transition-colors duration-300">
-                <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-rose bg-rose/20 px-2.5 py-1 rounded-full font-bold inline-block mb-3">
-                    Devolve Corpo e Densidade
-                  </span>
-                  <h4 className="font-serif font-bold text-lg sm:text-xl text-cream mb-2">
-                    NV Redensifier
-                  </h4>
-                  <p className="text-xs sm:text-sm font-sans text-cream/80 leading-relaxed">
-                    Nanoestruturas inteligentes aumentam o diâmetro da fibra e devolvem massa aos fios afinados, proporcionando maior sensação de volume e resistência.
-                  </p>
-                </div>
-              </div>
-
+            <div className="grid grid-cols-1 gap-5 mt-8 text-left border-t border-cream/15 pt-8 max-w-md mx-auto">
               {/* Active 3 */}
               <div className="bg-cream/5 border border-cream/10 rounded-2xl p-5 backdrop-blur-sm flex flex-col justify-between hover:border-rose/40 transition-colors duration-300">
                 <div>
