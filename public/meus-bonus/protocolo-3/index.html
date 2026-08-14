@@ -41,7 +41,7 @@
           </a>
         </div>
         <span id="access-badge-header" class="text-xs sm:text-sm font-sans font-bold text-emerald-800 uppercase tracking-wider bg-emerald-500/15 px-3.5 py-1 rounded-full">
-          ✓ 5 Bônus Liberados
+          ✓ 6 Bônus Exclusivos Liberados
         </span>
       </div>
     </header>
@@ -202,6 +202,34 @@
             </a>
           </div>
         
+          <div class="bg-white rounded-[28px] border border-[#B08D4F]/30 p-6 sm:p-8 shadow-[0_16px_36px_rgba(78,20,28,0.08)] hover:border-[#6E1F2B]/50 transition-all duration-300 flex flex-col justify-between group">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] font-sans font-black uppercase tracking-widest bg-[#4E141C] text-[#FBF8F2] px-3 py-1 rounded-full">
+                  Bônus 06
+                </span>
+                <span class="text-2xl">📅</span>
+              </div>
+              <h2 class="font-serif text-[#6E1F2B] font-bold text-xl sm:text-2xl leading-snug mb-3 group-hover:text-[#4E141C] transition-colors">
+                Calendário de Aplicação dos Protocolos
+              </h2>
+              <p class="font-sans text-[#5B4F45] text-sm sm:text-base leading-relaxed mb-6">
+                Quando usar cada produto da sua rotina para melhor desempenho.
+              </p>
+            </div>
+            <a
+              id="btn-bonus-06"
+              href="/bonus/calendario-aplicacao-protocolos-v2.pdf"
+              download="Calendario-de-Aplicacao-dos-Protocolos.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 w-full bg-gradient-to-r from-[#6E1F2B] to-[#4E141C] hover:from-[#4E141C] hover:to-[#6E1F2B] text-[#FBF8F2] font-sans font-bold text-sm sm:text-base px-6 py-4 rounded-full transition-all duration-300 shadow-[0_8px_20px_rgba(110,31,43,0.2)] hover:-translate-y-0.5 active:translate-y-0 text-center cursor-pointer"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+              <span>Baixar calendário</span>
+            </a>
+          </div>
+        
         </div>
 
         <div class="mt-12 text-center">
@@ -242,7 +270,6 @@
             accessBadgeHeader.innerText = '✓ Compra Confirmada';
           }
         } else {
-          // Default valid styling to ensure instant download availability across all direct & parameterized visits
           if (statusBadge) {
             statusBadge.className = 'inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-600/10 text-emerald-700 font-sans font-bold text-xs sm:text-sm uppercase tracking-widest mb-6';
             statusBadge.innerHTML = '<span>✅</span> Acesso Confirmado de Cliente';
