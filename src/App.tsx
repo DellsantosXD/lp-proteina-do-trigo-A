@@ -9,7 +9,6 @@ import LazyVideo from './components/LazyVideo';
 
 // Lazy loaded offscreen components for optimal initial paint performance
 const InteractiveStrand = lazy(() => import('./components/InteractiveStrand'));
-const Timeline = lazy(() => import('./components/Timeline'));
 const FaqAccordion = lazy(() => import('./components/FaqAccordion'));
 const SocialProof = lazy(() => import('./components/SocialProof'));
 const ProductVisualizer = lazy(() => import('./components/ProductVisualizer'));
@@ -298,35 +297,6 @@ export default function App() {
             >
               Entender a Reconstrução Molecular em 3 Camadas
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* HISTÓRIA SECTION */}
-      <section className="relative overflow-hidden py-16 sm:py-24 px-6 bg-gradient-to-br from-[#3C0A14] via-[#651524] to-[#7A2636] border-t border-cream/15" id="historia">
-        <div className="absolute inset-0 bg-[linear-gradient(125deg,transparent_0%,rgba(255,255,255,0.07)_48%,transparent_70%)] pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <div className="text-center mb-10 sm:mb-16">
-            <span className="text-xs font-mono text-rose uppercase font-bold tracking-widest block mb-3">
-              A Jornada Clínica
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-serif text-cream font-black tracking-tight leading-tight px-2 sm:px-0">
-              Antes de tratar o cabelo das outras,<br className="hidden sm:inline" /> eu precisei salvar o meu.
-            </h2>
-          </div>
-
-          <Suspense fallback={<div className="min-h-[300px]" />}>
-            <Timeline />
-          </Suspense>
-
-          <div className="relative z-20 mt-12">
-            <ConversionCta
-              tone="dark"
-              eyebrow="Reconstrução Molecular em 3 Camadas"
-              title="Agora você entende por que essa tecnologia entrega um resultado diferente."
-              description="A Reconstrução Molecular em 3 Camadas foi desenvolvida para restaurar corpo, densidade e resistência da fibra de forma inteligente, atuando exatamente onde o fio perdeu estrutura."
-              label="Quero iniciar meu protocolo"
-            />
           </div>
         </div>
       </section>

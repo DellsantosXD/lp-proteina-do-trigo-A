@@ -14,14 +14,6 @@ export interface LeadVariant {
   label: string;
   paragraphs: string[];
 }
-
-export interface TimelineItem {
-  id: number;
-  title: string;
-  description: string;
-  extraElement?: 'beforeAfter' | 'current';
-}
-
 export interface ReconstuctionStep {
   step: number;
   label: string;
