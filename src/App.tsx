@@ -5,7 +5,6 @@ import Header from './components/Header';
 import OfferSelector, { getProtocolById } from './components/OfferSelector';
 import VideoPlayer from './components/VideoPlayer';
 import ConversionCta from './components/ConversionCta';
-import ProtocolOverviewCards from './components/ProtocolOverviewCards';
 import LazyVideo from './components/LazyVideo';
 
 // Lazy loaded offscreen components for optimal initial paint performance
@@ -668,9 +667,6 @@ export default function App() {
               A aplicação isolada da <strong>Proteína Pro Filler (Protocolo Essencial)</strong> reconstrói a estrutura do fio em toda a sua extensão. Porém, se você sente o afinamento surgindo já desde a raiz, o <strong>Protocolo Intensivo</strong> soma o Sérum Fortalecedor que cuida do bulbo e fortalece desde a raiz. Caso o seu cabelo apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o <strong>Protocolo Completo</strong> prepara perfeitamente o terreno folicular da Raíz as pontas fazendo também um detox no couro.
             </p>
           </div>
-
-          {/* Quick Protocol Overview Selection Cards */}
-          <ProtocolOverviewCards onSelectProtocol={setSelectedProtocolId} />
 
           {/* Anchor target placed directly above the offer cards for 100% exact scroll landing */}
           <div id="oferta" className="scroll-mt-20 sm:scroll-mt-28" />
