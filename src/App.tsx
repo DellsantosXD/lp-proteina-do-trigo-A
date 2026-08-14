@@ -257,9 +257,6 @@ export default function App() {
         <div className="max-w-3xl mx-auto">
           {/* Transition text */}
           <div className="space-y-4 mb-10 text-center md:text-left mt-8">
-            <p className="text-base sm:text-xl text-ink font-semibold leading-relaxed">
-              Se você se identificou com essa história, existe uma explicação científica. E entender como a fibra perde estrutura é o primeiro passo para restaurar cabelos mais encorpados.
-            </p>
             <p className="text-base sm:text-xl text-bordo font-black leading-relaxed">
               Antes de conhecer a Reconstrução Molecular em 3 Camadas, vale entender por que tantos tratamentos falham:
             </p>
