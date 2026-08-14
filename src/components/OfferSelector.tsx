@@ -103,19 +103,19 @@ const protocols: ExtendedProtocol[] = [
     name: 'Protocolo Completo',
     originalPrice: '490,00',
     priceLabel: '327,00',
-    subtitle: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
+    subtitle: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 327,
     installments: '32,83',
     badge: 'Mais completo',
-    description: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
+    description: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)',
       'Shampoo Antioxidante Mineral (250 ml)'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.webp',
-    infoBox: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
+    infoBox: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
     bonusSection: {
