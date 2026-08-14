@@ -29,6 +29,8 @@ interface ExtendedProtocol extends Protocol {
 const protocols: ExtendedProtocol[] = [
   {
     id: 1,
+    name: 'Protocolo Essencial',
+    priceLabel: '197,00',
     subtitle: 'Se você deseja fios restaurados e encorpados, a aplicação isolada da Proteína Pro Filler reconstrói a estrutura do fio em toda a sua extensão.',
     price: 197,
     installments: '19,78',
