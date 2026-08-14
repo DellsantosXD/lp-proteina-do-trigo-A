@@ -61,17 +61,17 @@ const protocols: ExtendedProtocol[] = [
     name: 'Protocolo Intensivo',
     originalPrice: '348,00',
     priceLabel: '267,00',
-    subtitle: 'Mais escolhido',
+    subtitle: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
     price: 267,
     installments: '27,85',
     badge: 'Recomendado',
-    description: 'Mais escolhido',
+    description: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.webp',
-    infoBox: 'Mais escolhido',
+    infoBox: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonusSection: {
       title: 'BÔNUS',
