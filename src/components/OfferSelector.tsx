@@ -31,7 +31,7 @@ const protocols: ExtendedProtocol[] = [
     id: 1,
     name: 'Protocolo Essencial',
     priceLabel: '197,00',
-    subtitle: 'Para começar',
+    subtitle: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
     price: 197,
     installments: '19,78',
     description: 'Para começar',
@@ -341,7 +341,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 )}
               </div>
 
-              <p className="mx-auto my-3 max-w-[18rem] font-sans text-sm font-semibold leading-relaxed text-ink-soft">
+              <p className="mx-auto my-3 max-w-md font-sans text-sm font-semibold leading-relaxed text-ink-soft">
                 {protocol.subtitle}
               </p>
 
