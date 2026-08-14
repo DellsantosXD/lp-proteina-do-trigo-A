@@ -61,17 +61,17 @@ const protocols: ExtendedProtocol[] = [
     name: 'Protocolo Intensivo',
     originalPrice: '348,00',
     priceLabel: '267,00',
-    subtitle: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
+    subtitle: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
     price: 267,
     installments: '27,85',
     badge: 'Recomendado',
-    description: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
+    description: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)'
     ],
     imageUrl: '/products/protocolo-2-kit-cutout.webp',
-    infoBox: 'A aplicação isolada da Proteína Pro Filler reconstrói e encorpa a estrutura do fio em toda a sua extensão.',
+    infoBox: 'Escolha este se você sente o afinamento surgindo já desde a raiz, o Protocolo Intensivo soma o Sérum Fortalecedor que cuida do bulbo capilar e fortalece desde a raiz.',
     checkoutUrl: 'https://pay.youshop.com.br/KPQVFOAEEP8ZTYNL',
     bonusSection: {
       title: 'BÔNUS',
