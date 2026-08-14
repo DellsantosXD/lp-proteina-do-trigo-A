@@ -578,16 +578,6 @@ export default function App() {
             </p>
           </div>
 
-          {/* Guide description box */}
-          <div className="bg-tan/20 border border-tan-deep/45 rounded-3xl p-6 md:p-8 mb-10">
-            <h4 className="font-serif font-bold text-bordo text-base md:text-lg mb-2">
-              Qual Protocolo é o Ideal Para Você?
-            </h4>
-            <p className="text-sm sm:text-base text-ink font-medium leading-relaxed">
-              A aplicação isolada da <strong>Proteína Pro Filler (Protocolo Essencial)</strong> reconstrói a estrutura do fio em toda a sua extensão. Porém, se você sente o afinamento surgindo já desde a raiz, o <strong>Protocolo Intensivo</strong> soma o Sérum Fortalecedor que cuida do bulbo e fortalece desde a raiz. Caso o seu cabelo apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o <strong>Protocolo Completo</strong> prepara perfeitamente o terreno folicular da Raíz as pontas fazendo também um detox no couro.
-            </p>
-          </div>
-
           {/* Anchor target placed directly above the offer cards for 100% exact scroll landing */}
           <div id="oferta" className="scroll-mt-20 sm:scroll-mt-28" />
 
