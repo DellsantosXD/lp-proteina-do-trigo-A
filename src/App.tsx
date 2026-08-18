@@ -200,14 +200,15 @@ export default function App() {
             {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas e tamanho maior */}
             <div className="w-full lg:w-5/12 max-w-[380px] sm:max-w-[440px] lg:max-w-[460px] shrink-0 mx-auto">
               <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl bg-[#3D0A14] aspect-[3/4]">
-                <LazyVideo
-                  src="/videos/cris-mendanha.mp4"
+                <video
+                  src="/videos/cris-mendanha.mp4?v=3"
                   poster="/images/cris-mendanha-portrait.webp"
-                  className="w-full h-full object-cover object-top"
-                  loop
+                  className="w-full h-full object-cover object-center"
                   autoPlay
+                  loop
                   muted
                   playsInline
+                  preload="auto"
                 />
               </div>
             </div>

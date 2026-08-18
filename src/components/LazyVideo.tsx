@@ -42,6 +42,16 @@ export default function LazyVideo({
     return () => observer.disconnect();
   }, [shouldLoad]);
 
+  useEffect(() => {
+    if (!shouldLoad || !videoRef.current) return;
+
+    videoRef.current.src = src;
+    videoRef.current.load();
+    if (autoPlay) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, [shouldLoad, src, autoPlay]);
+
   // Pause video when offscreen
   useEffect(() => {
     if (!shouldLoad) return;
@@ -74,11 +84,9 @@ export default function LazyVideo({
         playsInline={playsInline}
         loop={loop}
         autoPlay={autoPlay}
-        preload="none"
+        preload="metadata"
         className={className}
-      >
-        {shouldLoad && <source src={src} type="video/mp4" />}
-      </video>
+      />
     </div>
   );
 }
