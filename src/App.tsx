@@ -199,13 +199,15 @@ export default function App() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-10 lg:gap-14">
             {/* Moldura da Foto da Expert no lado esquerdo com bordas arredondadas e tamanho maior */}
             <div className="w-full lg:w-5/12 max-w-[380px] sm:max-w-[440px] lg:max-w-[460px] shrink-0 mx-auto">
-              <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl group bg-[#3D0A14] aspect-[3/4]">
-                <img
-                  src="/images/cris-mendanha-portrait.webp"
-                  alt="Cris Mendanha - Tricologista"
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+              <div className="relative rounded-3xl overflow-hidden border-2 border-white/25 shadow-2xl bg-[#3D0A14] aspect-[3/4]">
+                <LazyVideo
+                  src="/videos/cris-mendanha.mp4"
+                  poster="/images/cris-mendanha-portrait.webp"
+                  className="w-full h-full object-cover object-top"
+                  loop
+                  autoPlay
+                  muted
+                  playsInline
                 />
               </div>
             </div>

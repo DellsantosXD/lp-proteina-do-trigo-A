@@ -73,6 +73,7 @@ export default function LazyVideo({
         muted={muted}
         playsInline={playsInline}
         loop={loop}
+        autoPlay={autoPlay}
         preload="none"
         className={className}
       >
