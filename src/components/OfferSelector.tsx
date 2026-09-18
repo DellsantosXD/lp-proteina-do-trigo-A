@@ -112,7 +112,7 @@ const protocols: ExtendedProtocol[] = [
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)',
-      'Shampoo Antioxidante Mineral (250 ml)'
+      'Shampoo Super Hidratante Sweet Moment 240ml'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.webp',
     infoBox: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
