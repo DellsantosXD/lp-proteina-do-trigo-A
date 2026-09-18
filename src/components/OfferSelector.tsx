@@ -114,7 +114,7 @@ const protocols: ExtendedProtocol[] = [
       'Sérum Fortalecedor (60 ml)',
       'Shampoo Super Hidratante Sweet Moment 240ml'
     ],
-    imageUrl: '/products/protocolo-3-kit-cutout.webp',
+    imageUrl: '/products/protocolo-3-kit-cutout.webp?v=5',
     infoBox: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
@@ -278,6 +278,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <picture className="relative z-10 w-full h-full flex items-center justify-center">
+                    {protocol.id !== 3 && (
                     <source
                       type="image/avif"
                       srcSet={
@@ -287,6 +288,7 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                       }
                       sizes="(max-width: 640px) 100vw, 50vw"
                     />
+                    )}
                     <source
                       type="image/webp"
                       srcSet={
