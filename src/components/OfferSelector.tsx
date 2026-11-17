@@ -103,19 +103,19 @@ const protocols: ExtendedProtocol[] = [
     name: 'Protocolo Completo',
     originalPrice: '490,00',
     priceLabel: '327,00',
-    subtitle: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
+    subtitle: 'Para quem busca limpeza suave com hidratação intensa sem ressecar, o Protocolo Completo inclui o Shampoo Super Hidratante Sweet Moment (Chlorella e Fiber Detox), que remove depósitos minerais da água e prepara os fios da raiz às pontas.',
     topHeaderBadge: '🔥 MELHOR CUSTO-BENEFÍCIO',
     price: 327,
     installments: '32,83',
     badge: 'Mais completo',
-    description: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
+    description: 'Para quem busca limpeza suave com hidratação intensa sem ressecar, o Protocolo Completo inclui o Shampoo Super Hidratante Sweet Moment (Chlorella e Fiber Detox), que remove depósitos minerais da água e prepara os fios da raiz às pontas.',
     items: [
       'Proteína do Trigo Pro Filler (100g)',
       'Sérum Fortalecedor (60 ml)',
-      'Shampoo Antioxidante Mineral (250 ml)'
+      'Shampoo Super Hidratante Sweet Moment (240 ml)'
     ],
     imageUrl: '/products/protocolo-3-kit-cutout.webp',
-    infoBox: 'Caso o seu cabelo também apresente oleosidade excessiva, dando o aspecto grudado e reduzindo o balanço natural, o Protocolo Completo prepara perfeitamente o terreno folicular da Raíz às pontas fazendo também um Detox no couro.',
+    infoBox: 'Para quem busca limpeza suave com hidratação intensa sem ressecar, o Protocolo Completo inclui o Shampoo Super Hidratante Sweet Moment (Chlorella e Fiber Detox), que remove depósitos minerais da água e prepara os fios da raiz às pontas.',
     hasFreeShipping: true,
     checkoutUrl: 'https://pay.youshop.com.br/BRFYWVIZZTWAMNB1',
     bonusSection: {
@@ -278,15 +278,17 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <picture className="relative z-10 w-full h-full flex items-center justify-center">
-                    <source
-                      type="image/avif"
-                      srcSet={
-                        protocol.id === 1
-                          ? '/products/proteina-trigo-pro-filler-cutout-mob.avif 600w, /products/proteina-trigo-pro-filler-cutout.avif 1000w'
-                          : protocol.imageUrl.replace('.webp', '.avif')
-                      }
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                    {protocol.id !== 3 && (
+                      <source
+                        type="image/avif"
+                        srcSet={
+                          protocol.id === 1
+                            ? '/products/proteina-trigo-pro-filler-cutout-mob.avif 600w, /products/proteina-trigo-pro-filler-cutout.avif 1000w'
+                            : protocol.imageUrl.replace('.webp', '.avif')
+                        }
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                      />
+                    )}
                     <source
                       type="image/webp"
                       srcSet={
