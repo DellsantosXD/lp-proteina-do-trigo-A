@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     id: 4,
     name: 'Renata Vasconcellos',
     role: 'Belo Horizonte, MG',
-    text: 'Eu usei o Protocolo 3 pois meu cabelo costumava ficar muito grudado no couro pela oleosidade, o que piorava o aspecto ralo. O shampoo de minerais preparou o couro e o trio devolveu a densidade que eu perdi após a gestação. Recomendo muito!',
+    text: 'Eu usei o Protocolo 3 pois meu cabelo estava ressecado e sem vida, o que piorava o aspecto ralo. O shampoo hidratante Sweet Moment limpou sem ressecar e o trio devolveu a densidade e o brilho que eu perdi após a gestação. Recomendo muito!',
     rating: 5,
     type: 'video',
     tag: 'Gestante/Pós-Parto'
