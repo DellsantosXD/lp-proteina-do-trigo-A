@@ -278,15 +278,17 @@ export default function OfferSelector({ selectedId, onSelect }: OfferSelectorPro
                 <div className="absolute inset-x-6 bottom-2 h-12 rounded-full bg-bordo/10 blur-xl" />
                 {protocol.imageUrl ? (
                   <picture className="relative z-10 w-full h-full flex items-center justify-center">
-                    <source
-                      type="image/avif"
-                      srcSet={
-                        protocol.id === 1
-                          ? '/products/proteina-trigo-pro-filler-cutout-mob.avif 600w, /products/proteina-trigo-pro-filler-cutout.avif 1000w'
-                          : protocol.imageUrl.replace('.webp', '.avif')
-                      }
-                      sizes="(max-width: 640px) 100vw, 50vw"
-                    />
+                    {protocol.id !== 3 && (
+                      <source
+                        type="image/avif"
+                        srcSet={
+                          protocol.id === 1
+                            ? '/products/proteina-trigo-pro-filler-cutout-mob.avif 600w, /products/proteina-trigo-pro-filler-cutout.avif 1000w'
+                            : protocol.imageUrl.replace('.webp', '.avif')
+                        }
+                        sizes="(max-width: 640px) 100vw, 50vw"
+                      />
+                    )}
                     <source
                       type="image/webp"
                       srcSet={
